@@ -22,6 +22,8 @@ import java.util.Locale;
 @ComponentScan(basePackages = { "com.tocsyk" })
 public class WebMvcConfig extends WebMvcConfigurerAdapter{
 
+
+
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();

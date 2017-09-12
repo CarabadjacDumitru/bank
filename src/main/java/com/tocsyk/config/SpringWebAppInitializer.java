@@ -8,7 +8,8 @@ import org.springframework.web.servlet.DispatcherServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletRegistration;
 
-public class WebInitializer implements WebApplicationInitializer {
+
+public class SpringWebAppInitializer implements WebApplicationInitializer {
 
     private static final String CONFIG_LOCATION = "com.tocsyk.config";
     private static final String MAPPING_URL = "/*";

@@ -1,7 +1,7 @@
 package com.tocsyk.models;
 
-import com.tocsyk.enums.ContractType;
-import com.tocsyk.enums.StatusesType;
+import com.tocsyk.models.enums.ContractType;
+import com.tocsyk.models.enums.StatusesType;
 
 import java.util.Date;
 

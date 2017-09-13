@@ -1,51 +1,47 @@
 package com.tocsyk.config;
 
-import com.tocsyk.repository.LoginDAO;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.context.annotation.Import;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
-
-import javax.sql.DataSource;
+import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
+@EnableWebMvc
 @ComponentScan("com.tocsyk.*")
-@EnableTransactionManagement
-// Load to Environment.
-@PropertySource("classpath:datasource-cfg.properties")
+//@EnableTransactionManagement
+@Import({ WebSecurityConfig.class })
+//@PropertySource("classpath:datasource-cfg.properties")
 public class ApplicationContextConfig {
 
+    @Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/JSP/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+    /*
     // The Environment class serves as the property holder
     // and stores all the properties loaded by the @PropertySource
-    @Autowired
-    private Environment env;
+    //@Autowired
+    //private Environment env;
 
-    @Autowired
-    private LoginDAO loginDAO;
+    //@Autowired
+    //private LoginDAO loginDAO;
 
-    /*@Bean
+    @Bean
     public ResourceBundleMessageSource messageSource() {
         ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
         // Load property in message/validator.properties
         rb.setBasenames(new String[] { "messages/validator" });
         return rb;
-    }*/
-
-    @Bean(name = "viewResolver")
-    public InternalResourceViewResolver getViewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setPrefix("/WEB-INF/JSP/");
-        viewResolver.setSuffix(".jsp");
-        return viewResolver;
     }
 
-    @Bean(name = "dataSource")
+    /*@Bean(name = "dataSource")
     public DataSource getDataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
@@ -68,5 +64,5 @@ public class ApplicationContextConfig {
 
         return transactionManager;
     }
-
+*/
 }

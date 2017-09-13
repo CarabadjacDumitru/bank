@@ -1,6 +1,6 @@
 package com.tocsyk.models;
 
-import com.tocsyk.enums.ContractType;
+import com.tocsyk.models.enums.ContractType;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,7 +10,7 @@ public class Contract {
 
     protected Date GenerationDate;
     protected Date FinishingDate;
-    protected com.tocsyk.enums.ContractType ContractType;
+    protected com.tocsyk.models.enums.ContractType ContractType;
     protected double Rate;
     protected double RemainingAmount;
     protected double PaidAmount;

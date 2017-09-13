@@ -1,4 +1,4 @@
-package com.tocsyk.enums;
+package com.tocsyk.models.enums;
 
 public enum StatusesType {
     Unspecified,

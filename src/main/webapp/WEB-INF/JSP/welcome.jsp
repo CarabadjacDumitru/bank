@@ -6,6 +6,7 @@
     <title>Welcome</title>
 </head>
 <body>
+    <h3>Message : ${message}</h3>
 <table>
     <tr>
         <td>Welcome ${firstname}</td>

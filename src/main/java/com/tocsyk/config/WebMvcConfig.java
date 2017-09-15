@@ -29,11 +29,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
 
-
-
-
-
-
     @Bean(name = "messageSource")
     public MessageSource getMessageResource() {
         ReloadableResourceBundleMessageSource messageSource = new ReloadableResourceBundleMessageSource();

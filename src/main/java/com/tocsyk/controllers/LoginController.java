@@ -12,10 +12,10 @@ public class LoginController {
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String displayLoginPage( Model model){
-        Login login = new Login();
+        /*Login login = new Login();
 
         model.addAttribute("login");
-
+*/
         return "login";
     }
 

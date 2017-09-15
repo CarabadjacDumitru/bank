@@ -12,6 +12,6 @@
 <a href="?lang=ro">Romanian</a>
 
 
-<spring:message code="Login.label.User" />
+<spring:message code="Login.label.user" />
 </body>
 </html>

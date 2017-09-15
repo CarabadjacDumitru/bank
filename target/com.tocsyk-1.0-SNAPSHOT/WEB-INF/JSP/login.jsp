@@ -34,22 +34,57 @@
 
     </div>
 </c:if>
+<h2>Login with Username and Password</h2>
 
 <h3>Enter user name and password:</h3>
+<div id="login-box">
+    <form:form id = "regForm" modelAttribute="login" action="loginProcess" method="post">
+        <form:errors path="*" cssClass="errorblock" element="div"/>
+        <label for="Login.label.user">Enter User name</label>
+        <form:errors path="Login.label.username" cssClass="error"/>
 
-<form:form commandName="Login">
-    <form:errors path="*" cssClass="errorblock" element="div"/>
-    <label for="textInput1">Enter User name</label>
-    <form:input path="username" cssErrorClass="error"/>
-    <form:errors path="username" cssClass="error"/>
+        <br>
+        <label for="textInput2">Enter User name</label>
+        <form:input path="Login.label.password" cssErrorClass="error"/>
+        <form:errors path="Login.label.password" cssClass="error"/>
+        <br>
+        <input type="submit" class="btn" value="Enter for logining">
+    </form:form>
+</div>
 
-    <br>
-    <label for="textInput2">Enter User name</label>
-    <form:input path="password" cssErrorClass="error"/>
-    <form:errors path="password" cssClass="error"/>
-    <br>
-    <input type="submit" class="btn" value="Enter for logining">
-</form:form>
+
+<form method="post" action="">
+    <table>
+        <tr>
+            <td>
+                <strong>
+                    <spring:message code="Login.label.user"/>
+                </strong>
+            </td>
+            <td><input name="userName"/></td>
+        </tr>
+        <tr>
+            <td>
+                <strong>
+                    <spring:message code="Login.label.password"/>
+                </strong>
+            </td>
+            <td><input name="password"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <spring:message code="Label.submit" var="labelSubmit"></spring:message>
+                <input type="submit" value="${labelSubmit}"/>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<input type="hidden" name="${_csrf.parameterName}"
+       value="${_csrf.token}"/>
+
+</form>
+</div>
 
 
 </body>

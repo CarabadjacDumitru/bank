@@ -33,7 +33,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
+/*
         http.csrf().disable();
 
         http.authorizeRequests().antMatchers("/", "/welcome", "/about", "/login", "/logout").permitAll();
@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .usernameParameter("username")//
                 .passwordParameter("password")
                 // Config for Logout Page
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");*/
 
     }
 }

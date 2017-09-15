@@ -1,31 +1,27 @@
 package com.tocsyk.controllers;
 
+import com.tocsyk.models.Login;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class LoginController {
 
-    //Spring Security see this :
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView login(
-            @RequestParam(value = "error", required = false) String error,
-            @RequestParam(value = "logout", required = false) String logout) {
+    public String displayLoginPage( Model model){
+        Login login = new Login();
 
-        ModelAndView model = new ModelAndView();
-        if (error != null) {
-            model.addObject("error", "Invalid username and password!");
-        }
+        model.addAttribute("login");
 
-        if (logout != null) {
-            model.addObject("msg", "You've been logged out successfully.");
-        }
-        model.setViewName("login");
+        return "login";
+    }
 
-        return model;
-
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String processLoginPage(@ModelAttribute("login")  Login login){
+        System.out.println(login);
+        return "redirect:welcome";
     }
 }

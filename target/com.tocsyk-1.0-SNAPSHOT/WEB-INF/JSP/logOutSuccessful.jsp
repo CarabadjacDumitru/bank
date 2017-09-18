@@ -3,7 +3,7 @@
     <title>Logout</title>
 </head>
 <body>
-<jsp:include page="menu.jsp" />
+<jsp:include page="NavigationalBar.jsp" />
 
 <h1>Logout Successful!</h1>
 </body>

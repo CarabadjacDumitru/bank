@@ -3,53 +3,51 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <style>
-        .error {
-            color: #ff0000;
-        }
-
-        .errorblock {
-            color: #000;
-            background-color: #ffEEEE;
-            border: 3px solid #ff0000;
-            padding: 8px;
-            margin: 16px;
-        }
-    </style>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="style.css">
 
     <title>Login</title>
 </head>
 <body>
-<jsp:include page="menu.jsp"/>
+<div class="container">
+    <jsp:include page="NavigationalBar.jsp"/>
+</div>
 
-
-<h1>Login</h1>
-
-<!-- /login?error=true -->
-<c:if test="${param.error == 'true'}">
-    <div style="color:red;margin:10px 0px;">
-
-        Login Failed!!!<br/>
-        Reason : ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
-
+<div class="container">
+    <div class="row">
+        <div class='col-md-3'></div>
+        <div class="col-md-6">
+            <div class="login-box well">
+                <form action="">
+                    <legend>Sign In</legend>
+                    <div class="form-group">
+                        <label for="username-email">E-mail or Username</label>
+                        <input value='' id="username-email" placeholder="E-mail or Username" type="text"
+                               class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" value='' placeholder="Password" type="text" class="form-control"/>
+                    </div>
+                    <div class="input-group">
+                        <div class="checkbox">
+                            <label>
+                                <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login"/>
+                    </div>
+                    <span class='text-center'><a href="/resetting/request" class="text-sm">Forgot Password?</a></span>
+                    <div class="form-group">
+                        <p class="text-center m-t-xs text-sm">Do not have an account?</p>
+                        <a href="/register/" class="btn btn-default btn-block m-t-md">Create an account</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-</c:if>
-
-<h3>Enter user name and password:</h3>
-
-<form:form commandName="Login">
-    <form:errors path="*" cssClass="errorblock" element="div"/>
-    <label for="textInput1">Enter User name</label>
-    <form:input path="username" cssErrorClass="error"/>
-    <form:errors path="username" cssClass="error"/>
-
-    <br>
-    <label for="textInput2">Enter User name</label>
-    <form:input path="password" cssErrorClass="error"/>
-    <form:errors path="password" cssClass="error"/>
-    <br>
-    <input type="submit" class="btn" value="Enter for logining">
-</form:form>
 
 
 </body>

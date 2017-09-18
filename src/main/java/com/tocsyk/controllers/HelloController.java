@@ -12,4 +12,9 @@ public class HelloController {
     public String welcomePage(Model model) {
         return "hello";
     }
+
+    @RequestMapping(value = {"/nav"})
+    public String navPage(Model model) {
+        return "NavigationalBar";
+    }
 }

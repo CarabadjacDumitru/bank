@@ -20,11 +20,11 @@ public class LoginController {
     @RequestMapping(value = { "/accountInfo" }, method = RequestMethod.GET)
     public String accountInfo(Model model) {
 
-        Login userDetails = (Login) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        System.out.println(userDetails.getPassword());
-        System.out.println(userDetails.getUserName());
+        Login login = (Login) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(login.getPassword());
+        System.out.println(login.getUserName());
 
-        model.addAttribute("Login", userDetails);
+        model.addAttribute("Login", login);
         return "accountInfo";
     }
 }

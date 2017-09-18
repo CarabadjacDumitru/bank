@@ -23,7 +23,7 @@
 
     </div>
 </c:if>
-<form name='f' method='POST' action="${pageContext.request.contextPath}/j_spring_security_check">>
+<form name='f'   action="<c:url value='j_spring_security_check'/>" method="POST">
     <div class="main">
         <div class="row">
             <div class='col-md-3'></div>
@@ -33,12 +33,12 @@
                         <legend>Sign In</legend>
                         <div class="form-group">
                             <label for="username-email">E-mail or Username</label>
-                            <input value='' id="username-email" placeholder="E-mail or Username" type="text"
+                            <input value='' id="username-email" placeholder="E-mail or Username" type="text" name='username'
                                    class="form-control"/>
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>
-                            <input id="password" value='' placeholder="Password" type="text" class="form-control"/>
+                            <input id="password" value='' placeholder="Password" type="text" class="form-control" name='password'/>
                         </div>
                         <div class="input-group">
                             <div class="checkbox">

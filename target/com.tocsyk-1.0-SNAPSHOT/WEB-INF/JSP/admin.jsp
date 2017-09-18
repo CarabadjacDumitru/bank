@@ -6,7 +6,7 @@
     <title>${title}</title>
 </head>
 <body>
-<jsp:include page="NavigationalBar.jsp" />
+<jsp:include page="NavBar.jsp" />
 
 <h2>Admin Page</h2>
 

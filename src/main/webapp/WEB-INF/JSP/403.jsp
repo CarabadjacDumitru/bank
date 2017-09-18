@@ -4,7 +4,7 @@
     <title>Access Denied</title>
 </head>
 <body>
-<jsp:include page="NavigationalBar.jsp"/>
+<jsp:include page="NavBar.jsp"/>
 
 <h3 style="color:red;">${message}</h3>
 </body>

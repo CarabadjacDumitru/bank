@@ -9,46 +9,60 @@
     <title>Login</title>
 </head>
 <body>
-<div class="container">
-    <jsp:include page="NavigationalBar.jsp"/>
-</div>
+<header>
+    <jsp:include page="NavBar.jsp"/>
+</header>
+<!-- /login?error=true -->
+<c:if test="${param.error == 'true'}">
+    <div style="color:red;margin:10px 0px;">
 
-<div class="container">
-    <div class="row">
-        <div class='col-md-3'></div>
-        <div class="col-md-6">
-            <div class="login-box well">
-                <form action="">
-                    <legend>Sign In</legend>
-                    <div class="form-group">
-                        <label for="username-email">E-mail or Username</label>
-                        <input value='' id="username-email" placeholder="E-mail or Username" type="text"
-                               class="form-control"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input id="password" value='' placeholder="Password" type="text" class="form-control"/>
-                    </div>
-                    <div class="input-group">
-                        <div class="checkbox">
-                            <label>
-                                <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
-                            </label>
+        Login Failed!!!<br/>
+        Reason :  ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
+
+
+
+    </div>
+</c:if>
+<form name='f' method='POST' action="${pageContext.request.contextPath}/j_spring_security_check">>
+    <div class="main">
+        <div class="row">
+            <div class='col-md-3'></div>
+            <div class="col-md-6">
+                <div class="login-box well">
+                    <form action="">
+                        <legend>Sign In</legend>
+                        <div class="form-group">
+                            <label for="username-email">E-mail or Username</label>
+                            <input value='' id="username-email" placeholder="E-mail or Username" type="text"
+                                   class="form-control"/>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md" value="Login"/>
-                    </div>
-                    <span class='text-center'><a href="/resetting/request" class="text-sm">Forgot Password?</a></span>
-                    <div class="form-group">
-                        <p class="text-center m-t-xs text-sm">Do not have an account?</p>
-                        <a href="/register/" class="btn btn-default btn-block m-t-md">Create an account</a>
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input id="password" value='' placeholder="Password" type="text" class="form-control"/>
+                        </div>
+                        <div class="input-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input id="login-remember" type="checkbox" name="remember" value="1"> Remember
+                                    me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md"
+                                   value="Login"/>
+                        </div>
+                        <span class='text-center'><a href="/resetting/request"
+                                                     class="text-sm">Forgot Password?</a></span>
+                        <div class="form-group">
+                            <p class="text-center m-t-xs text-sm">Do not have an account?</p>
+                            <a href="/register/" class="btn btn-default btn-block m-t-md">Create an account</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
-
+</form>
 </body>
 </html>

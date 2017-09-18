@@ -15,6 +15,11 @@ public class HelloController {
 
     @RequestMapping(value = {"/nav"})
     public String navPage(Model model) {
-        return "NavigationalBar";
+        return "NavBar";
+    }
+
+    @RequestMapping("/")
+    public String home() {
+        return "welcome";
     }
 }

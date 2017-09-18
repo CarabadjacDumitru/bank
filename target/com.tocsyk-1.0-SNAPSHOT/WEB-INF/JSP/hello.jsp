@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<jsp:include page="NavigationalBar.jsp" />
+<jsp:include page="NavBar.jsp" />
 
 </body>
 </html>

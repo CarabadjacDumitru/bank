@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html >
 <head>
-    <meta charset="UTF-8">
-    <title>bootstrap contact form</title>
-    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="css/contact.css">
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+    <link href="<c:url value='/static/css/navbar.css' />" rel="stylesheet"></link>
+    <link href="<c:url value='/static/css/style.css' />" rel="stylesheet"></link>
+    <link href="<c:url value='/static/css/bootstrap.min.css' />" rel="stylesheet"></link>
+    <link href="<c:url value='/static/css/bootstrap-theme.min.css' />" rel="stylesheet"></link>
 </head>
 
 <body>
+<script type="text/javascript" src='<c:url value="/static/js/jquery-3.2.1.min.js"/>'></script>
+<script type="text/javascript" src='<c:url value="/static/js/bootstrap.min.js"/>'></script>
+<script type="text/javascript" src='<c:url value="/static/js/navbar.js"/>'></script>
+<script type="text/javascript" src='<c:url value="/static/js/menu.js"/>'></script>
 
 <div class="container">
     <div class="col-md-5">
@@ -35,9 +39,6 @@
         </div>
     </div>
 </div>
-<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
-
-<script src="js/index.js"></script>
 
 </body>
 </html>

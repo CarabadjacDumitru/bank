@@ -21,39 +21,39 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 
         // Users in memory.
-
-        auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER");
-        auth.inMemoryAuthentication().withUser("admin1").password("12345").roles("USER, ADMIN");
-
+        auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER")
+                .and().withUser("admin1").password("12345").roles("USER, ADMIN");
 
         // For User in database.
-     /*   auth.userDetailsService(myDBAauthenticationService);
-*/
+     /*   auth.userDetailsService(myDBAauthenticationService);*/
+
     }
+
+
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-/*
+
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/", "/welcome", "/about", "/login", "/logout").permitAll();
+        // The pages does not require login
+        http.authorizeRequests().antMatchers("/", "/userInfo", "/welcome", "/login", "/login2", "/logout").permitAll();
 
-        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
-
-        http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
-
-        http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
+        // /userInfo page requires login as USER or ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('USER', 'ADMIN')");
 
 
+        // Config for Login Form
         http.authorizeRequests().and().formLogin()//
+                // Submit URL of login page.
                 .loginProcessingUrl("/j_spring_security_check") // Submit URL
                 .loginPage("/login")//
                 .defaultSuccessUrl("/userInfo")//
                 .failureUrl("/login?error=true")//
                 .usernameParameter("username")//
-                .passwordParameter("password")
-                // Config for Logout Page
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");*/
+                .passwordParameter("password") ;
 
     }
+
 }

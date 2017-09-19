@@ -4,6 +4,11 @@
     <title>${title}</title>
 </head>
 <body>
-<h1>Message : ${message}</h1>
+<header>
+    <jsp:include page="NavBar.jsp" />
+</header>
+
+
+<h1>WELCOME </h1>
 </body>
 </html>

@@ -4,7 +4,9 @@
     <title>${title}</title>
 </head>
 <body>
-<jsp:include page="NavBar.jsp" />
+<header>
+     <jsp:include page="NavBar.jsp" />
+</header>
 
 <h4>  USER INFOOOOOOOO</h4>
 

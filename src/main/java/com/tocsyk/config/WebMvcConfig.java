@@ -1,11 +1,13 @@
 package com.tocsyk.config;
 
+import com.tocsyk.dao.LoginOld.LoginDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.*;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.core.env.Environment;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
@@ -13,20 +15,46 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import javax.sql.DataSource;
 import java.nio.charset.Charset;
 import java.util.Locale;
 
 
 @Configuration
 @EnableWebMvc
-//@PropertySource(value = "classpath*:resources/messages")
 @Import({WebSecurityConfig.class})
 @ComponentScan(basePackages = "com.tocsyk")
+@PropertySource("classpath:datasource-cfg.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
-    //private final Logger logger = new Logger();
+    // The Environment class serves as the property holder
+    // and stores all the properties loaded by the @PropertySource
+    @Autowired
+    private Environment env;
+
+    @Autowired
+    private LoginDAO loginDAO;
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
+
+    @Bean(name = "dataSource")
+    public DataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getProperty("ds.database-driver"));
+        dataSource.setUrl(env.getProperty("ds.url"));
+        dataSource.setUsername(env.getProperty("ds.username"));
+        dataSource.setPassword(env.getProperty("ds.password"));
+        System.out.println("## getDataSource: " + dataSource);
+        return dataSource;
+    }
+
+    @Autowired
+    @Bean(name = "transactionManager")
+    public DataSourceTransactionManager getTransactionManager(DataSource dataSource) {
+        DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource);
+        return transactionManager;
+    }
+
 
 
     @Bean(name = "messageSource")

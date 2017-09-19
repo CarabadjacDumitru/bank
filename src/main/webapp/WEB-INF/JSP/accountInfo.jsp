@@ -8,7 +8,7 @@
      
     <title>Account Info</title>
      
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles.css">
+
      
 </head>
 <body>
@@ -20,16 +20,7 @@
    <div class="account-container">
      
      
-           <ul>
-               <li>User Name: ${pageContext.request.userPrincipal.name}</li>
-               <li>Role:
-                   <ul>
-                           <c:forEach items="${userDetails.authorities}" var="auth">
-                               <li>${auth.authority }</li>
-                           </c:forEach>
-                       </ul>
-               </li>
-           </ul>
+       
        </div>
  
 </body>

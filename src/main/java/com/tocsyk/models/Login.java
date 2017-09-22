@@ -94,6 +94,7 @@ public class Login {
         this.email = email;
     }
 
+
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -125,12 +126,18 @@ public class Login {
         return true;
     }
 
-
     @Override
     public String toString() {
-        return "User [id=" + id + ", ssoId=" + ssoId
-                + ", firstName=" + firstName + ", lastName=" + lastName
-                + ", email=" + email + "]";
+        return "Login{" +
+                "id=" + id +
+                ", ssoId='" + ssoId + '\'' +
+                ", logname='" + logname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", roles=" + roles +
+                '}';
     }
 
     @ManyToMany

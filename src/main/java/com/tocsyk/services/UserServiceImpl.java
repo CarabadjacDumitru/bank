@@ -1,15 +1,14 @@
 package com.tocsyk.services;
 
 
-import java.util.List;
-
+import com.tocsyk.dao.LoginDAO;
+import com.tocsyk.models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tocsyk.dao.LoginDAO;
-import com.tocsyk.models.Login;
+import java.util.List;
 
 
 @Service("userService")
@@ -27,27 +26,23 @@ public class UserServiceImpl implements UserService {
     }
 
     public Login findBySSO(String sso) {
-        Login user = dao.findBySSO(sso);
-        return user;
+        Login login = dao.findBySSO(sso);
+        return login;
     }
 
-    public void saveUser(Login login) {
+    public void saveLogin(Login login) {
         login.setPassword(passwordEncoder.encode(login.getPassword()));
         dao.save(login);
     }
 
-    /*
-     * Since the method is running with Transaction, No need to call hibernate update explicitly.
-     * Just fetch the entity from db and update it with proper values within transaction.
-     * It will be updated in db once transaction ends.
-     */
-    public void updateUser(Login login) {
+    public void updateLogin(Login login) {
         Login entity = dao.findById(login.getId());
         if (entity != null) {
             entity.setSsoId(login.getSsoId());
             if (!login.getPassword().equals(entity.getPassword())) {
                 entity.setPassword(passwordEncoder.encode(login.getPassword()));
             }
+            entity.setLogname(login.getLogname());
             entity.setFirstName(login.getFirstName());
             entity.setLastName(login.getLastName());
             entity.setEmail(login.getEmail());
@@ -60,7 +55,7 @@ public class UserServiceImpl implements UserService {
         dao.deleteBySSO(sso);
     }
 
-    public List<Login> findAllUsers() {
+    public List<Login> findAllLogins() {
         return dao.findAllLogins();
     }
 

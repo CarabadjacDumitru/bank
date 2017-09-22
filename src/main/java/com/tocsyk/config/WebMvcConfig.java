@@ -1,6 +1,5 @@
 package com.tocsyk.config;
 
-import com.tocsyk.dao.LoginOld.LoginDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.*;
@@ -27,13 +26,9 @@ import java.util.Locale;
 @PropertySource("classpath:datasource-cfg.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
-    // The Environment class serves as the property holder
-    // and stores all the properties loaded by the @PropertySource
     @Autowired
     private Environment env;
 
-    @Autowired
-    private LoginDAO loginDAO;
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
 

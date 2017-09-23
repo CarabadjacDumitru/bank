@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @Service("customUserDetailsService")
-public class SecurityServiceImpl implements UserDetailsService {
+public class CustomUserDetailsService implements UserDetailsService {
 
     //static final Logger logger = LoggerFactory.getLogger(CustomUserDetailsService.class);
 
@@ -41,7 +41,7 @@ public class SecurityServiceImpl implements UserDetailsService {
     private List<GrantedAuthority> getGrantedAuthorities(Login login) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 
-        for (Role userProfile : login.getUserProfiles()) {
+        for (Role userProfile : login.getRoles()) {
             //logger.info("UserProfile : {}", userProfile);
             authorities.add(new SimpleGrantedAuthority("ROLE_" + userProfile.getType()));
         }

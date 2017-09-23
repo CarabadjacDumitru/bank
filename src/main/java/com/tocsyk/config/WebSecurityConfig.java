@@ -3,16 +3,11 @@ package com.tocsyk.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
-import org.springframework.security.authentication.TestingAuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,44 +19,14 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 
 @Configuration
 @EnableWebSecurity
-@ComponentScan(basePackages = { "com.tocsyk.*" })
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    @Qualifier("customSecurityService")
+    @Qualifier("customUserDetailsService")
     UserDetailsService userDetailsService;
 
     @Autowired
     PersistentTokenRepository tokenRepository;
-
-    @Override
-    public void configure( WebSecurity web ) throws Exception {
-        web.ignoring().antMatchers("/static/**");
-    }
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-
-
-        http.csrf().disable();
-        http.authorizeRequests().antMatchers("/", "/userInfo", "/welcome", "/login", "/login2", "/logout","/403").permitAll();
-        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
-
-        //http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
-
-        http.authorizeRequests()
-                .and()
-                .formLogin()//
-                .loginProcessingUrl("/j_spring_security_check")
-                .loginPage("/login")//
-                .defaultSuccessUrl("/userInfo")
-                .failureUrl("/login?error=true")
-                .usernameParameter("logname")
-                .passwordParameter("password")
-                .and()
-                .exceptionHandling().accessDeniedPage("/403");
-    }
-
 
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {

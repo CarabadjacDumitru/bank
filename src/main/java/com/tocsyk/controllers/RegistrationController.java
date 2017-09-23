@@ -121,17 +121,17 @@ public class RegistrationController {
 
     @ModelAttribute("roles")
     public List<Role> initializeProfiles() {
-        return RoleService.findAll();
+        return roleService.findAll();
     }
 
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("loggedinuser", getPrincipal());
-        return "accessDenied";
+        return "403";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage() {
+    public String loginingPage() {
         if (isCurrentAuthenticationAnonymous()) {
             return "login";
         } else {

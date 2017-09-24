@@ -8,6 +8,7 @@ import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -30,7 +31,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
-        //auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER").and().withUser("admin1").password("12345").roles("USER, ADMIN");
+        auth.inMemoryAuthentication().withUser("user1").password("12345").roles("USER").and().withUser("admin1").password("12345").roles("USER, ADMIN");
 
         auth.userDetailsService(userDetailsService);
         auth.authenticationProvider(authenticationProvider());
@@ -60,4 +61,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests().antMatchers("/", "/list")
+                .access("hasRole('USER') or hasRole('ADMIN') or hasRole('DBA')")
+                .antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
+                .access("hasRole('ADMIN') or hasRole('DBA')").and().formLogin().loginPage("/login")
+                .loginProcessingUrl("/login").usernameParameter("ssoId").passwordParameter("password").and()
+                .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
+                .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");
+    }
+
 }

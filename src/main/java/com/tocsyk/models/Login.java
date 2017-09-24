@@ -18,10 +18,6 @@ public class Login {
     private String ssoId;
 
     @NotEmpty
-    @Column(name = "LOG_NAME", nullable = false)
-    private String logname;
-
-    @NotEmpty
     @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
 
@@ -52,14 +48,7 @@ public class Login {
         this.id = id;
     }
 
-    public String getLogname() {
-        return logname;
-    }
-    public void setLogname(String logname) {
-        this.logname = logname;
-    }
-
-    public String getSsoId() {
+     public String getSsoId() {
         return ssoId;
     }
     public void setSsoId(String ssoId) {
@@ -131,7 +120,6 @@ public class Login {
         return "Login{" +
                 "id=" + id +
                 ", ssoId='" + ssoId + '\'' +
-                ", logname='" + logname + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +

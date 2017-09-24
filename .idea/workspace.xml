@@ -7,35 +7,102 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f6805cf-54fd-4306-a168-f57e3661517f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_0_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AccessDeniedController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AdminController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/HelloController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LogOutController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LoginController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/UserInfoController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/WelcomeController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginMapper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityService.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebMvcConfig.class" afterPath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebMvcConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Login.class" afterPath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Login.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_oracle_ojdbc14_10_2_0_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_31.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_dbcp_7_0_47.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__postgresql_postgresql_9_1_901_1_jdbc4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/RoleToUserProfileConverter.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/datasource-cfg.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/datasource-cfg.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/403.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/Header.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/about.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/admin.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/hello.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/logOutSuccessful.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/loginSuccessful.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/logout.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/userInfo.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/welcome.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/SpringSecurityInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/SpringWebAppInitializer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebMvcConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/controllers/AdminController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/controllers/HelloController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/controllers/LoginController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/controllers/WelcomeController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/enums/ContractType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/enums/PaymentType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/enums/StatusesType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Account.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Address.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Bank.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Branch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Contact.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Contract.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Credit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Customer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Deposit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Grant.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Leasing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Payment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/Sequence.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/enums/ContractType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/enums/PaymentType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/com/tocsyk/models/enums/StatusesType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/datasource-cfg.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/i18n/messages_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/i18n/messages_ro.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/classes/log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/hello.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/log4j-1.2.17.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-aop-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-beans-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-context-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-core-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-expression-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-jdbc-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-security-config-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-security-core-4.2.3.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-security-web-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-tx-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-web-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.0.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/spring-webmvc-4.3.10.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/lib/tomcat-embed-core-9.0.0.M26.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/views/index.jsp" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Bank_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Bank_war.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bank.iml" afterPath="$PROJECT_DIR$/Bank.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/SpringSecurityInitializer.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/SpringSecurityInitializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/register.jsp" afterPath="$PROJECT_DIR$/target/com.tocsyk-1.0-SNAPSHOT/WEB-INF/JSP/register.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,39 +124,16 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="skistuff@localhost" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="skistuff@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="skistuff" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="skistuff@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="skistuff" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="skistuff@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="skistuff" type="e3449647:DbNodeDescriptor" />
-        <item name="public" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RegistrationController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java">
+      <file leaf-file-name="HibernateConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="137" column="26" lean-forward="true" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
+            <state relative-caret-position="663">
+              <caret line="52" column="122" lean-forward="false" selection-start-line="52" selection-start-column="122" selection-end-line="52" selection-end-column="122" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +141,66 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebSecurityConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="92">
+              <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validation.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebMvcConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="55" />
+              <folding>
+                <element signature="e#2726#2727#0" expanded="true" />
+                <element signature="e#2791#2792#0" expanded="true" />
+                <marker date="1506164372058" expanded="false" signature="3319:3330" ph=" { " />
+                <marker date="1506164372058" expanded="false" signature="3350:3356" ph=" }" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleToUserProfileConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/RoleToUserProfileConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,23 +224,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ROLE_</find>
-      <find>UsernamePasswordAuthenticationFilter</find>
-      <find>anonymous</find>
-      <find>Authorities</find>
-      <find>GrantAuthorities</find>
-      <find>SecurityService</find>
-      <find>findLogin</find>
-      <find>hibernate</find>
-      <find>User</find>
-      <find>findBySSO</find>
-      <find>WebSecurityConfigurerAdapter</find>
-      <find>authenticator</find>
-      <find>BCryptPasswordEncoder</find>
-      <find>configureGlobal</find>
-      <find>tokenRepository</find>
-      <find>antMatchersantMatchers</find>
-      <find>loadUserByUsername</find>
       <find>userDetailsService</find>
       <find>ComponentScan</find>
       <find>WebMvcConfigurerAdapter</find>
@@ -155,6 +237,23 @@
       <find>CONTROLLER</find>
       <find>controllers</find>
       <find>configureGlobalSecurity</find>
+      <find>logincon</find>
+      <find>application.p</find>
+      <find>HibernateTransactionManager</find>
+      <find>websystique</find>
+      <find>hibernateProperties</find>
+      <find>logname</find>
+      <find>logn</find>
+      <find>userService</find>
+      <find>getDataSource</find>
+      <find>messageSource</find>
+      <find>addResourceHandlers</find>
+      <find>RoleToUserProfileConverter</find>
+      <find>hibernate</find>
+      <find>configure(HttpSecurity http)</find>
+      <find>roleToUserProfileConverter</find>
+      <find>postg</find>
+      <find>spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect</find>
     </findStrings>
     <replaceStrings>
       <replace>Va rugam sa introduceti</replace>
@@ -178,7 +277,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/UserInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginSuccessful.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfo.jsp" />
@@ -192,7 +290,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LoginValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/validation.properties" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/RolesTypes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/RoleType.java" />
@@ -210,10 +307,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/validators/LoginValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/WelcomeController.java" />
@@ -223,12 +316,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomeUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/RoleToUserProfileConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -294,6 +393,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -350,6 +452,33 @@
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
+              <item name="converters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,39 +488,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="JSP" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -614,7 +715,8 @@
       <workItem from="1505754218762" duration="23394000" />
       <workItem from="1505800329397" duration="19842000" />
       <workItem from="1506079151648" duration="7240000" />
-      <workItem from="1506103797461" duration="12531000" />
+      <workItem from="1506103797461" duration="31737000" />
+      <workItem from="1506193967732" duration="3336000" />
     </task>
     <task id="LOCAL-00001" summary="home 2017 09 11">
       <created>1505079433381</created>
@@ -658,11 +760,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505829534762</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="home 2017 09 23">
+      <created>1506145369001</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1506145369032</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154936000" />
+    <option name="totallyTimeSpent" value="177478000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -677,30 +786,29 @@
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47646493" sideWeight="0.28304905" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32853025" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23574731" sideWeight="0.2873016" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14603175" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18869936" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1546" y="173" width="310" height="568" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13809524" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1546" y="173" width="310" height="568" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33429396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29121727" sideWeight="0.66770834" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27272728" sideWeight="0.66770834" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.57935286" sideWeight="0.71695095" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2626984" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7318952" sideWeight="0.7126984" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23412699" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936507" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -708,6 +816,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20338982" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -723,7 +832,8 @@
     <MESSAGE value="home 2017 09 19" />
     <MESSAGE value="home 2017 09 19 v2" />
     <MESSAGE value="work 2017 09 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="work 2017 09 19" />
+    <MESSAGE value="home 2017 09 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="home 2017 09 23" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -785,54 +895,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.0.M26/tomcat-embed-core-9.0.0.M26-sources.jar!/org/apache/catalina/valves/AbstractAccessLogValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="624" column="0" lean-forward="false" selection-start-line="624" selection-start-column="0" selection-end-line="624" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.0.M26/tomcat-embed-core-9.0.0.M26-sources.jar!/org/apache/catalina/valves/ErrorReportValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="86" column="21" lean-forward="true" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.0.M26/tomcat-embed-core-9.0.0.M26-sources.jar!/org/apache/catalina/core/StandardHostValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginSuccessful.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -840,18 +906,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/UserInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/UserInfoController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/register.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-408">
@@ -859,35 +917,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="33" column="48" lean-forward="true" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AdminController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/RoleType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -895,39 +925,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginProvider.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAOImpl.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/AbstractDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -938,13 +939,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginOld/LoginDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -961,17 +956,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LogOutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LogOutController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/RoleDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="32" column="1" lean-forward="true" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -983,29 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="60" column="0" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="60" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#hashCode#0;class#Login#0" expanded="false" />
-            <element signature="method#equals#0;class#Login#0" expanded="false" />
-            <element signature="method#toString#0;class#Login#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.0.4.RELEASE/spring-security-web-4.0.4.RELEASE-sources.jar!/org/springframework/security/web/authentication/rememberme/PersistentRememberMeToken.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1013,21 +980,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LoginController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/HelloController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/WelcomeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AccessDeniedController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/validators/LoginValidator.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityService.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="77" lean-forward="false" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="249" column="40" lean-forward="false" selection-start-line="249" selection-start-column="40" selection-end-line="249" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-391">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3466e1c6-46f3-4151-abfc-46ce1e69935f/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1d8822d0-b958-4f25-a5e1-5f206bd30077/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bank.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="29" column="80" lean-forward="false" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/datasource-cfg.properties" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="144" column="27" lean-forward="true" selection-start-line="144" selection-start-column="27" selection-end-line="144" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/HibernateTokenRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="39" column="78" lean-forward="false" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="45" column="69" lean-forward="false" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1041,161 +1074,122 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="136">
           <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/Authentification/AccessDeniedController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/validators/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="31" column="41" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/SecurityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/SpringSecurityInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="204">
+          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/SpringWebAppInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="65" column="65" lean-forward="false" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/SpringSecurityInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="55" />
+          <folding>
+            <element signature="e#2726#2727#0" expanded="true" />
+            <element signature="e#2791#2792#0" expanded="true" />
+            <marker date="1506164372058" expanded="false" signature="3319:3330" ph=" { " />
+            <marker date="1506164372058" expanded="false" signature="3350:3356" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/PersistentLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="121" column="44" lean-forward="false" selection-start-line="121" selection-start-column="44" selection-end-line="121" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/RoleToUserProfileConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="58" lean-forward="false" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="663">
+          <caret line="52" column="122" lean-forward="false" selection-start-line="52" selection-start-column="122" selection-end-line="52" selection-end-column="122" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        <state relative-caret-position="92">
+          <caret line="169" column="11" lean-forward="false" selection-start-line="169" selection-start-column="11" selection-end-line="169" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="249" column="40" lean-forward="false" selection-start-line="249" selection-start-column="40" selection-end-line="249" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/services/CustomUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-203">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="137" column="26" lean-forward="true" selection-start-line="137" selection-start-column="26" selection-end-line="137" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

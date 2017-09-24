@@ -1,15 +1,21 @@
 package com.tocsyk.config;
 
+import com.tocsyk.converters.RoleToUserProfileConverter;
+import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
@@ -23,23 +29,23 @@ import java.util.Locale;
 @EnableWebMvc
 @Import({WebSecurityConfig.class})
 @ComponentScan(basePackages = "com.tocsyk")
-@PropertySource("classpath:datasource-cfg.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private Environment env;
 
+    @Autowired
+    RoleToUserProfileConverter roleToUserProfileConverter;
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
-    @Bean(name = "dataSource")
-    public DataSource getDataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName(env.getProperty("ds.database-driver"));
-        dataSource.setUrl(env.getProperty("ds.url"));
-        dataSource.setUsername(env.getProperty("ds.username"));
-        dataSource.setPassword(env.getProperty("ds.password"));
-        System.out.println("## getDataSource: " + dataSource);
+    @Bean
+    public DataSource dataSource() {
+        BasicDataSource dataSource = new BasicDataSource();
+        dataSource.setUrl("jdbc:postgresql://localhost:5353/banking");
+        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
+        dataSource.setUsername("OPEN_U");
+        dataSource.setPassword("POU");
         return dataSource;
     }
 
@@ -60,6 +66,11 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         return messageSource;
     }
 
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(roleToUserProfileConverter);
+    }
+
     @Bean(name = "localeResolver")
     public LocaleResolver localeResolver() {
         SessionLocaleResolver resolver = new SessionLocaleResolver();
@@ -72,6 +83,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
            registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
 
+    /*
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
@@ -82,7 +94,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         LocaleChangeInterceptor changeInterceptor = new LocaleChangeInterceptor();
         changeInterceptor.setParamName("lang");
         registry.addInterceptor(changeInterceptor).addPathPatterns("/*");
-    }
+    }*/
 
     @Bean
     public InternalResourceViewResolver viewResolver() {

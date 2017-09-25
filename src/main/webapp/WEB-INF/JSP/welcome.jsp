@@ -1,14 +1,21 @@
-<%@page session="false"%>
 <html>
 <head>
-    <title>${title}</title>
+    <title>WEEEEE</title>
 </head>
 <body>
-<header>
-    <jsp:include page="NavBar.jsp" />
-</header>
+
+<div class="header">
+    <div class="navbar    nav-justified navbar-fixed-top">
+        <jsp:include page="NavBar.jsp"/>
+    </div>
+</div>
 
 
-<h1>WELCOME </h1>
+
+<div class="footer">
+    <div class="navbar    nav-justified navbar-fixed-bottom">
+         <jsp:include page="footer.jsp"/>
+    </div>
+</div>
 </body>
 </html>

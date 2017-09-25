@@ -12,10 +12,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,9 +45,24 @@ public class RegistrationController {
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
-    @RequestMapping(value = {"/", "/list"}, method = RequestMethod.GET)
-    public String listLogins(ModelMap model) {
 
+    @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+    public ModelAndView welcomePage() {
+
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Hello World");
+        model.addObject("message", "This is welcome page!");
+        model.setViewName("welcome");
+        return model;
+    }
+
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String adminPage(Model model) {
+        return "admin";
+    }
+
+    @RequestMapping(value = {  "/list"}, method = RequestMethod.GET)
+    public String listLogins(ModelMap model) {
         List<Login> login = userService.findAllLogins();
         model.addAttribute("users", login);
         model.addAttribute("loggedinuser", getPrincipal());
@@ -119,12 +136,7 @@ public class RegistrationController {
     }
 
 
-    @ModelAttribute("roles")
-    public List<Role> initializeProfiles() {
-        return roleService.findAll();
-    }
-
-    @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("loggedinuser", getPrincipal());
         return "403";
@@ -147,6 +159,13 @@ public class RegistrationController {
             SecurityContextHolder.getContext().setAuthentication(null);
         }
         return "redirect:/login?logout";
+    }
+
+
+
+    @ModelAttribute("roles")
+    public List<Role> initializeProfiles() {
+        return roleService.findAll();
     }
 
     private String getPrincipal() {

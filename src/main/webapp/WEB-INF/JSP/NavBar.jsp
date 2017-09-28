@@ -1,4 +1,6 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 
@@ -28,7 +30,7 @@
             <div class="container">
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="welcome" class="">Home</a></li>
+                        <li class="active"><a href="/" class="">Home</a></li>
                         <!--   HOME    -->
 
                         <li class=" dropdown">
@@ -85,19 +87,30 @@
 
                     </ul>
 
-                    <ul class="nav navbar-nav pull-right">
-                        <li class=" dropdown">
-                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">Signed in as
-                                <span class="caret"/>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Change Password</a></li>
-                                <li><a href="#">My Profile</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="#">Logout</a></li>
-                    </ul>
+                    <sec:authorize access="isAuthenticated()">
+                        <ul class="nav navbar-nav pull-right">
+
+                            <li class=" dropdown">
+                                <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"/>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="LoginModify">Change Password</a></li>
+                                    <li><a href="userInfo">My Profile</a></li>
+                                </ul>
+                            </li>
+                            <li class=""><a href="logout">Log Out</a></li>
+                        </ul>
+                    </sec:authorize>
+
+                    <sec:authorize access="isAnonymous()">
+                        <ul class="nav navbar-nav pull-right">
+                            <li class=""><a href="login">Log in</a></li>
+                            <li class=""><a href="register">Register</a></li>
+                        </ul>
+                    </sec:authorize>
+
+
                 </div>
             </div>
         </nav>

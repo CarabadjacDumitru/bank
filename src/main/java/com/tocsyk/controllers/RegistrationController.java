@@ -46,110 +46,34 @@ public class RegistrationController {
     AuthenticationTrustResolver authenticationTrustResolver;
 
 
-    @RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
-    public ModelAndView welcomePage() {
-
-        ModelAndView model = new ModelAndView();
-        model.addObject("title", "Spring Security Hello World");
-        model.addObject("message", "This is welcome page!");
-        model.setViewName("welcome");
-        return model;
-    }
-
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
-    public String adminPage(Model model) {
-        return "admin";
-    }
-
-    @RequestMapping(value = {  "/list"}, method = RequestMethod.GET)
-    public String listLogins(ModelMap model) {
-        List<Login> login = userService.findAllLogins();
-        model.addAttribute("users", login);
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "loginlist";
-    }
-
-    @RequestMapping(value = {"/newuser"}, method = RequestMethod.GET)
-    public String newUser(ModelMap model) {
-        Login login = new Login();
-        model.addAttribute("user", login);
-        model.addAttribute("edit", false);
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "registration";
-    }
-
-
-    @RequestMapping(value = {"/newuser"}, method = RequestMethod.POST)
-    public String saveUser(@Valid Login login, BindingResult result,
-                           ModelMap model) {
-
-        if (result.hasErrors()) {
-            return "registration";
-        }
-
-
-        if (!userService.isUserSSOUnique(login.getId(), login.getSsoId())) {
-            FieldError ssoError = new FieldError("user", "ssoId", messageSource.getMessage("non.unique.ssoId", new String[]{login.getSsoId()}, Locale.getDefault()));
-            result.addError(ssoError);
-            return "registration";
-        }
-
-        userService.saveLogin(login);
-
-        model.addAttribute("success", "User " + login.getFirstName() + " " + login.getLastName() + " registered successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        //return "success";
-        return "registrationsuccess";
-    }
-
-
-
-    @RequestMapping(value = {"/edit-user-{ssoId}"}, method = RequestMethod.GET)
-    public String editUser(@PathVariable String ssoId, ModelMap model) {
-        Login login = userService.findBySSO(ssoId);
-        model.addAttribute("user", login);
-        model.addAttribute("edit", true);
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "registration";
-    }
-
-    @RequestMapping(value = {"/edit-user-{ssoId}"}, method = RequestMethod.POST)
-    public String updateUser(@Valid Login login, BindingResult result,
-                             ModelMap model, @PathVariable String ssoId) {
-
-        if (result.hasErrors()) {
-            return "registration";
-        }
-
-        userService.updateLogin(login);
-
-        model.addAttribute("success", "User " + login.getFirstName() + " " + login.getLastName() + " updated successfully");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "registrationsuccess";
-    }
-
-
-    @RequestMapping(value = {"/delete-user-{ssoId}"}, method = RequestMethod.GET)
-    public String deleteUser(@PathVariable String ssoId) {
-        userService.deleteUserBySSO(ssoId);
-        return "redirect:/list";
-    }
-
-
-    @RequestMapping(value = "/403", method = RequestMethod.GET)
-    public String accessDeniedPage(ModelMap model) {
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "403";
-    }
-
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginingPage() {
-        if (isCurrentAuthenticationAnonymous()) {
-            return "login";
-        } else {
-            return "redirect:/list";
-        }
+    public ModelAndView showLogin(HttpServletRequest request, HttpServletResponse response) {
+        ModelAndView mav = new ModelAndView("login");
+        mav.addObject("loginPage", new Login());
+        return mav;
     }
+
+
+
+    @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
+    public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
+                                     @ModelAttribute("login") Login login) {
+        ModelAndView mav = null;
+        Login login1 = userService.findBySSO(login.getSsoId());
+        if (null != login) {
+            mav = new ModelAndView("userInfoPage");
+            mav.addObject("firstname", login.getFirstName());
+        } else {
+            mav = new ModelAndView("loginPage");
+            mav.addObject("message", "Username or Password is wrong!!");
+        }
+        return mav;
+    }
+
+
+
+
+
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
@@ -158,10 +82,110 @@ public class RegistrationController {
             persistentTokenBasedRememberMeServices.logout(request, response, auth);
             SecurityContextHolder.getContext().setAuthentication(null);
         }
-        return "redirect:/login?logout";
+        return "redirect:/logoutSuccessfullPage";
+    }
+
+    @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
+    public String logoutSuccessfulPage(Model model) {
+        model.addAttribute("title", "Logout");
+        return "logoutSuccessfullPage";
     }
 
 
+
+
+    @RequestMapping(value = {"/"}, method = RequestMethod.GET)
+    public ModelAndView welcomePage() {
+        ModelAndView model = new ModelAndView();
+        model.addObject("title", "Spring Security Hello World");
+        model.addObject("message", "This is welcome page!");
+        model.setViewName("welcomePage");
+        return model;
+    }
+
+    @RequestMapping(value = {"/register"}, method = RequestMethod.GET)
+    public String newUser(ModelMap model) {
+        Login login = new Login();
+        model.addAttribute("user", login);
+        model.addAttribute("edit", false);
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "registerPage";
+    }
+
+
+    @RequestMapping(value = {"/register"}, method = RequestMethod.POST)
+    public String saveUser(@Valid Login login, BindingResult result,
+                           ModelMap model) {
+        if (result.hasErrors()) {
+            return "registerPage";
+        }
+        if (!userService.isUserSSOUnique(login.getId(), login.getSsoId())) {
+            FieldError ssoError = new FieldError("user", "ssoId",
+                    messageSource.getMessage("non.unique.ssoId", new String[]{login.getSsoId()}, Locale.getDefault()));
+            result.addError(ssoError);
+            return "registerPage";
+        }
+        userService.saveLogin(login);
+        model.addAttribute("success", "User " + login.getFirstName() + " " + login.getLastName() + " registered successfully");
+        model.addAttribute("loggedinuser", getPrincipal());
+        //return "success";
+        return "userInfoPage";
+    }
+
+
+
+
+    @RequestMapping(value = {"/loginmodify"}, method = RequestMethod.GET)
+    public String editUser(ModelMap model) {
+        //Login login = userService.findBySSO(ssoId);
+        model.addAttribute("user", "2");
+        model.addAttribute("edit", true);
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "LoginModifyPage";
+    }
+
+    @RequestMapping(value = {"/loginmodify"}, method = RequestMethod.POST)
+    public String updateUser(@Valid Login login, BindingResult result, ModelMap model) {
+        if (result.hasErrors()) {
+            return "LoginModify";
+        }
+        userService.updateLogin(login);
+        model.addAttribute("success", "User " + login.getFirstName() + " " + login.getLastName() + " updated successfully");
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "LoginModifyPage";
+    }
+
+
+    @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
+    public String accessDeniedPage(ModelMap model) {
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "403";
+    }
+
+
+
+/*
+    @RequestMapping(value = {"/delete-user-{ssoId}"}, method = RequestMethod.GET)
+    public String deleteUser(@PathVariable String ssoId) {
+        userService.deleteUserBySSO(ssoId);
+        return "redirect:/list";
+    }
+
+
+    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    public String adminPage(Model model) {
+        return "admin";
+    }
+
+    @RequestMapping(value = {"/list"}, method = RequestMethod.GET)
+    public String listLogins(ModelMap model) {
+        List<Login> login = userService.findAllLogins();
+        model.addAttribute("users", login);
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "loginlist";
+    }
+
+*/
 
     @ModelAttribute("roles")
     public List<Role> initializeProfiles() {
@@ -184,6 +208,5 @@ public class RegistrationController {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authenticationTrustResolver.isAnonymous(authentication);
     }
-
 
 }

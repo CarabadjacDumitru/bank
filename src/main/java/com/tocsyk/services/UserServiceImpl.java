@@ -4,7 +4,6 @@ package com.tocsyk.services;
 import com.tocsyk.dao.LoginDAO;
 import com.tocsyk.models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,8 +17,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private LoginDAO dao;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+    /*@Autowired
+    private PasswordEncoder passwordEncoder;*/
 
     public Login findById(int id) {
         return dao.findById(id);
@@ -31,7 +30,8 @@ public class UserServiceImpl implements UserService {
     }
 
     public void saveLogin(Login login) {
-        login.setPassword(passwordEncoder.encode(login.getPassword()));
+        /*login.setPassword(passwordEncoder.encode(login.getPassword()));*/
+        login.setPassword(login.getPassword());
         dao.save(login);
     }
 
@@ -40,7 +40,8 @@ public class UserServiceImpl implements UserService {
         if (entity != null) {
             entity.setSsoId(login.getSsoId());
             if (!login.getPassword().equals(entity.getPassword())) {
-                entity.setPassword(passwordEncoder.encode(login.getPassword()));
+                /*entity.setPassword(passwordEncoder.encode(login.getPassword()));*/
+                entity.setPassword(login.getPassword());
             }
             entity.setFirstName(login.getFirstName());
             entity.setLastName(login.getLastName());

@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title><spring:message code="label.title" /></title>
+
 </head>
 <body>
 <h1>Spring MVC Internationalization i18n Example</h1>

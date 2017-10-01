@@ -5,9 +5,6 @@ import java.util.List;
 
 
 public interface LoginDAO {
-    Login findById(int id);
-    Login findBySSO(String sso);
-    void save(Login user);
-    void deleteBySSO(String sso);
-    List<Login> findAllLogins();
+    public Login findLogin(String userName);
+    public List<String> getUserRoles(String userName);
 }

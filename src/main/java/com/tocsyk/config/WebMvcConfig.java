@@ -1,53 +1,74 @@
 package com.tocsyk.config;
 
-import com.tocsyk.converters.RoleToUserProfileConverter;
-import org.apache.tomcat.dbcp.dbcp.BasicDataSource;
+import com.tocsyk.dao.LoginDAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.support.ReloadableResourceBundleMessageSource;
+import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
-import org.springframework.format.FormatterRegistry;
+import org.springframework.http.MediaType;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import javax.sql.DataSource;
 import java.nio.charset.Charset;
-import java.util.Locale;
+import java.util.Arrays;
+import java.util.List;
 
 
 @Configuration
 @EnableWebMvc
 @Import({WebSecurityConfig.class})
 @ComponentScan(basePackages = "com.tocsyk")
+@PropertySource("classpath:application.properties")
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private Environment env;
 
     @Autowired
-    RoleToUserProfileConverter roleToUserProfileConverter;
+    private LoginDAO loginDAO;
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
-    @Bean
-    public DataSource dataSource() {
-        BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setUrl("jdbc:postgresql://localhost:5353/banking");
-        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUsername("OPEN_U");
-        dataSource.setPassword("POU");
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
+        stringConverter.setSupportedMediaTypes(Arrays.asList(new MediaType("text", "plain", UTF8)));
+        converters.add(stringConverter);
+    }
+
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/static/css/**").addResourceLocations("/static/css/").setCachePeriod(31556926);
+        registry.addResourceHandler("/static/fonts/**").addResourceLocations("/static/fonts/").setCachePeriod(31556926);
+        registry.addResourceHandler("/static/js/**").addResourceLocations("/static/js/").setCachePeriod(31556926);
+    }
+
+    @Override
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
+    }
+
+
+    @Bean(name = "dataSource")
+    public DataSource getDataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName(env.getProperty("jdbc.driverClassName"));
+        dataSource.setUrl(env.getProperty("jdbc.url"));
+        dataSource.setUsername(env.getProperty("jdbc.username"));
+        dataSource.setPassword(env.getProperty("jdbc.password"));
+        System.out.println("## getDataSource: " + dataSource);
         return dataSource;
     }
+
 
     @Autowired
     @Bean(name = "transactionManager")
@@ -57,6 +78,16 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     }
 
 
+    @Bean
+    public InternalResourceViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/JSP/");
+        viewResolver.setSuffix(".jsp");
+        return viewResolver;
+    }
+
+      /*
 
     @Bean(name = "messageSource")
     public MessageSource getMessageResource() {
@@ -66,24 +97,16 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         return messageSource;
     }
 
-    @Override
-    public void addFormatters(FormatterRegistry registry) {
-        registry.addConverter(roleToUserProfileConverter);
-    }
 
-    @Bean(name = "localeResolver")
+
+     @Bean(name = "localeResolver")
     public LocaleResolver localeResolver() {
         SessionLocaleResolver resolver = new SessionLocaleResolver();
         resolver.setDefaultLocale(Locale.ENGLISH);
         return resolver;
     }
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-           registry.addResourceHandler("/static/**").addResourceLocations("/static/");
-    }
 
-    /*
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
@@ -96,12 +119,5 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         registry.addInterceptor(changeInterceptor).addPathPatterns("/*");
     }*/
 
-    @Bean
-    public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-        viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/JSP/");
-        viewResolver.setSuffix(".jsp");
-        return viewResolver;
-    }
+
 }

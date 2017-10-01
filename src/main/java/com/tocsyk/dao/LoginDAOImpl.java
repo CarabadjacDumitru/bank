@@ -1,66 +1,54 @@
 package com.tocsyk.dao;
 
 
+import com.tocsyk.converters.LoginMapper;
 import com.tocsyk.models.Login;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.hibernate.Criteria;
-import org.hibernate.Hibernate;
-import org.hibernate.criterion.Order;
-import org.hibernate.criterion.Restrictions;
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.support.JdbcDaoSupport;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import javax.sql.DataSource;
 import java.util.List;
 
+@Service
+@Transactional
+public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
-@Repository("LoginDao")
-public class LoginDAOImpl extends AbstractDao<Integer, Login> implements LoginDAO {
+    @Autowired
+    public LoginDAOImpl(DataSource dataSource) {
+        this.setDataSource(dataSource);
+    }
 
-    static final Logger logger = LogManager.getLogger(LoginDAOImpl.class);
 
-    public Login findById(int id) {
-        Login Login = getByKey(id);
-        if (Login != null) {
-            Hibernate.initialize(Login.getRoles());
+    @Override
+    public Login findLogin(String userName) {
+        String sql = "Select u.Username,u.Password "//
+                + " from Users u where u.Username = ? ";
+
+        Object[] params = new Object[]{userName};
+        LoginMapper mapper = new LoginMapper();
+        try {
+            Login userInfo = this.getJdbcTemplate().queryForObject(sql, params, mapper);
+            return userInfo;
+        } catch (EmptyResultDataAccessException e) {
+            return null;
         }
-        return Login;
     }
 
-    public Login findBySSO(String sso) {
-        logger.info("SSO :  " + sso.toString());
-        Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.eq("ssoId", sso));
-        Login Login = (Login) crit.uniqueResult();
-        if (Login != null) {
-            Hibernate.initialize(Login.getRoles());
-        }
-        return Login;
-    }
 
-    @SuppressWarnings("unchecked")
-    public List<Login> findAllLogins() {
-        Criteria criteria = createEntityCriteria().addOrder(Order.asc("firstName"));
-        criteria.setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY);//To avoid duplicates.
-        List<Login> Logins = (List<Login>) criteria.list();
+    @Override
+    public List<String> getUserRoles(String userName) {
+        String sql = "Select r.User_Role "//
+                + " from User_Roles r where r.Username = ? ";
 
-        // No need to fetch LoginProfiles since we are not showing them on list page. Let them lazy load.
-        // Uncomment below lines for eagerly fetching of LoginProfiles if you want.
-        /*
-		for(Login Login : Logins){
-			Hibernate.initialize(Login.getLoginProfiles());
-		}*/
-        return Logins;
-    }
+        Object[] params = new Object[]{userName};
 
-    public void save(Login Login) {
-        persist(Login);
-    }
+        List<String> roles = this.getJdbcTemplate().queryForList(sql, params, String.class);
 
-    public void deleteBySSO(String sso) {
-        Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.eq("ssoId", sso));
-        Login Login = (Login) crit.uniqueResult();
-        delete(Login);
+        return roles;
     }
 
 }
+

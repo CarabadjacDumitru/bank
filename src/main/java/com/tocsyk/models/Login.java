@@ -1,18 +1,69 @@
 package com.tocsyk.models;
 
 
+import java.util.List;
+
 public class Login {
 
+    private long id;
     private String userName;
-    private String password;
+    private String passWord;
+    private String email;
+    private List<String> roles;
 
-    public Login() {
+    private int enabled;
+
+    public  Login(){
+    }
+
+    public Login(String userName, String password, List<String> roles,String email) {
+        this.userName = userName;
+        this.passWord = password;
+        this.email = email;
+        this.roles = roles;
+        this.enabled = 1;
 
     }
 
-    public Login(String userName, String password) {
-        this.userName = userName;
-        this.password = password;
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String eMail) {
+        this.email = eMail;
+    }
+
+
+    public List<String> getUserProfiles() {
+        return roles;
+    }
+
+    public void setUserProfiles(List<String> userProfiles) {
+        this.roles = userProfiles;
+    }
+
+    public int getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(int enabled) {
+        this.enabled = enabled;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -24,11 +75,52 @@ public class Login {
     }
 
     public String getPassword() {
-        return password;
+        return passWord;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.passWord = password;
     }
 
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + (int) (id ^ (id >>> 32));
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (!(obj instanceof Login))
+            return false;
+        Login other = (Login) obj;
+        if (id != other.id)
+            return false;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Login{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", passWord='" + passWord + '\'' +
+                ", eMail='" + email + '\'' +
+                ", roles=" + roles +
+                ", enabled=" + enabled +
+                '}';
+    }
 }

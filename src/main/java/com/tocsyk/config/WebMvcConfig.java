@@ -1,12 +1,8 @@
 package com.tocsyk.config;
 
-import com.tocsyk.dao.LoginDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
-import org.springframework.http.MediaType;
-import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
@@ -18,8 +14,6 @@ import org.springframework.web.servlet.view.JstlView;
 
 import javax.sql.DataSource;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.List;
 
 
 @Configuration
@@ -32,24 +26,22 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     @Autowired
     private Environment env;
 
-    @Autowired
-    private LoginDAO loginDAO;
 
     private static final Charset UTF8 = Charset.forName("UTF-8");
 
-    @Override
+  /*  @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         StringHttpMessageConverter stringConverter = new StringHttpMessageConverter();
         stringConverter.setSupportedMediaTypes(Arrays.asList(new MediaType("text", "plain", UTF8)));
         converters.add(stringConverter);
     }
-
+*/
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/static/css/**").addResourceLocations("/static/css/").setCachePeriod(31556926);
-        registry.addResourceHandler("/static/fonts/**").addResourceLocations("/static/fonts/").setCachePeriod(31556926);
-        registry.addResourceHandler("/static/js/**").addResourceLocations("/static/js/").setCachePeriod(31556926);
+        registry.addResourceHandler("/static/css/**").addResourceLocations("/static/css/");
+        registry.addResourceHandler("/static/fonts/**").addResourceLocations("/static/fonts/");
+        registry.addResourceHandler("/static/js/**").addResourceLocations("/static/js/");
     }
 
     @Override

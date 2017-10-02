@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>${title}</title>
+    <title>Admin Page</title>
 </head>
 <body>
 

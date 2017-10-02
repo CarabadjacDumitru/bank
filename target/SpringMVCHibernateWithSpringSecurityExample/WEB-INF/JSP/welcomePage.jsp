@@ -1,22 +1,25 @@
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page session="false"%>
 
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Welcome</title>
-</head>
 <body>
 
-    <div class="navbar    nav-justified navbar-fixed-top">
-        <jsp:include page="NavBar.jsp"/>
-    </div>
+<table>
+    <tr>
+        <td>Welcome  </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
 
-    <c:if test="${pageContext.request.userPrincipal.name != null}">
-        <a href="javascript:document.getElementById('logout').submit()">Hello 2222222 </a>
-    </c:if>
-    <br><br><br><br><br>
-    <h6>AAAAAAAAAAAAAAAAA </h6>
-    <div class="navbar    nav-justified navbar-fixed-bottom">
-         <jsp:include page="footer.jsp"/>
-    </div>
+        </td>
+    </tr>
+</table>
+
+<br><br><br><br><br>
+Welcome Page
+
+
 </body>
-</html>

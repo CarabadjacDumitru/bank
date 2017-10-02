@@ -5,6 +5,12 @@ import java.util.List;
 
 
 public interface LoginDAO {
-    public Login findLogin(String userName);
-    public List<String> getUserRoles(String userName);
+    Login validateLogin(Login login);
+    Login findLogin(String name);
+    void saveLogin(Login login);
+    void updateLogin(Login login);
+
+    List<String> getRoles();
+    List<String> getUserRoles(String name);
+    List<Login> findAllLogins();
 }

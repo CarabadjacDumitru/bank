@@ -1,6 +1,6 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
-<%@page session="true"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 
@@ -87,15 +87,15 @@
 
                     </ul>
 
-
+                    <sec:authorize access="isAnonymous()">
                         <ul class="nav navbar-nav pull-right">
                             <li class=""><a href="login">Log in</a></li>
                             <li class=""><a href="register">Register</a></li>
                         </ul>
+                    </sec:authorize>
 
-
+                    <sec:authorize access="isAuthenticated()">
                         <ul class="nav navbar-nav pull-right">
-
                             <li class=" dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button"
                                    aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"/>
@@ -107,7 +107,7 @@
                             </li>
                             <li class=""><a href="logout">Log Out</a></li>
                         </ul>
-
+                    </sec:authorize>
                 </div>
             </div>
         </nav>

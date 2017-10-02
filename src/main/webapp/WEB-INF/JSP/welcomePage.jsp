@@ -3,7 +3,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<header>
+    <jsp:include page="NavBar.jsp"/>
+</header>
 <table>
     <tr>
         <td>Welcome  </td>

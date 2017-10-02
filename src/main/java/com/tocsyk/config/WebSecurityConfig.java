@@ -36,11 +36,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+        http.csrf().disable();
 
         // The pages does not require login
         http.authorizeRequests().antMatchers("/", "/welcome", "/login", "/logoutSuccessfull","/register").permitAll();
 
-        http.authorizeRequests().antMatchers("/static/**").permitAll().anyRequest().permitAll();
+        http.authorizeRequests().antMatchers("/static/**").permitAll();
 
 
                 // /userInfo page requires login as USER or ADMIN.
@@ -59,12 +60,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // Config for Login Form
         http.authorizeRequests().and().formLogin()//
                 // Submit URL of login page.
-                //.loginProcessingUrl("/j_spring_security_check") // Submit URL
+                .loginProcessingUrl("/j_spring_security_check") // Submit URL
                 .loginPage("/login")//
-                //.defaultSuccessUrl("/userInfo")//
-                //.failureUrl("/login?error=true")//
-                .usernameParameter("username")//
-                .passwordParameter("password")
+                .defaultSuccessUrl("/welcome")//
+                .failureUrl("/login/error")//
+                .usernameParameter("j_username")//
+                .passwordParameter("j_password")
                 // Config for Logout Page
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessfull");
 

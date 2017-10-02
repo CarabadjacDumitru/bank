@@ -36,7 +36,7 @@ public class LoginLogoutController {
             mav = new ModelAndView("welcomePage");
             mav.addObject("firstname", login2.getUserName());
         } else {
-            mav = new ModelAndView("loginPage");
+            mav = new ModelAndView("registerPage");
             mav.addObject("message", "Username or Password is wrong!!");
         }
         return mav;

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +30,7 @@
 
 <div class="generic-container">
     <div class="well lead">User Registration Form</div>
-    <form:form method="POST" action = "registerProcess" modelAttribute="login" class="form-horizontal">
+    <form:form method="POST" action="registerProcess" modelAttribute="login" class="form-horizontal">
         <form:input type="hidden" path="id" id="id"/>
 
         <div class="row">
@@ -84,14 +84,7 @@
 
         <div class="row">
             <div class="form-actions floatRight">
-                <c:choose>
-                    <c:when test="${edit}">
-                        <input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
-                    </c:when>
-                    <c:otherwise>
-                        <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/list' />">Cancel</a>
-                    </c:otherwise>
-                </c:choose>
+                <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/welcome' />">Cancel</a>
             </div>
         </div>
     </form:form>

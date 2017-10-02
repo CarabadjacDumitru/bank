@@ -58,7 +58,12 @@ USER_ROLE</ColNames>
       <DataType>smallint(6)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="18" parent="8" name="PRIMARY">
+    <column id="18" parent="8" name="EMAIL">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="19" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USERNAME</ColNames>
       <Primary>1</Primary>

@@ -3,6 +3,8 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+
+
 <html>
 
 <head>
@@ -21,7 +23,7 @@
     <script src="${jqueryJs}" type="text/javascript"></script>
     <script src="${bootstrJs}" type="text/javascript"></script>
     <script src="${navbarJs}" type="text/javascript"></script>
-
+<title>Login Page</title>
 </head>
 <body>
 <header>
@@ -32,7 +34,7 @@
 <div class="container">
     <div class="row" style="margin-top:60px">
         <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-            <form:form method="POST" action="/j_spring_security_check" modelAttribute="login" class="form-signin" prependId = "false">
+            <form:form id="loginForm" modelAttribute="login"  action="loginProcess"  method="post">
                 <c:if test="${param.error == 'true'}">
                     <div style="color:red;margin:10px 0px;">
                         Login Failed!!!<br/>
@@ -44,12 +46,12 @@
                 <hr class="colorgraph">
 
                 <div class="form-group">
-                    <form:input id="j_username" name="j_username" path="userName" class="form-control input-lg"
+                    <form:input id="username" name="userName" path="userName" class="form-control input-lg"
                            placeholder="enter Login" />
                 </div>
 
                 <div class="form-group">
-                    <form:input id="j_password" name="j_password" path="passWord"  type="password" class="form-control input-lg" placeholder="Password" />
+                    <form:input id="password" name="passWord" path="passWord"  type="password" class="form-control input-lg" placeholder="Password" />
                 </div>
 
                 <hr class="colorgraph">

@@ -22,6 +22,8 @@
     <script src="${jqueryJs}" type="text/javascript"></script>
     <script src="${bootstrJs}" type="text/javascript"></script>
     <script src="${navbarJs}" type="text/javascript"></script>
+
+    <title>Register Page</title>
 </head>
 <body>
 <header>

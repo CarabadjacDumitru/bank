@@ -2,11 +2,17 @@ package com.tocsyk.config;
 
 import com.tocsyk.dao.MyDBAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationTrustResolver;
+import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
 /*import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;*/
 /*import org.springframework.security.crypto.password.PasswordEncoder;*/
@@ -16,9 +22,24 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    @Autowired
+    @Qualifier("customUserDetailsService")
+    UserDetailsService userDetailsService;
+
 
     @Autowired
     MyDBAuthenticationService myDBAuthenticationService;
+
+
+    @Bean
+    public AuthenticationTrustResolver getAuthenticationTrustResolver() {
+        return new AuthenticationTrustResolverImpl();
+    }
+
+    @Autowired
+    public void configureGlobalSecurity(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService);
+    }
 
 
     @Autowired
@@ -38,36 +59,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
 
-        // The pages does not require login
-        http.authorizeRequests().antMatchers("/", "/welcome", "/login", "/logoutSuccessfull","/register").permitAll();
+        http.authorizeRequests().antMatchers("/", "/login","/register", "/loginProcess").anonymous();
 
-        http.authorizeRequests().antMatchers("/static/**").permitAll();
+        http.authorizeRequests().antMatchers("/userInfo","/welcome").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
-
-                // /userInfo page requires login as USER or ADMIN.
-        // If no login, it will redirect to /login page.
-        http.authorizeRequests().anyRequest().authenticated().antMatchers("/userInfo", "/logout","/loginSuccessfull","/loginModify")
-                .access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
-
-        // For ADMIN only.
         http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
 
-        // When the user has logged in as XX.
-        // But access a page that requires role YY,
-        // AccessDeniedException will throw.
+
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
-        // Config for Login Form
+
         http.authorizeRequests().and().formLogin()//
                 // Submit URL of login page.
-                .loginProcessingUrl("/j_spring_security_check") // Submit URL
+                //.loginProcessingUrl("/j_spring_security_check") // Submit URL
                 .loginPage("/login")//
                 .defaultSuccessUrl("/welcome")//
-                .failureUrl("/login/error")//
-                .usernameParameter("j_username")//
-                .passwordParameter("j_password")
-                // Config for Logout Page
-                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessfull");
+                //.failureUrl("/login?error")//
+                .usernameParameter("username")//
+                .passwordParameter("password");
 
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers("/static/**");
     }
 }

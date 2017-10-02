@@ -2,7 +2,12 @@ package com.tocsyk.controllers;
 
 import com.tocsyk.dao.LoginDAOImpl;
 import com.tocsyk.models.Login;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationTrustResolver;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -17,19 +22,26 @@ import java.security.Principal;
 @Controller
 public class LoginLogoutController {
 
+    protected final Log logger = LogFactory.getLog(getClass());
+
+    @Autowired
+    AuthenticationTrustResolver authenticationTrustResolver;
+
     @Autowired
     public LoginDAOImpl loginDAOImpl;
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView loginPage(Model model ) {
+    public ModelAndView loginPage(Model model) {
         ModelAndView mav = new ModelAndView("loginPage");
         mav.addObject("login", new Login());
         return mav;
     }
 
+
     @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
     public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
                                      @ModelAttribute("login") Login login) {
+
         ModelAndView mav = null;
         Login login2 = loginDAOImpl.validateLogin(login);
         if (null != login2) {
@@ -43,6 +55,15 @@ public class LoginLogoutController {
     }
 
 
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        if (auth != null) {
+            SecurityContextHolder.getContext().setAuthentication(null);
+        }
+        return "redirect:/logoutSuccessfullPage";
+    }
+
     @RequestMapping(value = "/logoutSuccessfull", method = RequestMethod.GET)
     public String logoutSuccessfulPage(Model model) {
         model.addAttribute("title", "Logout");
@@ -52,7 +73,12 @@ public class LoginLogoutController {
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
     public String userInfo(Model model, Principal principal) {
         String userName = principal.getName();
-        System.out.println("User Name: "+ userName);
+        System.out.println("User Name: " + userName);
         return "userInfoPage";
     }
+
+    private boolean isCurrentAuthenticationAnonymous() {
+               final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+                return authenticationTrustResolver.isAnonymous(authentication);
+            }
 }

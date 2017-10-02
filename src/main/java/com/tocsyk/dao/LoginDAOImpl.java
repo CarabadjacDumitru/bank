@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @Transactional
-@Service("userService")
+@Service("userDetailsService")
 public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     @Autowired

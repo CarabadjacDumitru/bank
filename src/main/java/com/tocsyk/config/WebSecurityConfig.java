@@ -5,14 +5,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.authentication.AuthenticationTrustResolverImpl;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+
+import javax.sql.DataSource;
 
 /*import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;*/
 /*import org.springframework.security.crypto.password.PasswordEncoder;*/
@@ -30,6 +34,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     MyDBAuthenticationService myDBAuthenticationService;
 
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource){
+        JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+        jdbcTemplate.setResultsMapCaseInsensitive(true);
+        return jdbcTemplate;
+    }
 
     @Bean
     public AuthenticationTrustResolver getAuthenticationTrustResolver() {
@@ -59,9 +70,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/", "/login","/register", "/loginProcess").anonymous();
+        http.authorizeRequests().antMatchers("/", "/welcome","/login","/register").permitAll();
 
-        http.authorizeRequests().antMatchers("/userInfo","/welcome").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
 
@@ -69,16 +80,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
 
-        http.authorizeRequests().and().formLogin()//
+        http.authorizeRequests().anyRequest().authenticated()
+                .and().formLogin()//
                 // Submit URL of login page.
-                //.loginProcessingUrl("/j_spring_security_check") // Submit URL
+                .loginProcessingUrl("/login") // Submit URL
                 .loginPage("/login")//
                 .defaultSuccessUrl("/welcome")//
                 //.failureUrl("/login?error")//
-                .usernameParameter("username")//
-                .passwordParameter("password");
-
+                .usernameParameter("userName")//
+                .passwordParameter("passWord");
     }
+
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider() {
+        DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+        authenticationProvider.setUserDetailsService(userDetailsService);
+        return authenticationProvider;
+    }
+
 
     @Override
     public void configure(WebSecurity web) throws Exception {

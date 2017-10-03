@@ -51,4 +51,12 @@
 
 </div>
 
+
+<div class="navbar nav-justified">
+    <%@include file="auth.jsp" %>
+</div>
+
+<div class="navbar nav-justified">
+    <%@include file="NavBar.jsp" %>
+</div>
 </body>

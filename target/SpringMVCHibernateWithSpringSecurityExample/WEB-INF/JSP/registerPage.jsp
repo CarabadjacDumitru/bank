@@ -92,6 +92,10 @@
     </form:form>
 
 </div>
+
+<div class="navbar nav-justified">
+    <%@include file="auth.jsp" %>
+</div>
 <div class="navbar    nav-justified navbar-fixed-bottom">
     <jsp:include page="footer.jsp"/>
 </div>

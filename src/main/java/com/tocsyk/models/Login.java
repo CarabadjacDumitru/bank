@@ -16,12 +16,12 @@ public class Login {
     public  Login(){
     }
 
-    public Login(String userName, String password, List<String> roles,String email) {
+    public Login(String userName, String password, List<String> roles,int  enabled, String email) {
         this.userName = userName;
         this.passWord = password;
         this.email = email;
         this.roles = roles;
-        this.enabled = 1;
+        this.enabled = enabled;
 
     }
 

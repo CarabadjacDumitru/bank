@@ -12,4 +12,15 @@
 
 <h1>Message : ${message}</h1>
 </body>
+
+</tr>
+
+<div class="navbar nav-justified">
+    <%@include file="auth.jsp" %>
+</div>
+
+<div class="navbar    nav-justified navbar-fixed-bottom">
+    <jsp:include page="footer.jsp"/>
+</div>
+
 </html>

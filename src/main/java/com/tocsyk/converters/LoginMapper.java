@@ -16,13 +16,14 @@ public class LoginMapper implements RowMapper<Login> {
         String userName = rs.getString("userName");
         String password = rs.getString("passWord");
         String email = rs.getString("eMail");
+        int enabled = rs.getInt("enabled");
         List<String> roles = new ArrayList<>();
 
         while(rs.next()) {
             roles.add(rs.getString("roles"));
         }
 
-        return new Login(userName, password, roles, email);
+        return new Login(userName, password, roles, enabled,email);
     }
 
 }

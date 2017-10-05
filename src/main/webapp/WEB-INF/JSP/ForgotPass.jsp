@@ -1,15 +1,16 @@
+
 <html>
+
 <head>
-    <title>Logout successfull</title>
+
+    <title>Forgot  Page</title>
 </head>
 <body>
-
-<div class="navbar    nav-justified navbar-fixed-top">
+<header>
     <jsp:include page="NavBar.jsp"/>
-</div>
-<br><br><br><br><br>
-<h1>Logout Successful!</h1>
+</header>
 
+<h6>Fuck it i  dont remember password</h6>
 
 <div class="navbar    nav-justified navbar-fixed-bottom">
     <jsp:include page="footer.jsp"/>

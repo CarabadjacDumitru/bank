@@ -12,8 +12,8 @@
 
 <body>
 <div class="generic-container">
-    <%@include file="NavBar.jsp" %>
-    <div class="panel panel-default">
+    <jsp:include page="auth.jsp"/>
+    <div class="panel NavBar-default">
         <!-- Default panel contents -->
         <div class="panel-heading"><span class="lead">List of Users </span></div>
         <table class="table table-hover">
@@ -46,17 +46,17 @@
     </div>
     <sec:authorize access="hasRole('USER')">
         <div class="well">
-            <a href="<c:url value='/register' />">Add New User</a>
+            <a href="<c:url value='//register' />">Add New User</a>
         </div>
     </sec:authorize>
 </div>
 
-<div class="navbar nav-justified">
-    <%@include file="auth.jsp" %>
+<div class="navbar nav-justified navbar-fixed-bottom">
+    <jsp:include page="auth.jsp"/>
 </div>
 
-<div class="navbar nav-justified">
-    <%@include file="NavBar.jsp" %>
+<div class="navbar nav-justified navbar-fixed-bottom">
+    <jsp:include page="footer.jsp"/>
 </div>
 </body>
 </html>

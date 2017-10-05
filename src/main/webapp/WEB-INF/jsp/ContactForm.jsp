@@ -11,7 +11,7 @@
 <script type="text/javascript" src='<c:url value="/static/js/jquery-3.2.1.min.js"/>'></script>
 <script type="text/javascript" src='<c:url value="/static/js/bootstrap.min.js"/>'></script>
 <script type="text/javascript" src='<c:url value="/static/js/navbar.js"/>'></script>
-<script type="text/javascript" src='<c:url value="/static/js/menu.js"/>'></script>
+<<!--<script type="text/javascript" src='<c: url value="/sta tic/js/menu.js"/>'></script>-->
 
 <div class="container">
     <div class="col-md-5">

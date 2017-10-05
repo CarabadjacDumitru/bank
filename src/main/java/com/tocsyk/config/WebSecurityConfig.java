@@ -70,9 +70,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/", "/welcome","/login","/register").permitAll();
+        http.authorizeRequests().antMatchers("/", "/welcome","/login","/userregister","/forgotpass","/operationSuccess").permitAll();
 
-        http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/userInfo","/user*").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
 
@@ -85,10 +85,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // Submit URL of login page.
                 .loginProcessingUrl("/login") // Submit URL
                 .loginPage("/login")//
-                .defaultSuccessUrl("/welcome")//
+                .defaultSuccessUrl("/loginSuccessfull")//
                 //.failureUrl("/login?error")//
                 .usernameParameter("userName")//
-                .passwordParameter("passWord");
+                .passwordParameter("passWord")
+                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");;
     }
 
     @Bean

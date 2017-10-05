@@ -1,7 +1,6 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@page session="false"%>
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +22,9 @@
     <script src="${bootstrJs}" type="text/javascript"></script>
     <script src="${navbarJs}" type="text/javascript"></script>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
+
 <body>
 <div class="navbar-wrapper">
     <div class="container-fluid">
@@ -100,14 +101,14 @@
                                     <li><a href="userInfo">My Profile</a></li>
                                 </ul>
                             </li>
-                            <li class=""><a href="logout">Log Out</a></li>
+                            <li class=""><a href="/logout">Log Out</a></li>
                         </ul>
                     </sec:authorize>
 
                     <sec:authorize access="isAnonymous()">
                         <ul class="nav navbar-nav pull-right">
-                            <li class=""><a href="login">Log in</a></li>
-                            <li class=""><a href="register">Register</a></li>
+                            <li class=""><a href="/login">Log in</a></li>
+                            <li class="regis"><a href="/userregister">Register</a></li>
                         </ul>
                     </sec:authorize>
 

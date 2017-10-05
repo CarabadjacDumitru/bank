@@ -18,11 +18,11 @@ public class LoginMapper implements RowMapper<Login> {
         String email = rs.getString("eMail");
         int enabled = rs.getInt("enabled");
         List<String> roles = new ArrayList<>();
-
+/*
         while(rs.next()) {
             roles.add(rs.getString("roles"));
         }
-
+*/
         return new Login(userName, password, roles, enabled,email);
     }
 

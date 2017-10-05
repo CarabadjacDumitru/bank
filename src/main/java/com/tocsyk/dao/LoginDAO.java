@@ -9,6 +9,8 @@ public interface LoginDAO {
     Login findLogin(String name);
     void  registerLogin(Login login);
     void  updateLogin(Login login);
+    void  deleteLogin(String username);
+
 
     List<String> getRoles();
     List<String> getUserRoles(String name);

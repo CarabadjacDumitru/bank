@@ -1,4 +1,3 @@
-<%@page session="false"%>
 <title>Welcome  Page</title>
 <!DOCTYPE html>
 <html>

@@ -32,7 +32,7 @@
 
 <div class="generic-container">
     <div class="well lead">User Registration Form</div>
-    <form:form method="POST" action="registerProcess" modelAttribute="login" class="form-horizontal">
+    <form:form method="POST" action="registerProcess" modelAttribute="loginAtr" class="form-horizontal">
         <form:input type="hidden" path="id" id="id"/>
 
         <div class="row">
@@ -86,17 +86,15 @@
 
         <div class="row">
             <div class="form-actions floatRight">
-                <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='/welcome' />">Cancel</a>
+                <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='//welcome' />">Cancel</a>
             </div>
         </div>
     </form:form>
 
 </div>
 
-<div class="navbar nav-justified">
-    <%@include file="auth.jsp" %>
-</div>
-<div class="navbar    nav-justified navbar-fixed-bottom">
+<div class="navbar nav-justified navbar-fixed-bottom">
+    <jsp:include page="auth.jsp" />
     <jsp:include page="footer.jsp"/>
 </div>
 </body>

@@ -53,10 +53,10 @@
 
 
 <div class="navbar nav-justified">
-    <%@include file="auth.jsp" %>
+    <jsp:include page="auth.jsp"/>
 </div>
 
 <div class="navbar nav-justified">
-    <%@include file="NavBar.jsp" %>
+    <jsp:include page="NavBar.jsp"/>
 </div>
 </body>

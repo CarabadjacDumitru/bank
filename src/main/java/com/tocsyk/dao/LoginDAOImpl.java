@@ -31,7 +31,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     @Override
     public Login validateLogin(Login login) {
-        String sql = "select *  from users where username='" + login.getUserName() + "' and password='" + login.getPassword() + "'";
+        String sql = "select username, password, email ,enabled  from users where username='" + login.getUserName() + "' and password='" + login.getPassword() + "'";
         List<Login> logins = jdbcTemplate.query(sql, new LoginMapper());
         return logins.size() > 0 ? logins.get(0) : null;
     }
@@ -51,8 +51,14 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
     }
 
     public void updateLogin(Login login) {
-        String sql = "UPDATE USERS u  set USERNAME = ?, PASSWORD = ? , EMAIl = ?, ENABLED = ? where ID = ?";
-        Object[] params = new Object[]{login.getUserName(), login.getPassword(), login.getEnabled(),login.getEmail(), login.getId()};
+        String sql = "UPDATE USERS u  set USERNAME = ?, PASSWORD = ? , EMAIl = ?, ENABLED = ? where USERNAME = ?";
+        Object[] params = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), login.getEnabled(), login.getUserName()};
+        jdbcTemplate.update(sql, params);
+    }
+
+    public void deleteLogin(String username) {
+        String sql = "DELETE FROM USERS WHERE USERNAME = ?";
+        Object[] params = new Object[]{username};
         jdbcTemplate.update(sql, params);
     }
 
@@ -61,8 +67,9 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
         String sql = "Select u.Username,u.Password,u.Email,u.Enabled  from Users u ";
         Object[] params = new Object[]{" "};
         LoginMapper mapper = new LoginMapper();
-        List<Login> loginList = jdbcTemplate.query(sql, params, mapper);
-        return loginList;
+        //List<Login> loginList = jdbcTemplate.query(sql, params, mapper);
+        List<Login> users = jdbcTemplate.query(sql,mapper);
+        return users ;
     }
 
 

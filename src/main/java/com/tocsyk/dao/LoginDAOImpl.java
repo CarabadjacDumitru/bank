@@ -38,47 +38,53 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     @Override
     public Login findLogin(String name) {
-        String sql = "select username, password, email ,enabled from users where username= ?";
+        String sql = "select u.username, u.password, u.email ,u.enabled,ur.user_role from users u, user_roles ur where u.username=ur.username and u.username= ?";
         Object[] params = new Object[] { name};
         return jdbcTemplate.queryForObject(sql, params, new LoginMapper());
     }
 
 
     public void registerLogin(Login login) {
-        String sql = "INSERT INTO USERS  (USERNAME,PASSWORD,EMAIL, ENABLED) values(?, ?, ?, ?) ";
-        Object[] params = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), 1};
-        jdbcTemplate.update(sql,params);
+        String sql1 = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL, ENABLED) values(?, ?, ?, ?) ";
+        String sql2 = "INSERT INTO USER_ROLES (USERNAME,USER_ROLE) values(?, ?) ";
+        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), 1};
+        jdbcTemplate.update(sql1,params1);
+        Object[] params2 = new Object[]{login.getUserName(),login.getRole()};
+        jdbcTemplate.update(sql2,params2);
     }
 
     public void updateLogin(Login login) {
-        String sql = "UPDATE USERS u  set USERNAME = ?, PASSWORD = ? , EMAIl = ?, ENABLED = ? where USERNAME = ?";
-        Object[] params = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), login.getEnabled(), login.getUserName()};
-        jdbcTemplate.update(sql, params);
+        String sql1 = "UPDATE USERS u  set USERNAME = ?, PASSWORD = ? , EMAIl = ?, ENABLED = ? where USERNAME = ?";
+        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), login.getEnabled(), login.getUserName()};
+        jdbcTemplate.update(sql1, params1);
+        String sql2 = "UPDATE USER_ROLES set USER_ROLE = ? where USERNAME = ?";
+        Object[] params2 = new Object[]{login.getRole(), login.getUserName()};
+        jdbcTemplate.update(sql2, params2);
     }
 
     public void deleteLogin(String username) {
-        String sql = "DELETE FROM USERS WHERE USERNAME = ?";
-        Object[] params = new Object[]{username};
-        jdbcTemplate.update(sql, params);
+        String sql1 = "DELETE FROM USERS WHERE USERNAME = ?";
+        Object[] params1 = new Object[]{username};
+        jdbcTemplate.update(sql1, params1);
+        String sql2 = "DELETE FROM USER_ROLES WHERE USERNAME = ?";
+        jdbcTemplate.update(sql2, params1);
     }
 
 
     public List<Login> findAllLogins() {
-        String sql = "Select u.Username,u.Password,u.Email,u.Enabled  from Users u ";
-        Object[] params = new Object[]{" "};
+        String sql = "select u.Username,u.Password,u.Email,u.Enabled, ur.USER_ROLE from users u , user_roles ur  WHERE u.username = ur.username";
         LoginMapper mapper = new LoginMapper();
-        //List<Login> loginList = jdbcTemplate.query(sql, params, mapper);
         List<Login> users = jdbcTemplate.query(sql,mapper);
         return users ;
     }
 
 
     @Override
-    public List<String> getUserRoles(String userName) {
-        String sql = "select distinct r.user_role from user_roles r  where r.Username = ? ";
+    public String getUserRole(String userName) {
+        String sql = "select  r.user_role from user_roles r  where r.Username = ? ";
         Object[] params = new Object[]{userName};
-        List<String> roles = jdbcTemplate.queryForList(sql, params, String.class);
-        return roles;
+        String role = jdbcTemplate.queryForObject(sql, params, String.class);
+        return role;
     }
 
 

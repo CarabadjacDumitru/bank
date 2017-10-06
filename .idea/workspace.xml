@@ -7,53 +7,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f6805cf-54fd-4306-a168-f57e3661517f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/ForgotPass.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/Header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginSuccessfullPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/logoutSuccessfullPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/static/css/contact.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/Header.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/loginSuccessfullPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/logoutSuccessfullPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/static/css/contact.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/controllers/GeneralController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/MyDBAuthenticationService.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/controllers/GeneralController.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/controllers/GeneralController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/converters/LoginMapper.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/converters/LoginMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAO.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAOImpl.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAOImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Login.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Login.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/config/WebSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/controllers/GeneralController.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/controllers/GeneralController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/converters/LoginMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/converters/LoginMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAO.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAOImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Login.class" afterPath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Login.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/84414640-685e-46d8-b539-d1af07960ee5.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/84414640-685e-46d8-b539-d1af07960ee5.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bank.iml" afterPath="$PROJECT_DIR$/Bank.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginModifyPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginModifyPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/auth.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/auth.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/listPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/listPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ContactForm.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ContactForm.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/ContactForm.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/ContactForm.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/LoginModifyPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/LoginModifyPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/META-INF/MANIFEST.MF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/NavBar.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/NavBar.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/adminPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/adminPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/auth.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/auth.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/listPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/listPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/loginPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/loginPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/registerPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/registerPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/userInfoPage.jsp" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/JSP/userInfoPage.jsp" />
@@ -84,49 +68,36 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="mySQL@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mySQL@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="banking" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="mySQL@localhost" type="e3449647:DbNodeDescriptor" />
-        <item name="banking" type="e3449647:DbNodeDescriptor" />
-        <item name="users" type="e3449647:DbNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeneralController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeneralController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="543">
-              <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="operationSuccess.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="-880">
+              <caret line="103" column="67" lean-forward="true" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcomePage.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp">
+      <file leaf-file-name="LoginMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="133">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userInfoPage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,18 +119,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isCurrentAuthenticationAnonymous</find>
-      <find>listUsers</find>
-      <find>userPrincipal</find>
-      <find>loginproce</find>
-      <find>userInfoPage</find>
-      <find>authenticationProvider</find>
-      <find>loginProcess</find>
-      <find>admin</find>
       <find>Select u.Username,u.Password,u.Email,u.Enabled  from Users u</find>
       <find>modelatt</find>
       <find>Roles</find>
-      <find>roles</find>
       <find>Modelat</find>
       <find>model</find>
       <find>edit</find>
@@ -178,6 +140,15 @@
       <find>logoutsucc</find>
       <find>logoutSuccessful</find>
       <find>loginSuccessfull</find>
+      <find>findAllLogins</find>
+      <find>setRoles</find>
+      <find>user</find>
+      <find>logins</find>
+      <find>roles</find>
+      <find>select username, password, email ,enabled from users where username</find>
+      <find>username</find>
+      <find>usermodify</find>
+      <find>loadUserByUsername</find>
     </findStrings>
     <replaceStrings>
       <replace>Va rugam sa introduceti</replace>
@@ -225,34 +196,34 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/RoleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/footer.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/AdminController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/LoginLogoutController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/lisstPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginSuccessfullPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/84414640-685e-46d8-b539-d1af07960ee5/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/OperationSuccess.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginModifyPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/listPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/ContactForm.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/ForgotPass.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/auth.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/84414640-685e-46d8-b539-d1af07960ee5/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java" />
       </list>
     </option>
   </component>
@@ -293,7 +264,7 @@
     <option name="x" value="134" />
     <option name="y" value="-8" />
     <option name="width" value="864" />
-    <option name="height" value="918" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -313,33 +284,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -347,7 +321,7 @@
               <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -356,7 +330,7 @@
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -365,7 +339,7 @@
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -374,7 +348,7 @@
               <item name="converters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -383,14 +357,14 @@
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -398,7 +372,7 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -410,10 +384,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -656,6 +627,7 @@
       <workItem from="1506972936553" duration="6416000" />
       <workItem from="1507007617556" duration="6668000" />
       <workItem from="1507188761883" duration="14444000" />
+      <workItem from="1507221016366" duration="8460000" />
     </task>
     <task id="LOCAL-00001" summary="home 2017 09 11">
       <created>1505079433381</created>
@@ -724,7 +696,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="299189000" />
+    <option name="totallyTimeSpent" value="307649000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -736,7 +708,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49768874" sideWeight="0.44047618" order="7" side_tool="true" content_ui="tabs" />
@@ -744,26 +716,25 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.082539685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07196162" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1546" y="173" width="310" height="568" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08968254" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1546" y="173" width="310" height="568" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28914505" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3898305" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21805955" sideWeight="0.4477612" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21725732" sideWeight="0.4477612" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34101826" sideWeight="0.5595238" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4468413" sideWeight="0.5595238" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266564" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949087" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16311301" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14920636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28530258" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,6 +742,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28530258" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -915,81 +887,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>33</line>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>72</line>
-          <properties />
-          <option name="timeStamp" value="74" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>76</line>
-          <properties />
-          <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>79</line>
-          <properties />
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>93</line>
-          <properties />
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>34</line>
+          <line>41</line>
           <properties />
           <option name="timeStamp" value="87" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>37</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="88" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>38</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>78</line>
-          <properties />
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>94</line>
-          <properties />
-          <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
@@ -998,48 +916,24 @@
           <option name="timeStamp" value="140" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>33</line>
           <properties />
-          <option name="timeStamp" value="143" />
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
-          <line>22</line>
+          <line>35</line>
           <properties />
-          <option name="timeStamp" value="147" />
+          <option name="timeStamp" value="180" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>32</line>
-          <properties class="com.tocsyk.dao.LoginDAOImpl" method="validateLogin">
+          <line>39</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="findLogin">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="84" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>71</line>
-          <properties class="com.tocsyk.dao.LoginDAOImpl">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>74</line>
-          <properties class="com.tocsyk.dao.LoginDAOImpl">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
-          <line>92</line>
-          <properties class="com.tocsyk.dao.LoginDAOImpl">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
@@ -1050,31 +944,61 @@
           <option name="timeStamp" value="133" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
-          <line>23</line>
-          <properties class="com.tocsyk.dao.MyDBAuthenticationService" method="loadUserByUsername">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>82</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="getUserRole">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="146" />
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>230</line>
-          <properties class="com.tocsyk.controllers.GeneralController" method="getPrincipal">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>73</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="findAllLogins">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="161" />
+          <option name="timeStamp" value="175" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java</url>
-          <line>21</line>
-          <properties field="loginDAO" class="com.tocsyk.dao.MyDBAuthenticationService" />
-          <option name="timeStamp" value="144" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>64</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="deleteLogin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="176" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>55</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="updateLogin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="177" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>46</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="registerLogin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="178" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java</url>
+          <line>32</line>
+          <properties class="com.tocsyk.dao.LoginDAOImpl" method="validateLogin">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="179" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="173" />
+      <option name="time" value="183" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="role" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -1152,68 +1076,10 @@
       </provider>
     </entry>
     <entry file="das://table:/5c3a1d3/84414640-685e-46d8-b539-d1af07960ee5/banking.users" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/AdminController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/RegistrationController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/LoginLogoutController.java" />
-    <entry file="das://table:/8741d23c/84414640-685e-46d8-b539-d1af07960ee5/banking.users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="method#hashCode#0;class#Login#0" expanded="false" />
-            <element signature="method#equals#0;class#Login#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84414640-685e-46d8-b539-d1af07960ee5/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="58" column="43" lean-forward="false" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="43" />
-          <folding>
-            <marker date="1507192115304" expanded="true" signature="822:963" ph="select * fro... users" />
-            <marker date="1507192115304" expanded="true" signature="1181:1251" ph="select usern... users" />
-            <marker date="1507192115304" expanded="true" signature="1453:1525" ph="INSERT INTO USERS... " />
-            <marker date="1507192115304" expanded="true" signature="1744:1834" ph="UPDATE USERS... " />
-            <marker date="1507192115304" expanded="true" signature="2095:2131" ph="DELETE FROM " />
-            <marker date="1507192115304" expanded="true" signature="2297:2357" ph="Select u.Use... Users" />
-            <marker date="1507192115304" expanded="true" signature="2712:2779" ph="select disti... user_roles" />
-            <marker date="1507192115304" expanded="true" signature="3019:3060" ph="select disti... user_roles" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/8741d23c/84414640-685e-46d8-b539-d1af07960ee5/banking.users" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1222,27 +1088,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="53" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/logoutSuccessfullPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,14 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="14" column="67" lean-forward="true" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/ContactForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1298,15 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="37" lean-forward="false" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1314,7 +1146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="42" lean-forward="true" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1169,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,15 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginModifyPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,22 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="95" column="52" lean-forward="false" selection-start-line="95" selection-start-column="52" selection-end-line="95" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1406,60 +1211,171 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/listPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginSuccessfullPage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/LoginModifyPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" column="34" lean-forward="false" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/listPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/NavBar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="109" column="64" lean-forward="true" selection-start-line="109" selection-start-column="64" selection-end-line="109" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="119" column="24" lean-forward="false" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+          <folding>
+            <element signature="method#hashCode#0;class#Login#0" expanded="false" />
+            <element signature="method#equals#0;class#Login#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/adminPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/registerPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="75" column="59" lean-forward="false" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/loginPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="46" column="71" lean-forward="false" selection-start-line="46" selection-start-column="71" selection-end-line="46" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userModifyPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/84414640-685e-46d8-b539-d1af07960ee5/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="75" column="0" lean-forward="true" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        <state relative-caret-position="117">
+          <caret line="74" column="55" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/LoginDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding>
+            <marker date="1507225658945" expanded="true" signature="822:963" ph="select usern... users" />
+            <marker date="1507225658945" expanded="true" signature="1181:1318" ph="select usern... users" />
+            <marker date="1507225658945" expanded="true" signature="1521:1592" ph="INSERT INTO USERS... " />
+            <marker date="1507225658945" expanded="true" signature="1619:1675" ph="INSERT INTO USER_ROLES... " />
+            <marker date="1507225658945" expanded="true" signature="2019:2109" ph="UPDATE USERS... " />
+            <marker date="1507225658945" expanded="true" signature="2320:2374" ph="UPDATE USER_... " />
+            <marker date="1507225658945" expanded="true" signature="2577:2613" ph="DELETE FROM " />
+            <marker date="1507225658945" expanded="true" signature="2734:2775" ph="DELETE FROM " />
+            <marker date="1507225658945" expanded="true" signature="2893:2982" ph="select u.Use... users" />
+            <marker date="1507225658945" expanded="true" signature="2893:3014" ph="select u.Use... users" />
+            <marker date="1507225658945" expanded="true" signature="3241:3300" ph="select disti... user_roles" />
+            <marker date="1507225658945" expanded="true" signature="3534:3575" ph="select disti... user_roles" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/userInfoPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/MyDBAuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding>
+            <element signature="e#1265#1283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="82" column="32" lean-forward="false" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/operationSuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/JSP/welcomePage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        <state relative-caret-position="-880">
+          <caret line="103" column="67" lean-forward="true" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
           <folding />
         </state>
       </provider>

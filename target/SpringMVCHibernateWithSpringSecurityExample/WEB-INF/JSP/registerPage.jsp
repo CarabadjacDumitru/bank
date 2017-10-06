@@ -6,22 +6,6 @@
 <html>
 
 <head>
-    <spring:url value="/static/css/font-awesome.css" var="awecss"/>
-    <spring:url value="/static/css/bootstrap.css" var="bootcss"/>
-    <spring:url value="/static/css/navbar.css" var="navcss"/>
-
-    <spring:url value="/static/js/jquery-3.2.1.js" var="jqueryJs"/>
-    <spring:url value="/static/js/bootstrap.js" var="bootstrJs"/>
-    <spring:url value="/static/js/navbar.js" var="navbarJs"/>
-
-
-    <link href="${bootcss}" rel="stylesheet"/>
-    <link href="${navcss}" rel="stylesheet"/>
-    <link href="${awecss}" rel="stylesheet"/>
-
-    <script src="${jqueryJs}" type="text/javascript"></script>
-    <script src="${bootstrJs}" type="text/javascript"></script>
-    <script src="${navbarJs}" type="text/javascript"></script>
 
     <title>Register Page</title>
 </head>
@@ -32,7 +16,7 @@
 
 <div class="generic-container">
     <div class="well lead">User Registration Form</div>
-    <form:form method="POST" action="registerProcess" modelAttribute="loginAtr" class="form-horizontal">
+    <form:form method="POST" action="/registerProcess" modelAttribute="loginAtr" class="form-horizontal">
         <form:input type="hidden" path="id" id="id"/>
 
         <div class="row">
@@ -74,11 +58,24 @@
 
         <div class="row">
             <div class="form-group col-md-12">
-                <label class="col-md-3 control-lable" for="roles">Roles</label>
+                <label for="enabled" class="col-md-3 control-lable">Enabled</label>
                 <div class="col-md-7">
-                    <form:select path="roles" items="${roles}" multiple="false" class="form-control input-sm"/>
+                    <select id="enabled" class="form-control">
+                        <option>Enabled</option>
+                        <option>Disabled</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="role">Role</label>
+                <div class="col-md-7">
+                    <form:select path="role" items="${roles}" multiple="false" class="form-control input-sm"/>
                     <div class="has-error">
-                        <form:errors path="roles" class="help-inline"/>
+                        <form:errors path="role" class="help-inline"/>
                     </div>
                 </div>
             </div>
@@ -86,7 +83,8 @@
 
         <div class="row">
             <div class="form-actions floatRight">
-                <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a href="<c:url value='//welcome' />">Cancel</a>
+                <input type="submit" value="Register" class="btn btn-primary btn-sm"/> or <a
+                    href="<c:url value='//welcome' />">Cancel</a>
             </div>
         </div>
     </form:form>
@@ -94,7 +92,7 @@
 </div>
 
 <div class="navbar nav-justified navbar-fixed-bottom">
-    <jsp:include page="auth.jsp" />
+    <jsp:include page="auth.jsp"/>
     <jsp:include page="footer.jsp"/>
 </div>
 </body>

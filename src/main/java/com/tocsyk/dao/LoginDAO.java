@@ -13,6 +13,6 @@ public interface LoginDAO {
 
 
     List<String> getRoles();
-    List<String> getUserRoles(String name);
+    String getUserRole(String name);
     List<Login> findAllLogins();
 }

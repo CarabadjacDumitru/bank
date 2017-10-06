@@ -29,10 +29,11 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th>Firstname tr</th>
-                <th>Lastname tr</th>
-                <th>Email tr</th>
-                <th>Enabled tr</th>
+                <th>Firstname</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Enabled</th>
+                <th>Role</th>
             </tr>
             </thead>
             <tbody>
@@ -42,18 +43,16 @@
                     <td>${logins.passWord}</td>
                     <td>${logins.email}</td>
                     <td>${logins.enabled}</td>
-                    <td><a href="<c:url value='/edit-user-${user.ssoId}' />" class="btn btn-success custom-width">edit</a></td>
-                    <td><a href="<c:url value='/delete-user-${user.ssoId}' />" class="btn btn-danger custom-width">delete</a></td>
+                    <td>${logins.roles}</td>
+                    <td><a href="<c:url value='/edit-user-${logins.userName}' />" class="btn btn-success custom-width">edit</a>
+                    </td>
+                    <td><a href="<c:url value='/delete-user-${logins.userName}' />" class="btn btn-danger custom-width">delete</a>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
     </div>
-
-    <div class="well">
-        <a href="<c:url value='//register' />">Add New User</a>
-    </div>
-
 </div>
 </body>
 </html>

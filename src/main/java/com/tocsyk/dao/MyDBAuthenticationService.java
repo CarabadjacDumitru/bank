@@ -30,15 +30,12 @@ public class MyDBAuthenticationService implements UserDetailsService {
         }
 
 
-        List<String> roles = loginDAO.getUserRoles(username);
+        String role = loginDAO.getUserRole(username);
 
         List<GrantedAuthority> grantList = new ArrayList<GrantedAuthority>();
-        if (roles != null) {
-            for (String role : roles) {
-                // ROLE_USER, ROLE_ADMIN,..
-                GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + role);
-                grantList.add(authority);
-            }
+        if (!role.isEmpty()) {
+            GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + role);
+            grantList.add(authority);
         }
 
         UserDetails userDetails = (UserDetails) new User(userInfo.getUserName(), //

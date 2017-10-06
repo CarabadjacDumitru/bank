@@ -59,11 +59,11 @@ public class GeneralController {
     }
 
     /***************************************************    REGISTER       **********************************************************************/
-    @RequestMapping(value = "/userregister", method = RequestMethod.GET)
+    @RequestMapping(value = "/registeruser", method = RequestMethod.GET)
     public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView mav = new ModelAndView("registerPage");
         mav.addObject("loggedinuser", getPrincipal());
-        mav.addObject("login", new Login());
+        mav.addObject("loginAtr", new Login());
         return mav;
     }
 
@@ -71,7 +71,7 @@ public class GeneralController {
     public ModelAndView doRegister(HttpServletRequest request, HttpServletResponse response,
                                    @ModelAttribute("loginAtr") Login login) {
         loginDAOImpl.registerLogin(login);
-        return new ModelAndView("welcomePage", "firstname", login.getUserName());
+        return new ModelAndView("registerPage", "firstname", login.getUserName());
     }
 
 

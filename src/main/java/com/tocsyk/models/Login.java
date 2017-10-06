@@ -1,26 +1,24 @@
 package com.tocsyk.models;
 
 
-import java.util.List;
-
 public class Login {
 
     private long id;
     private String userName;
     private String passWord;
     private String email;
-    private List<String> roles;
+    private String role;
 
     private int enabled;
 
     public  Login(){
     }
 
-    public Login(String userName, String password, List<String> roles,int  enabled, String email) {
+    public Login(String userName, String password, String rols,int  enabled, String email) {
         this.userName = userName;
         this.passWord = password;
         this.email = email;
-        this.roles = roles;
+        this.role = role;
         this.enabled = enabled;
 
     }
@@ -42,12 +40,12 @@ public class Login {
     }
 
 
-    public List<String> getUserProfiles() {
-        return roles;
+    public String getUserProfiles() {
+        return role;
     }
 
-    public void setUserProfiles(List<String> userProfiles) {
-        this.roles = userProfiles;
+    public void setUserProfiles(String userProfiles) {
+        this.role = userProfiles;
     }
 
     public int getEnabled() {
@@ -82,12 +80,12 @@ public class Login {
         this.passWord = password;
     }
 
-    public List<String> getRoles() {
-        return roles;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
@@ -119,7 +117,7 @@ public class Login {
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", eMail='" + email + '\'' +
-                ", roles=" + roles +
+                ", role`=" + role +
                 ", enabled=" + enabled +
                 '}';
     }

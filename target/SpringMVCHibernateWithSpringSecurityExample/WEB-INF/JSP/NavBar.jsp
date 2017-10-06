@@ -108,7 +108,7 @@
                     <sec:authorize access="isAnonymous()">
                         <ul class="nav navbar-nav pull-right">
                             <li class=""><a href="/login">Log in</a></li>
-                            <li class="regis"><a href="/userregister">Register</a></li>
+                            <li class="register"><a href="/registeruser">Register</a></li>
                         </ul>
                     </sec:authorize>
 

@@ -3,7 +3,9 @@
 <html>
 <body>
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavBar.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </header>
 <table>
     <tr>

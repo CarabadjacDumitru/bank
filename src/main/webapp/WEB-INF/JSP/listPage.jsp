@@ -8,6 +8,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Users List</title>
+    <jsp:include page="NavBar.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </head>
 
 <body>

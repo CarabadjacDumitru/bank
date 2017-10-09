@@ -7,10 +7,11 @@
 </head>
 <body>
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavBar.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </header>
-
-<h1>Login Successful!</h1>
+<br><br><br><br><br>
 
 
 <div class="navbar nav-justified navbar-fixed-bottom">

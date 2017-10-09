@@ -31,14 +31,14 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     @Override
     public Login validateLogin(Login login) {
-        String sql = "select username, password, email ,enabled  from users where username='" + login.getUserName() + "' and password='" + login.getPassword() + "'";
+        String sql = "select 1  from users where username='" + login.getUserName() + "' and password='" + login.getPassword() + "'";
         List<Login> logins = jdbcTemplate.query(sql, new LoginMapper());
         return logins.size() > 0 ? logins.get(0) : null;
     }
 
     @Override
     public Login findLogin(String name) {
-        String sql = "select u.username, u.password, u.email ,u.enabled,ur.user_role from users u, user_roles ur where u.username=ur.username and u.username= ?";
+        String sql = "select u.username, u.password, u.email ,u.enabled,ur.user_role as rOle from users u, user_roles ur where u.username=ur.username and u.username= ?";
         Object[] params = new Object[] { name};
         return jdbcTemplate.queryForObject(sql, params, new LoginMapper());
     }
@@ -47,7 +47,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
     public void registerLogin(Login login) {
         String sql1 = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL, ENABLED) values(?, ?, ?, ?) ";
         String sql2 = "INSERT INTO USER_ROLES (USERNAME,USER_ROLE) values(?, ?) ";
-        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.geteMail(), 1};
+        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.geteMail(), login.getEnabled()};
         jdbcTemplate.update(sql1,params1);
         Object[] params2 = new Object[]{login.getUserName(),login.getRole()};
         jdbcTemplate.update(sql2,params2);
@@ -72,7 +72,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
 
     public List<Login> findAllLogins() {
-        String sql = "select u.Username,u.Password,u.Email,u.Enabled, ur.USER_ROLE from users u , user_roles ur  WHERE u.username = ur.username";
+        String sql = "select u.Username,u.Password,u.Email,u.Enabled, ur.USER_ROLE as rOle from users u , user_roles ur  WHERE u.username = ur.username";
         LoginMapper mapper = new LoginMapper();
         List<Login> users = jdbcTemplate.query(sql,mapper);
         return users ;

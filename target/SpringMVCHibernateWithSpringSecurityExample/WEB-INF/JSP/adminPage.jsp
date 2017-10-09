@@ -19,7 +19,10 @@
 
 </head>
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavBar.jsp">
+        <jsp:param name="param1" value="${loggedinuser}"/>
+        <jsp:param name="firstname" value="Chaitanya" />
+    </jsp:include>
 </header>
 
 <body>
@@ -41,7 +44,7 @@
                 <tr>
                     <td>${logins.userName}</td>
                     <td>${logins.passWord}</td>
-                    <td>${logins.email}</td>
+                    <td>${logins.eMail}</td>
                     <td>${logins.enabled}</td>
                     <td>${logins.role}</td>
                     <td><a href="<c:url value='/usermodify/${logins.userName}/' />" class="btn btn-success custom-width">edit</a>

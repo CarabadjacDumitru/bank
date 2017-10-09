@@ -104,9 +104,9 @@
                                    aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"/>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<c:url value='/usermodify/${login.userName}/'/>"
+                                    <li><a href="<c:url value='/usermodify/${param.param1}/'/>"
                                            class="btn btn-success custom-width"> Change Password</a></li>
-                                    <li><a href="<c:url value='/userInfo/${login.userName}/'/>"
+                                    <li><a href="<c:url value='/userInfo/${param.param1}/'/>"
                                            class="btn btn-success custom-width"> My Profile</a></li>
                                 </ul>
                             </li>

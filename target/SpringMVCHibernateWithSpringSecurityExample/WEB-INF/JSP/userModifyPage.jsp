@@ -20,21 +20,22 @@
 </head>
 <body>
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavBar.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </header>
 
 
 <div class="generic-container">
 
     <div class="well lead">User Registration Form</div>
-    <form:form method="POST" action="/usermodify/${loginName}" modelAttribute="login" class="form-horizontal">
+    <form:form method="POST" action="/usermodify/${loginName}/" modelAttribute="login" class="form-horizontal">
 
         <div class="row">
             <div class="form-group col-md-12">
                 <label class="col-md-3 control-lable" for="userName">Username</label>
                 <div class="col-md-7">
-                    <form:input type="text" path="userName" id="userName" class="form-control input-sm"
-                                disabled="true"/>
+                    <form:input type="text" path="userName" id="userName" class="form-control input-sm"/>
                 </div>
             </div>
         </div>
@@ -53,11 +54,11 @@
 
         <div class="row">
             <div class="form-group col-md-12">
-                <label class="col-md-3 control-lable" for="email">Email</label>
+                <label class="col-md-3 control-lable" for="eMail">Email</label>
                 <div class="col-md-7">
-                    <form:input type="text" path="email" id="email" class="form-control input-sm"/>
+                    <form:input type="text" path="eMail" id="eMail" class="form-control input-sm"/>
                     <div class="has-error">
-                        <form:errors path="email" class="help-inline"/>
+                        <form:errors path="eMail" class="help-inline"/>
                     </div>
                 </div>
             </div>
@@ -68,7 +69,7 @@
             <div class="form-group col-md-12">
                 <label class="col-md-3 control-lable" for="userProfiles">Roles</label>
                 <div class="col-md-7">
-                    <form:select path="userProfiles" items="${roles}" multiple="true" itemValue="id" itemLabel="type" class="form-control input-sm"/>
+                    <form:select path="userProfiles" items="${roles}" multiple="true"  class="form-control input-sm"/>
                     <div class="has-error">
                         <form:errors path="userProfiles" class="help-inline"/>
                     </div>

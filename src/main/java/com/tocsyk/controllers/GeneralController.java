@@ -10,18 +10,22 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import java.security.Principal;
 import java.util.List;
 
 @Controller
 @RequestMapping("/")
+@Transactional
 @SessionAttributes("loginSes")
 public class GeneralController {
 
@@ -72,7 +76,7 @@ public class GeneralController {
     public ModelAndView doRegister(HttpServletRequest request, HttpServletResponse response,
                                    @ModelAttribute("loginAtr") Login login) {
         ModelAndView mav = null;
-        mav = new ModelAndView("registerPage");
+        mav = new ModelAndView("operationSuccess");
 
         loginDAOImpl.registerLogin(login);
         mav.addObject("loggedinuser", getPrincipal());
@@ -118,8 +122,9 @@ public class GeneralController {
     }
 
     @RequestMapping(value = {"/usermodify/{loginName}/"}, method = RequestMethod.POST)
-    public String updateUser(ModelMap model, @PathVariable String loginName) {
-        loginDAOImpl.updateLogin(loginDAOImpl.findLogin(loginName));
+    public String updateUser(@Valid Login login, BindingResult result,
+                             ModelMap model, @PathVariable String loginName) {
+        loginDAOImpl.updateLogin(login);
         model.addAttribute("message", "User " + loginName + " was updated successfully");
         model.addAttribute("title", "Success by modifing the Login data ");
         model.addAttribute("loggedinuser", loginName);

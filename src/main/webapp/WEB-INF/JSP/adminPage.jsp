@@ -41,12 +41,12 @@
                 <tr>
                     <td>${logins.userName}</td>
                     <td>${logins.passWord}</td>
-                    <td>${logins.email}</td>
+                    <td>${logins.eMail}</td>
                     <td>${logins.enabled}</td>
-                    <td>${logins.roles}</td>
-                    <td><a href="<c:url value='/edit-user-${logins.userName}' />" class="btn btn-success custom-width">edit</a>
+                    <td>${logins.role}</td>
+                    <td><a href="<c:url value='/usermodify/${logins.userName}/' />" class="btn btn-success custom-width">edit</a>
                     </td>
-                    <td><a href="<c:url value='/delete-user-${logins.userName}' />" class="btn btn-danger custom-width">delete</a>
+                    <td><a href="<c:url value='/userdelete/${logins.userName}/' />" class="btn btn-danger custom-width">delete</a>
                     </td>
                 </tr>
             </c:forEach>

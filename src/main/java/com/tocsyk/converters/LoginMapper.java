@@ -14,7 +14,7 @@ public class LoginMapper implements RowMapper<Login> {
         String userName = rs.getString("userName");
         String password = rs.getString("passWord");
         String email = rs.getString("eMail");
-        int enabled = rs.getInt("enabled");
+        int enabled = rs.getInt("eNabled");
         String role = rs.getString("user_role");
 /*
         while(rs.next()) {

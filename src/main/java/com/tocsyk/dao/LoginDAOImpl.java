@@ -47,7 +47,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
     public void registerLogin(Login login) {
         String sql1 = "INSERT INTO USERS (USERNAME,PASSWORD,EMAIL, ENABLED) values(?, ?, ?, ?) ";
         String sql2 = "INSERT INTO USER_ROLES (USERNAME,USER_ROLE) values(?, ?) ";
-        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), 1};
+        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.geteMail(), 1};
         jdbcTemplate.update(sql1,params1);
         Object[] params2 = new Object[]{login.getUserName(),login.getRole()};
         jdbcTemplate.update(sql2,params2);
@@ -55,7 +55,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     public void updateLogin(Login login) {
         String sql1 = "UPDATE USERS u  set USERNAME = ?, PASSWORD = ? , EMAIl = ?, ENABLED = ? where USERNAME = ?";
-        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.getEmail(), login.getEnabled(), login.getUserName()};
+        Object[] params1 = new Object[]{login.getUserName(), login.getPassword(),login.geteMail(), login.getEnabled(), login.getUserName()};
         jdbcTemplate.update(sql1, params1);
         String sql2 = "UPDATE USER_ROLES set USER_ROLE = ? where USERNAME = ?";
         Object[] params2 = new Object[]{login.getRole(), login.getUserName()};

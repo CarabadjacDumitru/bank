@@ -48,9 +48,9 @@
             <div class="form-group col-md-12">
                 <label class="col-md-3 control-lable" for="eMail">Email</label>
                 <div class="col-md-7">
-                    <form:input type="text" path="email" id="email" class="form-control input-sm"/>
+                    <form:input type="text" path="eMail" id="email" class="form-control input-sm"/>
                     <div class="has-error">
-                        <form:errors path="email" class="help-inline"/>
+                        <form:errors path="eMail" class="help-inline"/>
                     </div>
                 </div>
             </div>

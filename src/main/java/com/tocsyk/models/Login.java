@@ -6,20 +6,19 @@ public class Login {
     private long id;
     private String userName;
     private String passWord;
-    private String email;
-    private String role;
-
-    private int enabled;
+    private String eMail;
+    private String rOle;
+    private int eNabled;
 
     public  Login(){
     }
 
-    public Login(String userName, String password, String rols,int  enabled, String email) {
+    public Login(String userName, String password, String role, int  enabled, String email) {
         this.userName = userName;
         this.passWord = password;
-        this.email = email;
-        this.role = role;
-        this.enabled = enabled;
+        this.eMail = email;
+        this.rOle = role;
+        this.eNabled = enabled;
 
     }
 
@@ -31,29 +30,29 @@ public class Login {
         this.passWord = passWord;
     }
 
-    public String getEmail() {
-        return email;
+    public String geteMail() {
+        return eMail;
     }
 
-    public void setEmail(String eMail) {
-        this.email = eMail;
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
     }
 
 
     public String getUserProfiles() {
-        return role;
+        return rOle;
     }
 
     public void setUserProfiles(String userProfiles) {
-        this.role = userProfiles;
+        this.rOle = userProfiles;
     }
 
     public int getEnabled() {
-        return enabled;
+        return eNabled;
     }
 
     public void setEnabled(int enabled) {
-        this.enabled = enabled;
+        this.eNabled = enabled;
     }
 
     public long getId() {
@@ -81,11 +80,11 @@ public class Login {
     }
 
     public String getRole() {
-        return role;
+        return rOle;
     }
 
     public void setRole(String role) {
-        this.role = role;
+        this.rOle = role;
     }
 
     @Override
@@ -116,9 +115,9 @@ public class Login {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", passWord='" + passWord + '\'' +
-                ", eMail='" + email + '\'' +
-                ", role`=" + role +
-                ", enabled=" + enabled +
+                ", eMail='" + eMail + '\'' +
+                ", role`=" + rOle +
+                ", enabled=" + eNabled +
                 '}';
     }
 }

@@ -12,7 +12,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -23,7 +22,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes("rolesAtr")
+@SessionAttributes("loginSes")
 public class GeneralController {
 
     protected final Log logger = LogFactory.getLog(getClass());
@@ -40,6 +39,7 @@ public class GeneralController {
     /***************************************************    LOG  IN       **********************************************************************/
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(Model model) {
+        model.addAttribute("loggedinuser", getPrincipal());
         if (isCurrentAuthenticationAnonymous()) {
             model.addAttribute("title", "Login page ");
             model.addAttribute("message", "This is the start page page!");
@@ -55,6 +55,7 @@ public class GeneralController {
     public String loginSuccessfulPage(Model model) {
         model.addAttribute("title", "Log IN");
         model.addAttribute("message", "You have been LOGGED IN");
+        model.addAttribute("loggedinuser", getPrincipal());
         return "operationSuccess";
     }
 
@@ -70,8 +71,13 @@ public class GeneralController {
     @RequestMapping(value = "/registerProcess", method = RequestMethod.POST)
     public ModelAndView doRegister(HttpServletRequest request, HttpServletResponse response,
                                    @ModelAttribute("loginAtr") Login login) {
+        ModelAndView mav = null;
+        mav = new ModelAndView("registerPage");
+
         loginDAOImpl.registerLogin(login);
-        return new ModelAndView("registerPage", "firstname", login.getUserName());
+        mav.addObject("loggedinuser", getPrincipal());
+        mav.addObject("firstname",login.getUserName());
+        return mav;
     }
 
 
@@ -80,6 +86,7 @@ public class GeneralController {
     public String logoutSuccessfulPage(Model model) {
         model.addAttribute("title", "Log Out");
         model.addAttribute("message", "You have been LOGGED OUT");
+        model.addAttribute("loggedinuser", getPrincipal());
         return "operationSuccess";
     }
 
@@ -93,7 +100,7 @@ public class GeneralController {
         return "forgotpass";
     }
 
-    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
+    @RequestMapping(value = "/userInfo/{login}/", method = RequestMethod.GET)
     public String userInfo(Model model, Principal principal) {
         String userName = principal.getName();
         System.out.println("User Name: " + userName);
@@ -101,36 +108,32 @@ public class GeneralController {
         return "userInfoPage";
     }
 
-    @RequestMapping(value = {"/usermodify-{login}"}, method = RequestMethod.GET)
-    public String editLogin(@PathVariable String login, ModelMap model) {
-        Login login2 = loginDAOImpl.findLogin(login);
+    @RequestMapping(value = {"/usermodify/{loginName}/"}, method = RequestMethod.GET)
+    public String editLogin(@PathVariable String loginName, ModelMap model) {
+        Login login2 = loginDAOImpl.findLogin(loginName);
         model.addAttribute("login", login2);
         model.addAttribute("title", "User Modify Page");
         model.addAttribute("loggedinuser", getPrincipal());
         return "userModifyPage";
     }
 
-    @RequestMapping(value = {"/usermodify-{login}"}, method = RequestMethod.POST)
-    public String updateUser(BindingResult result, ModelMap model, @PathVariable Login login) {
-
-        if (result.hasErrors()) {
-            return "userModifyPage";
-        }
-        loginDAOImpl.updateLogin(login);
-        model.addAttribute("message", "User " + login.getUserName() + " " + login.getPassword() + " was updated successfully");
+    @RequestMapping(value = {"/usermodify/{loginName}/"}, method = RequestMethod.POST)
+    public String updateUser(ModelMap model, @PathVariable String loginName) {
+        loginDAOImpl.updateLogin(loginDAOImpl.findLogin(loginName));
+        model.addAttribute("message", "User " + loginName + " was updated successfully");
         model.addAttribute("title", "Success by modifing the Login data ");
-        model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedinuser", loginName);
 
         return "operationSuccess";
     }
 
-    @RequestMapping(value = {"/userdelete-{login}"}, method = RequestMethod.GET)
-    public String deleteLogin(@PathVariable Login login,Model model) {
+    @RequestMapping(value = {"/userdelete/{loginName}/"}, method = RequestMethod.GET)
+    public String deleteLogin(@PathVariable String loginName,Model model) {
         model.addAttribute("title", "Success by deleting the Login data ");
-        model.addAttribute("message", "Login " + login.getUserName() + " " + login.getPassword() + " was removed successfully");
+        model.addAttribute("message", "Login " + loginName + " was removed successfully");
         model.addAttribute("loggedinuser", getPrincipal());
 
-        loginDAOImpl.deleteLogin(login.getUserName());
+        loginDAOImpl.deleteLogin(loginName);
         return "operationSuccess";
     }
 /*************************************************************************************************************************/
@@ -241,4 +244,9 @@ public class GeneralController {
     }
 
 
+    /*@ModelAttribute("loginSes")
+    public Login getLogin(String name){
+    return loginDAOImpl.findLogin(name);
+    }
+*/
 }

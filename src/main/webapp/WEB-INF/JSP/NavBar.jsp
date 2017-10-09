@@ -89,29 +89,37 @@
 
                     </ul>
 
+                    <sec:authorize access="hasRole('ADMIN')">
+                        <ul class="nav navbar-nav">
+                            <li class=""><a href="/admin">List of Users</a></li>
+                        </ul>
+                    </sec:authorize>
 
-                    <sec:authorize access="isAuthenticated()">
+
+
+                    <sec:authorize access="hasAnyRole('USER','ADMIN')">
                         <ul class="nav navbar-nav pull-right">
                             <li class=" dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button"
                                    aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"/>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="LoginModify">Change Password</a></li>
-                                    <li><a href="userInfo">My Profile</a></li>
+                                    <li><a href="<c:url value='/usermodify/${login.userName}/'/>"
+                                           class="btn btn-success custom-width"> Change Password</a></li>
+                                    <li><a href="<c:url value='/userInfo/${login.userName}/'/>"
+                                           class="btn btn-success custom-width"> My Profile</a></li>
                                 </ul>
                             </li>
                             <li class=""><a href="/logout">Log Out</a></li>
                         </ul>
                     </sec:authorize>
 
-                    <sec:authorize access="isAnonymous()">
+                    <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
                         <ul class="nav navbar-nav pull-right">
                             <li class=""><a href="/login">Log in</a></li>
                             <li class="register"><a href="/registeruser">Register</a></li>
                         </ul>
                     </sec:authorize>
-
                 </div>
             </div>
         </nav>

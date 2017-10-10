@@ -1,7 +1,5 @@
 package com.tocsyk.models;
 
-import com.tocsyk.models.enums.RoleType;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

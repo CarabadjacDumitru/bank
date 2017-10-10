@@ -1,7 +1,7 @@
 package com.tocsyk.dao;
 
-import com.tocsyk.models.Login;
-import java.util.List;
+        import com.tocsyk.models.Login;
+        import java.util.List;
 
 
 public interface LoginDAO {

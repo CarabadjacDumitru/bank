@@ -1,5 +1,6 @@
-package com.tocsyk.dao;
+package com.tocsyk.daoImp;
 
+import com.tocsyk.dao.LoginDAO;
 import com.tocsyk.models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,6 +1,6 @@
 package com.tocsyk.controllers;
 
-import com.tocsyk.dao.LoginDAOImpl;
+import com.tocsyk.daoImp.LoginDAOImpl;
 import com.tocsyk.models.Login;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -37,36 +37,58 @@ public class GeneralController {
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
+    //region Bank
+    @RequestMapping(value = "/bankregister", method = RequestMethod.GET)
+    public String newBank(Model model) {
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "BankRegisterPage";
+    }
+
+    @RequestMapping(value = {"/banklist}/"}, method = RequestMethod.GET)
+    public String listBank( ModelMap model) {
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "BankListPage";
+    }
+
+    //endregion
+
+    //region Branch
+    //endregion
+
+    //region Customer
+    //endregion
+
+    //region Contract
+    //endregion
+
+    //region Payment
+    //endregion
 
 
-
-    /***************************************************    LOG  IN       **********************************************************************/
+    //region Login
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(Model model) {
         model.addAttribute("loggedinuser", getPrincipal());
         if (isCurrentAuthenticationAnonymous()) {
             model.addAttribute("title", "Login page ");
             model.addAttribute("message", "This is the start page page!");
-            return "loginPage";
+            return "LoginPage";
         } else {
             model.addAttribute("message", "Dear " + getPrincipal() + " you have been logged in ");
             model.addAttribute("title", "Operation LOGIN  Success");
-            return "operationSuccess";
+            return "operationSuccessPage";
         }
     }
 
-     @RequestMapping(value = "/loginSuccessfull", method = RequestMethod.GET)
-    public String loginSuccessfulPage(Model model) {
-        model.addAttribute("title", "Log IN");
-        model.addAttribute("message", "You have been LOGGED IN");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "operationSuccess";
+    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.GET)
+    public String forgotPassPage(Model model) {
+        return "LoginForgotPassPage";
     }
 
-    /***************************************************    REGISTER       **********************************************************************/
-    @RequestMapping(value = "/registeruser", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/loginregister", method = RequestMethod.GET)
     public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
-        ModelAndView mav = new ModelAndView("registerPage");
+        ModelAndView mav = new ModelAndView("LoginRegisterPage");
         mav.addObject("loggedinuser", getPrincipal());
         mav.addObject("loginAtr", new Login());
         return mav;
@@ -76,7 +98,7 @@ public class GeneralController {
     public ModelAndView doRegister(HttpServletRequest request, HttpServletResponse response,
                                    @ModelAttribute("loginAtr") Login login) {
         ModelAndView mav = null;
-        mav = new ModelAndView("operationSuccess");
+        mav = new ModelAndView("operationSuccessPage");
 
         loginDAOImpl.registerLogin(login);
         mav.addObject("loggedinuser", getPrincipal());
@@ -84,44 +106,41 @@ public class GeneralController {
         return mav;
     }
 
-
-    /***************************************************    LOG  OUT       **********************************************************************/
     @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
     public String logoutSuccessfulPage(Model model) {
         model.addAttribute("title", "Log Out");
         model.addAttribute("message", "You have been LOGGED OUT");
         model.addAttribute("loggedinuser", getPrincipal());
-        return "operationSuccess";
+        return "operationSuccessPage";
     }
 
 
-    /***************************************************    LOG  Maintenance       **********************************************************************/
-    @RequestMapping(value = "/forgotpass", method = RequestMethod.GET)
+    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.GET)
     public String forgotPass(Model model, Principal principal) {
         model.addAttribute("title", "Forgot Password");
         model.addAttribute("message", "You have lost your chanse");
         model.addAttribute("loggedinuser", getPrincipal());
-        return "forgotpass";
+        return "LoginForgotPassPage";
     }
 
-    @RequestMapping(value = "/userInfo/{login}/", method = RequestMethod.GET)
+    @RequestMapping(value = "/logininfo/{login}/", method = RequestMethod.GET)
     public String userInfo(Model model, Principal principal) {
         String userName = principal.getName();
         System.out.println("User Name: " + userName);
         model.addAttribute("loggedinuser", getPrincipal());
-        return "userInfoPage";
+        return "LoginInfoPage";
     }
 
-    @RequestMapping(value = {"/usermodify/{loginName}/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.GET)
     public String editLogin(@PathVariable String loginName, ModelMap model) {
         Login login2 = loginDAOImpl.findLogin(loginName);
         model.addAttribute("login", login2);
         model.addAttribute("title", "User Modify Page");
         model.addAttribute("loggedinuser", getPrincipal());
-        return "userModifyPage";
+        return "LoginModifyPage";
     }
 
-    @RequestMapping(value = {"/usermodify/{loginName}/"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.POST)
     public String updateUser(@Valid Login login, BindingResult result,
                              ModelMap model, @PathVariable String loginName) {
         loginDAOImpl.updateLogin(login);
@@ -129,70 +148,39 @@ public class GeneralController {
         model.addAttribute("title", "Success by modifing the Login data ");
         model.addAttribute("loggedinuser", loginName);
 
-        return "operationSuccess";
+        return "operationSuccessPage";
     }
 
-    @RequestMapping(value = {"/userdelete/{loginName}/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/logindelete/{loginName}/"}, method = RequestMethod.GET)
     public String deleteLogin(@PathVariable String loginName,Model model) {
         model.addAttribute("title", "Success by deleting the Login data ");
         model.addAttribute("message", "Login " + loginName + " was removed successfully");
         model.addAttribute("loggedinuser", getPrincipal());
 
         loginDAOImpl.deleteLogin(loginName);
-        return "operationSuccess";
+        return "operationSuccessPage";
     }
-/*************************************************************************************************************************/
+    //endregion Login
 
-
-
-    /*@RequestMapping(value = "/logoutSuccessfull", method = RequestMethod.GET)
-    public String logoutSuccessfulPage(Model model) {
-        model.addAttribute("title", "Logout");
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "logoutSuccessfullPage";
-    }*/
-
-/*
-    @RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
-    public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
-                                     @ModelAttribute("loginAtr") Login login) {
-
-        ModelAndView mav = null;
-        Login login2 = loginDAOImpl.validateLogin(login);
-        if (null != login2) {
-            mav = new ModelAndView("operationSuccess");
-            model.addAttribute("title", "Welcome here ");
-            model.addAttribute("message", "This is the start page page!");
-            model.addAttribute("loggedinuser", getPrincipal());
-            return "loginPage";
-        } else {
-            mav = new ModelAndView("registerPage");
-            mav.addObject("message", "Username or Password is wrong!!");
-        }
-        mav.addObject("loggedinuser", getPrincipal());
-
-        return mav;
-    }
-
-    @RequestMapping(value = "/logout", method = RequestMethod.GET)
-    public String logoutPage(HttpServletRequest request, HttpServletResponse response) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null) {
-            SecurityContextHolder.getContext().setAuthentication(null);
-        }
-        return "redirect:/login?logout";
-    }
-*/
-    /***************************************************    ADMIN           **********************************************************************/
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    //region Admin
+   @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(Model model) {
         List<Login> logins = loginDAOImpl.findAllLogins();
         model.addAttribute("logins", logins);
         model.addAttribute("loggedinuser", getPrincipal());
         return "adminPage";
     }
+    //endregion Admin
 
-    /***************************************************    EVERY ONE       **********************************************************************/
+    //region General
+    @RequestMapping(value = "/operationSuccess", method = RequestMethod.GET)
+    public String loginSuccessfulPage(Model model) {
+        model.addAttribute("title", "Log IN");
+        model.addAttribute("message", "You have been LOGGED IN");
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "operationSuccessPage";
+    }
+
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String initialPage(Model model) {
         model.addAttribute("title", "Welcome Page");
@@ -209,18 +197,15 @@ public class GeneralController {
         return "welcomePage";
     }
 
-
     private boolean isCurrentAuthenticationAnonymous() {
         final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         return authenticationTrustResolver.isAnonymous(authentication);
     }
 
-
     @ModelAttribute("roles")
     public List<String> initializeProfiles() {
         return loginDAOImpl.getRoles();
     }
-
 
     @RequestMapping(value = "/403", method = RequestMethod.GET)
     public String accessDenied(Model model, Principal principal) {
@@ -247,11 +232,5 @@ public class GeneralController {
         }
         return userName;
     }
-
-
-    /*@ModelAttribute("loginSes")
-    public Login getLogin(String name){
-    return loginDAOImpl.findLogin(name);
-    }
-*/
+    //endregion General
 }

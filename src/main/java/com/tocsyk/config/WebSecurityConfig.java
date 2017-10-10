@@ -1,6 +1,6 @@
 package com.tocsyk.config;
 
-import com.tocsyk.dao.MyDBAuthenticationService;
+import com.tocsyk.daoImp.MyDBAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -70,11 +70,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.csrf().disable();
 
-        http.authorizeRequests().antMatchers("/", "/welcome","/login","/registeruser","/registerProcess","/forgotpass","/operationSuccess").permitAll();
+        http.authorizeRequests().antMatchers("/", "/welcome","/login","/loginregister","/registerProcess","/forgotpass","/operationSuccess","/loginforgotpass").permitAll();
 
-        http.authorizeRequests().antMatchers("/userInfo","/user*").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
-        http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/admin*").access("hasRole('ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/bank*").access("hasAnyRole('ROLE_BANK','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/branch*").access("hasAnyRole('ROLE_BANK','ROLE_BRANCH','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/customer*").access("hasAnyRole('ROLE_BANK','ROLE_BRANCH','ROLE_CUSTOMER','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/contract*").access("hasAnyRole('ROLE_BANK','ROLE_BRANCH','ROLE_CUSTOMER','ROLE_CONTRACT','ROLE_ADMIN')");
+        http.authorizeRequests().antMatchers("/payment*").access("hasAnyRole('ROLE_BANK','ROLE_BRANCH','ROLE_CUSTOMER','ROLE_CONTRACT','ROLE_PAYMENT','ROLE_ADMIN')");
 
 
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
@@ -85,7 +89,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // Submit URL of login page.
                 .loginProcessingUrl("/login") // Submit URL
                 .loginPage("/login")//
-                .defaultSuccessUrl("/loginSuccessfull")//
+                .defaultSuccessUrl("/operationSuccess")//
                 //.failureUrl("/login?error")//
                 .usernameParameter("userName")//
                 .passwordParameter("passWord")

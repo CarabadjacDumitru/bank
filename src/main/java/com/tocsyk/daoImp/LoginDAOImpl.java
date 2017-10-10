@@ -1,7 +1,8 @@
-package com.tocsyk.dao;
+package com.tocsyk.daoImp;
 
 
 import com.tocsyk.converters.LoginMapper;
+import com.tocsyk.dao.LoginDAO;
 import com.tocsyk.models.Login;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -90,7 +91,7 @@ public class LoginDAOImpl extends JdbcDaoSupport implements LoginDAO {
 
     @Override
     public List<String> getRoles() {
-        String sql = "select distinct user_role from user_roles ";
+        String sql = "select distinct ROLE_NAME from ROLES";
         List<String> roles = jdbcTemplate.queryForList(sql,  String.class);
         return roles;
     }

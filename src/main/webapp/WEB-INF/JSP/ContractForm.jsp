@@ -6,6 +6,11 @@
     <link href="<c:url value='/static/css/bootstrap.min.css' />" rel="stylesheet"></link>
     <link href="<c:url value='/static/css/bootstrap-theme.min.css' />" rel="stylesheet"></link>
 </head>
+<header>
+    <jsp:include page="NavHeader.jsp">
+        <jsp:param name="param1" value="${loggedinuser}"/>
+    </jsp:include>
+</header>
 
 <body>
 <script type="text/javascript" src='<c:url value="/static/js/jquery-3.2.1.min.js"/>'></script>

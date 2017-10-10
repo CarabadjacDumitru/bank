@@ -41,10 +41,10 @@
                                aria-haspopup="true" aria-expanded="false">Banks <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                    <a href="/banklist" class="dropdown-toggle " data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false">View Banks</a>
                                 </li>
-                                <li><a href="#">Add New Bank</a></li>
+                                <li><a href="/bankregister">Add New Bank</a></li>
                             </ul>
                         </li>
 
@@ -54,10 +54,10 @@
                                aria-haspopup="true" aria-expanded="false">Branches <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                    <a href="/branchlist" class="dropdown-toggle " data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false">View Branches</a>
                                 </li>
-                                <li><a href="#">Add New Branch</a></li>
+                                <li><a href="/branchregister">Add New Branch</a></li>
                             </ul>
                         </li>
 
@@ -67,10 +67,10 @@
                                aria-haspopup="true" aria-expanded="false">Customers <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                    <a href="/customerlist" class="dropdown-toggle " data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false">View Customers</a>
                                 </li>
-                                <li><a href="#">Add New Customer</a></li>
+                                <li><a href="/customerregister">Add New Customer</a></li>
                             </ul>
                         </li>
 
@@ -80,10 +80,25 @@
                                aria-haspopup="true" aria-expanded="false">Contract <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li class=" dropdown">
-                                    <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                    <a href="/contractlist" class="dropdown-toggle " data-toggle="dropdown" role="button"
                                        aria-haspopup="true" aria-expanded="false">View Contract</a>
                                 </li>
-                                <li><a href="#">Add New Contract</a></li>
+                                <li><a href="/contractregister">Add New Contract</a></li>
+                            </ul>
+                        </li>
+
+                        <li class=" dropdown">
+                            <!--   Payments    -->
+                            <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">Payment <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class=" dropdown">
+                                    <a href="/paymentlist" class="dropdown-toggle " data-toggle="dropdown" role="button"
+                                       aria-haspopup="true" aria-expanded="false">View Payments</a>
+                                </li>
+                                <li><a href="/paymentregister">Add New Payment</a></li>
+                                <li><a href="/paymentreject">Reject Payment</a></li>
+                                <li><a href="/paymentmodify">Modify Payment</a></li>
                             </ul>
                         </li>
 
@@ -104,9 +119,9 @@
                                    aria-haspopup="true" aria-expanded="false">Signed in as<span class="caret"/>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="<c:url value='/usermodify/${param.param1}/'/>"
+                                    <li><a href="<c:url value='/loginmodify/${param.param1}/'/>"
                                            class="btn btn-success custom-width"> Change Password</a></li>
-                                    <li><a href="<c:url value='/userInfo/${param.param1}/'/>"
+                                    <li><a href="<c:url value='/logininfo/${param.param1}/'/>"
                                            class="btn btn-success custom-width"> My Profile</a></li>
                                 </ul>
                             </li>
@@ -117,7 +132,8 @@
                     <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
                         <ul class="nav navbar-nav pull-right">
                             <li class=""><a href="/login">Log in</a></li>
-                            <li class="register"><a href="/registeruser">Register</a></li>
+                            <li class="register"><a href="/loginregister">Register</a></li>
+                            <li class="register"><a href="/loginforgotpass">Forgot Password</a></li>
                         </ul>
                     </sec:authorize>
                 </div>

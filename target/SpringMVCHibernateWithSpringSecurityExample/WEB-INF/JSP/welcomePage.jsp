@@ -3,28 +3,18 @@
 <html>
 <body>
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavHeader.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </header>
 <table>
-    <tr>
-        <td>Welcome  </td>
-    </tr>
-    <tr>
-    </tr>
-    <tr>
-    </tr>
-    <tr>
+    <br><br><br><br><br><br>
+    <td>Welcome  </td>
 
-        </td>
-    </tr>
 </table>
-
-<br><br><br><br><br>
-Welcome Page
 
 
 <div class="navbar nav-justified navbar-fixed-bottom">
-    <jsp:include page="auth.jsp" />
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="NavFooter.jsp"/>
 </div>
 </body>

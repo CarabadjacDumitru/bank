@@ -1,62 +1,94 @@
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ page isELIgnored="false" %>
 
 
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <spring:url value="/static/css/bootstrap.css" var="bootcss"/>
+    <spring:url value="/static/js/jquery-3.2.1.js" var="jqueryJs"/>
+    <spring:url value="/static/js/bootstrap.js" var="bootstrJs"/>
+
+    <link href="${bootcss}" rel="stylesheet"/>
+    <script src="${jqueryJs}" type="text/javascript"></script>
+    <script src="${bootstrJs}" type="text/javascript"></script>
+    <title>Modify User</title>
+</head>
 <body>
-
-<title>Login modify</title>
-
 <header>
-    <jsp:include page="NavBar.jsp"/>
+    <jsp:include page="NavHeader.jsp">
+        <jsp:param name="param1" value="${login.userName}"></jsp:param>
+    </jsp:include>
 </header>
 
 
-<div class="container">
+<div class="generic-container">
 
-    <div class="row" style="margin-top:60px">
-        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-            <form role="form">
-                <fieldset>
-                    <h2>Please Sign In</h2>
-                    <hr class="colorgraph">
+    <div class="well lead">User Registration Form</div>
+    <form:form method="POST" action="/usermodify/${loginName}/" modelAttribute="login" class="form-horizontal">
 
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control input-lg"
-                               placeholder="Email Address">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password" name="password" id="password" class="form-control input-lg"
-                               placeholder="Password">
-                    </div>
-
-                    <span class="button-checkbox">
-					    <button type="button" class="btn" data-color="info">Remember Me</button>
-
-                        <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
-					    <a href="" class="btn btn-link pull-right">Forgot Password?</a>
-				    </span>
-
-                    <hr class="colorgraph">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <input type="submit" class="btn btn-lg btn-success btn-block" value="Sign In">
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6">
-                            <a href="" class="btn btn-lg btn-primary btn-block">Register</a>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="userName">Username</label>
+                <div class="col-md-7">
+                    <form:input type="text" path="userName" id="userName" class="form-control input-sm"/>
+                </div>
+            </div>
         </div>
-    </div>
 
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="passWord">Password</label>
+                <div class="col-md-7">
+                    <form:input type="password" path="passWord" id="passWord" class="form-control input-sm"/>
+                    <div class="has-error">
+                        <form:errors path="passWord" class="help-inline"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="eMail">Email</label>
+                <div class="col-md-7">
+                    <form:input type="text" path="eMail" id="eMail" class="form-control input-sm"/>
+                    <div class="has-error">
+                        <form:errors path="eMail" class="help-inline"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label class="col-md-3 control-lable" for="userProfiles">Roles</label>
+                <div class="col-md-7">
+                    <form:select path="userProfiles" items="${roles}" multiple="true"  class="form-control input-sm"/>
+                    <div class="has-error">
+                        <form:errors path="userProfiles" class="help-inline"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-actions floatRight">
+                <input type="submit" value="Update" class="btn btn-primary btn-sm"/> or <a
+                    href="<c:url value='//admin' />">Cancel</a>
+            </div>
+        </div>
+    </form:form>
 </div>
 
-
-<div class="navbar nav-justified">
-    <jsp:include page="auth.jsp"/>
+<div class="navbar    nav-justified navbar-fixed-bottom">
+    <jsp:include page="NavFooter.jsp"/>
 </div>
 
-<div class="navbar nav-justified">
-    <jsp:include page="NavBar.jsp"/>
-</div>
 </body>
+</html>

@@ -8,11 +8,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Users List</title>
+    <jsp:include page="NavHeader.jsp">
+        <jsp:param name="param1" value="${loggedinuser}"></jsp:param>
+    </jsp:include>
 </head>
 
 <body>
 <div class="generic-container">
-    <jsp:include page="auth.jsp"/>
     <div class="panel NavBar-default">
         <!-- Default panel contents -->
         <div class="panel-heading"><span class="lead">List of Users </span></div>
@@ -52,11 +54,7 @@
 </div>
 
 <div class="navbar nav-justified navbar-fixed-bottom">
-    <jsp:include page="auth.jsp"/>
-</div>
-
-<div class="navbar nav-justified navbar-fixed-bottom">
-    <jsp:include page="footer.jsp"/>
+    <jsp:include page="NavFooter.jsp"/>
 </div>
 </body>
 </html>

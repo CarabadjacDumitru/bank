@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-<%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-
 <html>
 
 <head>
@@ -19,7 +17,7 @@
 
 </head>
 <header>
-    <jsp:include page="NavBar.jsp">
+    <jsp:include page="NavHeader.jsp">
         <jsp:param name="param1" value="${loggedinuser}"/>
     </jsp:include>
 </header>
@@ -55,6 +53,10 @@
             </tbody>
         </table>
     </div>
+</div>
+
+<div class="navbar nav-justified navbar-fixed-bottom">
+    <jsp:include page="NavFooter.jsp"/>
 </div>
 </body>
 </html>

@@ -1,0 +1,117 @@
+CREATE TABLE `account` (
+  `ID` int(10) NOT NULL,
+  `balance` float NOT NULL,
+  `creditscore` float NOT NULL,
+  `account_status` varchar(45) NOT NULL,
+  `account_contract` int(10) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK_ACCOUNT_TYPE_idx` (`account_status`),
+  CONSTRAINT `FK_ACCOUNT_CONTRACT` FOREIGN KEY (`ID`) REFERENCES `contract` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `FK_ACCOUNT_TYPE` FOREIGN KEY (`account_status`) REFERENCES `statuses_type` (`statusestype`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `adress` (
+  `id` int(10) NOT NULL,
+  `city` varchar(45) NOT NULL,
+  `street` varchar(45) NOT NULL,
+  `house` varchar(45) NOT NULL,
+  `postalcode` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `bank` (
+  `ID` int(10) NOT NULL,
+  `bank_contact` varchar(45) NOT NULL,
+  `name` varchar(45) NOT NULL,
+  `balance` float NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `branch` (
+  `ID` int(10) NOT NULL,
+  `balanse` float NOT NULL,
+  `branch_contact` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `FK_BRANCH_CONTACT` FOREIGN KEY (`ID`) REFERENCES `contact` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `mobile` varchar(45) NOT NULL,
+  `telephone` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `contact_address` int(10) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FT_CONTACT_ADDRESS` FOREIGN KEY (`id`) REFERENCES `adress` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `contract` (
+  `ID` int(10) NOT NULL,
+  `dategeneration` date NOT NULL,
+  `datefinishing` date NOT NULL,
+  `rate` float NOT NULL,
+  `amountremain` float NOT NULL,
+  `amountpaid` float NOT NULL,
+  `score` float NOT NULL,
+  `contract_type` varchar(45) NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK_CONTRACT_TYPE_idx` (`contract_type`),
+  CONSTRAINT `FK_CONTRACT_TYPE` FOREIGN KEY (`contract_type`) REFERENCES `contract_type` (`contracttype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `contract_type` (
+  `contracttype` varchar(20) NOT NULL,
+  PRIMARY KEY (`contracttype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `customer` (
+  `ID` int(10) NOT NULL,
+  `creditscore` float NOT NULL,
+  `customer_contact` float NOT NULL,
+  `balance` float NOT NULL,
+  PRIMARY KEY (`ID`),
+  KEY `FK_CUSTOMER_CONTACT_idx` (`customer_contact`),
+  CONSTRAINT `FK_CUSTOMER_CONTACT` FOREIGN KEY (`ID`) REFERENCES `contact` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `payment` (
+  `ID` int(10) NOT NULL,
+  `amount` float NOT NULL,
+  `date` date NOT NULL,
+  `payment_contract` int(10) NOT NULL,
+  `payment_type` varchar(45) NOT NULL,
+  KEY `FP_PAYMENT_TYPE_idx` (`payment_type`),
+  KEY `PF_PAYMENT_CONTRACT_idx` (`ID`),
+  CONSTRAINT `FK_PAYMENT_TYPE` FOREIGN KEY (`payment_type`) REFERENCES `payment_type` (`Paymenttype`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `PF_PAYMENT_CONTRACT` FOREIGN KEY (`ID`) REFERENCES `contract` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `payment_type` (
+  `Paymenttype` varchar(20) NOT NULL,
+  PRIMARY KEY (`Paymenttype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `payment_planned` (
+  `ID` int(10) NOT NULL,
+  `panneddates` date NOT NULL,
+  `ispaid` int(11) NOT NULL,
+  `paiddate` date NOT NULL,
+  `payment_contract` int(10) NOT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `FK_PAYMENT_PLANNED_CONTRACT` FOREIGN KEY (`ID`) REFERENCES `contract` (`ID`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `payment_type` (
+  `Paymenttype` varchar(20) NOT NULL,
+  PRIMARY KEY (`Paymenttype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `role_type` (
+  `roletype` varchar(20) NOT NULL,
+  PRIMARY KEY (`roletype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `statuses_type` (
+  `statusestype` varchar(20) NOT NULL,
+  PRIMARY KEY (`statusestype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

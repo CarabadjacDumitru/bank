@@ -1,75 +1,63 @@
 package com.tocsyk.models;
 
-import org.springframework.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
 
-    private int BankID;
-    private Contact BankInfo;
-    private String BankName;
-    private Address BranchAddress;
-    private List<Branch> BranchCollection;
+    private int ID;
+    private Contact contact;
+    private String name;
+    private List<Branch> branchList;
+    private float balance;
 
-    public Bank(String bankName, Contact bankInfo) {
-        setBankID();
-        this.BankName = bankName;
-        this.BankInfo = bankInfo;
-        this.BranchCollection = new ArrayList<Branch>();
+
+    public Bank(String name, Contact contact) {
+        this.name = name;
+        this.contact = contact;
+        this.branchList = new ArrayList<>();
+        this.balance = 0;
     }
 
-    public int getBankID() {
-        return BankID;
+    public float getBalance() {
+        return balance;
     }
 
-    private void setBankID() {
-        BankID = Sequence.getBankSeq();
+    public void setBalance(float balance) {
+        this.balance = balance;
     }
 
-    public Contact getBankInfo() {
-        return BankInfo;
+    public int getID() {
+        return ID;
     }
 
-    public void setBankInfo(Contact bankInfo) {
-        BankInfo = bankInfo;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public String getBankName() {
-        return BankName;
+    public Contact getContact() {
+        return contact;
     }
 
-    public void setBankName(String bankName) {
-        if (StringUtils.isEmpty(bankName)) {
-            throw new IllegalArgumentException("BankName");
-        } else
-            BankName = bankName;
+    public void setContact(Contact contact) {
+        this.contact = contact;
     }
 
-    public Address getBranchAddress() {
-        return BranchAddress;
+    public String getName() {
+        return name;
     }
 
-    public void setBranchAddress(Address branchAddress) {
-        BranchAddress = branchAddress;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public List<Branch> getBranchCollection() {
-        return BranchCollection;
+
+    public List<Branch> getBranchList() {
+        return branchList;
     }
 
-    public void setBranchCollection(List<Branch> branchCollection) {
-        BranchCollection = branchCollection;
+    public void setBranchList(List<Branch> branchList) {
+        this.branchList = branchList;
     }
-
-/*
-public bool IsNull()
-{
-return this.BankID == 0;
-}
-
-
-*/
 }
 

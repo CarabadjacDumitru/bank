@@ -1,9 +1,11 @@
 package com.tocsyk.models;
 
+import com.tocsyk.models.enums.ContractType;
+
 public class Deposit extends Contract {
-    public Deposit(double paidAmount, double contractRate, double remainingAmount) {
-        super( paidAmount, contractRate, remainingAmount);
-        this.ContractType = ContractType.Debit;
-        this.Rate = -0.2;
+    public Deposit(float  paidAmount, float contractRate) {
+        super(paidAmount, contractRate);
+        this.contractType = ContractType.Debit;
+        this.rate = -0.2f;
     }
 }

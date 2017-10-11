@@ -4,48 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Branch {
-    private Address BranchAddress;
-    private int BranchID;
-    private List<Customer> CustomerCollection;
+    private int ID;
+    private Contact contact;
+    private List<Customer> customerList;
+    private float balance;
 
-    public Branch(Address branchAddress) {
-        try {
-            setBranchID();
-            BranchAddress = branchAddress;
-            CustomerCollection = new ArrayList<Customer>();
-        } catch (IllegalArgumentException aa) {
-            System.out.println("Exception has been thrown:" + aa.toString());
-            throw aa;
-        }
+    public Branch(Contact contact) {
+            this.contact = contact;
+            customerList = new ArrayList<Customer>();
     }
 
-
-    public Address getBranchAddress() {
-        return BranchAddress;
+    public Contact getAddress() {
+        return contact;
     }
 
-    public void setBranchAddress(Address branchAddress) {
-        BranchAddress = branchAddress;
+    public void setAddress(Contact contact) {
+        this.contact = contact;
     }
 
-    public int getBranchID() {
-        return BranchID;
+    public List<Customer> getCustomerList() {
+        return customerList;
     }
 
-    private void setBranchID() {
-        BranchID = Sequence.getBranchSeq();
+    public void setCustomerList(List<Customer> customerList) {
+        this.customerList = customerList;
     }
 
-        /*
-        public bool IsNull()
-        {
-            return this.BranchID == 0;
-        }
+    public float getBalance() {
+        return balance;
+    }
 
-        public virtual bool ReceivePayment(object payment)
-        {
-            throw new System.NotImplementedException();
-        }
-        */
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
 
-}
+    public int getID() {
+        return ID;
+    }
+
+    private void setID(int ID) {
+        this.ID = ID;
+    }
+
+ }

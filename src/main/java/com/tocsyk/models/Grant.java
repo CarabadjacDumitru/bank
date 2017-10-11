@@ -1,10 +1,11 @@
 package com.tocsyk.models;
 
-public class Grant extends Contract{
-    public Grant(double paidAmount, double contractRate, double remainingAmount)
-    {
-        super(paidAmount, contractRate, remainingAmount);
-        this.ContractType = ContractType.Grant;
-        this.Rate = -0.1;
+import com.tocsyk.models.enums.ContractType;
+
+public class Grant extends Contract {
+    public Grant(float paidAmount, float contractRate) {
+        super(paidAmount, contractRate);
+        this.contractType = ContractType.Grant;
+        this.rate = -0.1f;
     }
 }

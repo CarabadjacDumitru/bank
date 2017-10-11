@@ -8,146 +8,106 @@ import java.util.List;
 
 public class Contract {
 
-    protected Date GenerationDate;
-    protected Date FinishingDate;
-    protected com.tocsyk.models.enums.ContractType ContractType;
-    protected double Rate;
-    protected double RemainingAmount;
-    protected double PaidAmount;
-    protected int ContractScore;
-    protected int ContractID;
-    protected List<Payment> PaymentCollection;
-    protected List<Date> PaymentDateMonthly;
+    protected int ID;
+    protected Date dateGeneration;
+    protected Date dateFinishing;
+    protected ContractType contractType;
+    protected float rate;
+    protected float amountRemain;
+    protected float amountPaid;
+    protected int contractScore;
+    protected List<Payment> paymentList;
+    protected List<Date> paymentPlanned;
 
 
-    protected Contract(double paidAmount, double contractRate, double remainingAmount) {
-        try {
-            setContractID();
-            this.GenerationDate = new Date();
-            this.FinishingDate = new Date();
-            this.RemainingAmount = remainingAmount;
-            this.PaidAmount = paidAmount;
-            this.PaymentCollection = new ArrayList<Payment>();
-            this.PaymentDateMonthly = new ArrayList<Date>();
-            this.ContractScore = 0;
-            generateGenDates();
-        } catch (IllegalArgumentException aa) {
-            System.out.println("Exception has been thrown:" + aa.toString());
-            throw aa;
-        }
-
+    protected Contract(float amountToPay, float contractRate) {
+            this.dateGeneration = new Date();
+            this.dateFinishing = new Date();
+            this.amountPaid= 0;
+            this.amountRemain = amountToPay;
+            this.paymentList= new ArrayList<Payment>();
+            this.paymentPlanned= new ArrayList<Date>();
+            this.rate = 1;
+            this.contractScore = 0;
     }
 
-    private void generateGenDates(){
-        for (Date dt = GenerationDate; dt.after(FinishingDate); dt.setMonth(dt.getMonth() + 1)) {
-            PaymentDateMonthly.add(dt);
-        }
-    }
-    public Date getGenerationDate() {
-        return GenerationDate;
+    public int getID() {
+        return ID;
     }
 
-    public void setGenerationDate(Date generationDate) {
-        if (generationDate.compareTo(new Date()) > 0) {
-            throw new IllegalArgumentException("GenerationDate");
-        } else
-            GenerationDate = generationDate;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
-    public Date getFinishingDate() {
-        return FinishingDate;
+    public Date getDateGeneration() {
+        return dateGeneration;
     }
 
-    public void setFinishingDate(Date finishingDate) {
-        if (finishingDate.compareTo(new Date()) < 0) {
-            throw new IllegalArgumentException("FinishingDate");
-        } else
-            FinishingDate = finishingDate;
+    public void setDateGeneration(Date dateGeneration) {
+        this.dateGeneration = dateGeneration;
+    }
+
+    public Date getDateFinishing() {
+        return dateFinishing;
+    }
+
+    public void setDateFinishing(Date dateFinishing) {
+        this.dateFinishing = dateFinishing;
     }
 
     public ContractType getContractType() {
-        return ContractType;
+        return contractType;
     }
 
     public void setContractType(ContractType contractType) {
-        if (contractType.equals(ContractType.Unspecified)) {
-            throw new IllegalArgumentException("ContractType");
-        } else
-            ContractType = contractType;
+        this.contractType = contractType;
     }
 
-    public double getRate() {
-        return Rate;
+    public float getRate() {
+        return rate;
     }
 
-    public void setRate(double rate) {
-        if (rate < 0 || rate > 100) {
-            throw new IllegalArgumentException("Rate");
-        } else
-            Rate = rate;
+    public void setRate(float rate) {
+        this.rate = rate;
     }
 
-    public double getRemainingAmount() {
-        return RemainingAmount;
+    public float getAmountRemain() {
+        return amountRemain;
     }
 
-    public void setRemainingAmount(double remainingAmount) {
-        if (remainingAmount < 0) {
-            throw new IllegalArgumentException("RemainingAmount");
-        } else
-            RemainingAmount = remainingAmount;
+    public void setAmountRemain(float amountRemain) {
+        this.amountRemain = amountRemain;
     }
 
-    public double getPaidAmount() {
-        return PaidAmount;
+    public float getAmountPaid() {
+        return amountPaid;
     }
 
-    public void setPaidAmount(double paidAmount) {
-        if (paidAmount < 0) {
-            throw new IllegalArgumentException("PaidAmount");
-        } else
-            PaidAmount = paidAmount;
+    public void setAmountPaid(float amountPaid) {
+        this.amountPaid = amountPaid;
     }
 
-    public int getContractScore() {
-        return ContractScore;
+    public int getScore() {
+        return contractScore;
     }
 
-    public void setContractScore(int contractScore) {
-        if (contractScore < 0) {
-            throw new IllegalArgumentException("ContractScore");
-        } else
-            ContractScore = contractScore;
+    public void setScore(int contractScore) {
+        this.contractScore = contractScore;
     }
 
-    public int getContractID() {
-        return ContractID;
+    public List<Payment> getPaymentList() {
+        return paymentList;
     }
 
-    private void setContractID() {
-        ContractID = Sequence.getContractSeq();
+    public void setPaymentList(List<Payment> paymentList) {
+        this.paymentList = paymentList;
     }
 
-    public List<Payment> getPaymentCollection() {
-        return PaymentCollection;
+    public List<Date> getPaymentPlanned() {
+        return paymentPlanned;
     }
 
-    public void setPaymentCollection(List<Payment> paymentCollection) {
-        PaymentCollection = paymentCollection;
+    public void setPaymentPlanned(List<Date> paymentPlanned) {
+        this.paymentPlanned = paymentPlanned;
     }
-
-    public List<Date> getPaymentDateMonthly() {
-        return PaymentDateMonthly;
-    }
-
-    public void setPaymentDateMonthly(List<Date> paymentDateMonthly) {
-        PaymentDateMonthly = paymentDateMonthly;
-    }
-
- /*
-        public bool IsNull()
-        {
-            return ContractID == 0;
-        }*/
-
 }

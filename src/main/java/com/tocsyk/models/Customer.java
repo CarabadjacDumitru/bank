@@ -5,64 +5,40 @@ import java.util.List;
 
 public class Customer {
 
-    protected int CustomerID;
-    protected Address CustomerAddress;
-    protected int CustomerCreditScore;
-    protected List<Account> AccountCollection;
+    protected int ID;
+    protected Contact contact;
+    protected int creditScore;
+    protected List<Account> accountList;
 
-    public Customer(int customerCreditScore, Address customerAddress) {
-        try {
-            setCustomerID();
-            this.CustomerCreditScore = customerCreditScore;
-            this.CustomerAddress = customerAddress;
-            this.AccountCollection = new ArrayList<Account>();
-            this.CustomerID = CustomerID;
-        } catch (IllegalArgumentException aa) {
-            System.out.println("Exception has been thrown:" + aa.toString());
-            throw aa;
-        }
+    public Customer(int ID, int creditScore, Contact customerContact) {
+            this.ID = ID;
+            this.creditScore = creditScore;
+            this.contact = customerContact;
+            this.accountList = new ArrayList<Account>();
     }
 
-    public int getCustomerID() {
-        return CustomerID;
+    public int getID() {return ID;}
+
+    public void setID(int ID) {this.ID = ID;}
+
+    public List<Account> getAccountList() {
+        return accountList;
     }
 
-    private void setCustomerID() {
-        CustomerID = Sequence.getCustomerSeq();
+    public void setAccountList(List<Account> accountList) {
+        this.accountList = accountList;
     }
 
-    public Address getCustomerAddress() {
-        return CustomerAddress;
+    public Contact getContact() {return contact;}
+
+    public void setContact(Contact contact) {this.contact = contact;}
+
+    public int getCreditScore() {
+        return creditScore;
     }
 
-    public void setCustomerAddress(Address customerAddress) {
-        CustomerAddress = customerAddress;
+    public void setCreditScore(int creditScore) {
+        this.creditScore = creditScore;
     }
 
-    public int getCustomerCreditScore() {
-        return CustomerCreditScore;
-    }
-
-    public void setCustomerCreditScore(int customerCreditScore) {
-        if (customerCreditScore < 0) {
-            throw new IllegalArgumentException("CustomerCreditScore");
-        } else
-            CustomerCreditScore = customerCreditScore;
-    }
-
-    public List<Account> getAccountCollection() {
-        return AccountCollection;
-    }
-
-    public void setAccountCollection(List<Account> accountCollection) {
-        AccountCollection = accountCollection;
-    }
-
-
-
-        /*
-        public bool IsNull()
-        {
-            return this.CustomerID == 0;
-        }*/
 }

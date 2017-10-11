@@ -1,10 +1,12 @@
 package com.tocsyk.models;
 
+import com.tocsyk.models.enums.ContractType;
+
 public class Credit extends  Contract {
-    public  Credit(double paidAmount, double contractRate, double remainingAmount)
+    public  Credit(float paidAmount, float contractRate)
     {
-        super(paidAmount, contractRate, remainingAmount);
-        this.ContractType = ContractType.Credit;
-        this.Rate = 0.3;
+        super(paidAmount, contractRate);
+        this.contractType = ContractType.Credit;
+        this.rate = 0.3f;
     }
 }

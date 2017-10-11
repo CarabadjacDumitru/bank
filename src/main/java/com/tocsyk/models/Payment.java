@@ -1,86 +1,57 @@
 package com.tocsyk.models;
 
-import com.tocsyk.models.enums.ContractType;
-import com.tocsyk.models.enums.StatusesType;
+import com.tocsyk.models.enums.PaymentType;
 
 import java.util.Date;
 
 public class Payment {
 
-    protected Contract PaymentContract;
-    protected double PaymentAmount;
-    protected Date PaymentDate;
-    protected Account PaymentAccount;
-    protected int PaymentID;
+    protected int ID;
+    protected Contract contract;
+    protected float amount;
+    protected Date date;
+    protected PaymentType paymentType;
 
-    public Payment(Date paymentDate, Account paymentAccount, double paymentAmount, Contract paymentContract) {
-
-        this.PaymentContract = paymentContract;
-        this.PaymentAmount = paymentAmount;
-        this.PaymentDate = paymentDate;
-        this.PaymentAccount = paymentAccount;
-        this.PaymentID = PaymentID;
-
+    public Payment(Date date, float amount, Contract contract, PaymentType paymentType) {
+        this.contract = contract;
+        this.amount = amount;
+        this.date = date;
+        this.paymentType = paymentType;
     }
 
+    public int getID() {return ID;}
 
+    public void setID(int ID) {this.ID = ID;}
 
-    public Contract getPaymentContract() {
-        return PaymentContract;
+    public Contract getContract() {
+        return contract;
     }
 
-    public void setPaymentContract(Contract paymentContract) {
-        if (paymentContract.getContractType().equals(ContractType.Unspecified)) {
-            throw new IllegalArgumentException("PaymentContract");
-        } else
-            PaymentContract = paymentContract;
+    public void setContract(Contract contract) {
+        this.contract = contract;
     }
 
-    public double getPaymentAmount() {
-        return PaymentAmount;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setPaymentAmount(double paymentAmount) {
-
-        if (paymentAmount < 0) {
-            throw new IllegalArgumentException("PaymentAmount");
-        } else
-            PaymentAmount = paymentAmount;
+    public void setAmount(float amount) {
+        this.amount = amount;
     }
 
-    public Date getPaymentDate() {
-        return PaymentDate;
+    public Date getDate() {
+        return date;
     }
 
-    public void setPaymentDate(Date paymentDate) {
-        PaymentDate = new Date();
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public Account getPaymentAccount() {
-        return PaymentAccount;
+    public PaymentType getPaymentType() {
+        return paymentType;
     }
 
-    public void setPaymentAccount(Account paymentAccount) {
-        if (paymentAccount.getAccountStatus().equals(StatusesType.Unspecified)) {
-            throw new IllegalArgumentException("AccountStatus");
-        } else
-            PaymentAccount = paymentAccount;
+    public void setPaymentType(PaymentType paymentType) {
+        this.paymentType = paymentType;
     }
-
-    public int getPaymentID() {
-        return PaymentID;
-    }
-
-    public void setPaymentID(int paymentID) {
-        PaymentID = Sequence.getPaymentSeq();
-    }
-
-
-        /*
-
-        public bool IsNull()
-        {
-            return PaymentID == 0;
-        }
-        */
 }

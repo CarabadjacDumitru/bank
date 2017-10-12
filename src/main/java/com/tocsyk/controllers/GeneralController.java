@@ -44,8 +44,9 @@ public class GeneralController {
         return "BankRegisterPage";
     }
 
-    @RequestMapping(value = {"/banklist}/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"/banklist"}, method = RequestMethod.GET)
     public String listBank( ModelMap model) {
+
         model.addAttribute("loggedinuser", getPrincipal());
         return "BankListPage";
     }

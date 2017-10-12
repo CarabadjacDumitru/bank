@@ -1,21 +1,18 @@
 package com.tocsyk.models;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
 
     private int ID;
     private Contact contact;
-    private String name;
     private List<Branch> branchList;
     private float balance;
 
 
-    public Bank(String name, Contact contact) {
-        this.name = name;
+    public Bank(int contactID, float balance, List<Branch> listBranches) {
         this.contact = contact;
-        this.branchList = new ArrayList<>();
+        this.branchList = listBranches;
         this.balance = 0;
     }
 
@@ -42,15 +39,6 @@ public class Bank {
     public void setContact(Contact contact) {
         this.contact = contact;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
     public List<Branch> getBranchList() {
         return branchList;

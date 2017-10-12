@@ -7,16 +7,26 @@ public class Contact {
     private String email;
     private String telephone;
     private String mobile;
+    private int addressID;
     private Address address;
 
-    public Contact(String mobile, String telephone, String email, Address address) {
+    public Contact() {
+    }
+
+    public Contact(String mobile, String telephone, String email, int addressID) {
             this.mobile = mobile;
             this.telephone = telephone;
             this.email = email;
-            this.address = address;
-            this.ID = ID;
+            this.addressID = addressID;
     }
 
+    public int getAddressID() {
+        return addressID;
+    }
+
+    public void setAddressID(int addressID) {
+        this.addressID = addressID;
+    }
 
     public int getID() {
         return ID;

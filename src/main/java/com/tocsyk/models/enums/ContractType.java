@@ -1,9 +1,16 @@
 package com.tocsyk.models.enums;
 
 public enum ContractType {
-    Unspecified,
-    Credit,
-    Debit,
-    Leasing,
-    Grant
+    Unspecified(0),
+    Credit(1),
+    Debit(2),
+    Leasing(3),
+    Grant(4);
+
+    private int contractType;
+
+    ContractType(int contractType) {
+        this.contractType = contractType;
+
+    }
 }

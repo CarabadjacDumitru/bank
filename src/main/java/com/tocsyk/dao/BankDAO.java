@@ -8,4 +8,5 @@ public interface BankDAO {
     List<Branch> findAllBranches();
     void registerBank(Bank bank);
     Bank loadBankData(String bankName);
+
 }

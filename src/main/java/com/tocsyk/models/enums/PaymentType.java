@@ -1,7 +1,14 @@
 package com.tocsyk.models.enums;
 
 public enum PaymentType {
-    Unspecified,
-    Debited,
-    Credited
+    Unspecified(0),
+    Debited(1),
+    Credited(2);
+
+    private int paymentType;
+
+    PaymentType(int paymentType) {
+        this.paymentType = paymentType;
+
+    }
 }

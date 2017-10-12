@@ -158,6 +158,100 @@ CREATE TABLE `banking`.`payment` (
   `payment_contract` INT NOT NULL,
   PRIMARY KEY (`contract_id`));
 
+-- 2017 10 12
+
+ALTER TABLE `banking`.`bank`
+CHANGE COLUMN `bank_contact` `bank_contact` INT(10) NOT NULL ;
+
+ALTER TABLE `banking`.`branch`
+CHANGE COLUMN `branch_contact` `branch_contact` INT(10) NOT NULL ;
+
+ALTER TABLE `banking`.`branch`
+CHANGE COLUMN `balanse` `balance` FLOAT NOT NULL ;
+
+
+ALTER TABLE `banking`.`branch`
+ADD COLUMN `branch_bank` INT(10) NOT NULL AFTER `branch_contact`;
+ALTER TABLE `banking`.`branch`
+ADD CONSTRAINT `FK_BANK_BRANCH`
+  FOREIGN KEY (`ID`)
+  REFERENCES `banking`.`bank` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `banking`.`adress`
+RENAME TO  `banking`.`address` ;
+
+
+ALTER TABLE `banking`.`branch`
+CHANGE COLUMN `branch_bank` `bank_branch` INT(10) NOT NULL ;
+
+
+ALTER TABLE `banking`.`customer`
+ADD COLUMN `branch_customer` INT(10) NOT NULL AFTER `balance`;
+ALTER TABLE `banking`.`customer`
+ADD CONSTRAINT `FK_BRANCH_CUSTOMER`
+  FOREIGN KEY (`ID`)
+  REFERENCES `banking`.`branch` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `banking`.`account`
+DROP FOREIGN KEY `FK_ACCOUNT_CONTRACT`;
+ALTER TABLE `banking`.`account`
+CHANGE COLUMN `account_contract` `customer_account` INT(10) NOT NULL ;
+ALTER TABLE `banking`.`account`
+ADD CONSTRAINT `FK_CUSTOMER_ACCOUNT`
+  FOREIGN KEY (`ID`)
+  REFERENCES `banking`.`customer` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+ALTER TABLE `banking`.`contract`
+ADD COLUMN `account_contract` INT(10) NOT NULL AFTER `contract_type`;
+ALTER TABLE `banking`.`contract`
+ADD CONSTRAINT `FK_ACCOUNT_CONTRACT`
+  FOREIGN KEY (`ID`)
+  REFERENCES `banking`.`contact` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `banking`.`payment`
+DROP FOREIGN KEY `PF_PAYMENT_CONTRACT`;
+ALTER TABLE `banking`.`payment`
+CHANGE COLUMN `payment_contract` `contract_payment` INT(10) NOT NULL ;
+ALTER TABLE `banking`.`payment`
+ADD CONSTRAINT `PF_CONTRACT_PAYMENT`
+  FOREIGN KEY (`ID`)
+  REFERENCES `banking`.`contract` (`ID`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+DROP TABLE `banking`.`account_status`;
+
+CREATE TABLE `banking`.`account_status` (
+  `ID` INT(10) NOT NULL,
+  `status_type` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`),
+  CONSTRAINT `FK_ACCOUNT_ACCSTAT`
+    FOREIGN KEY (`ID`)
+    REFERENCES `banking`.`account` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+
+ALTER TABLE `banking`.`account`
+DROP FOREIGN KEY `FK_ACCOUNT_TYPE`;
+ALTER TABLE `banking`.`account`
+DROP INDEX `FK_ACCOUNT_TYPE_idx` ;
+
+ALTER TABLE `banking`.`bank`
+DROP COLUMN `name`;
+
 
 
 

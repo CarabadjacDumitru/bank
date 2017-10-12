@@ -11,49 +11,446 @@
     <schema id="6" parent="1" name="banking">
       <Visible>1</Visible>
     </schema>
-    <table id="7" parent="6" name="user_roles"/>
-    <table id="8" parent="6" name="users"/>
-    <column id="9" parent="7" name="USERNAME">
+    <table id="7" parent="6" name="account"/>
+    <table id="8" parent="6" name="adress"/>
+    <table id="9" parent="6" name="bank"/>
+    <table id="10" parent="6" name="branch"/>
+    <table id="11" parent="6" name="contact"/>
+    <table id="12" parent="6" name="contract"/>
+    <table id="13" parent="6" name="contract_type"/>
+    <table id="14" parent="6" name="customer"/>
+    <table id="15" parent="6" name="payment"/>
+    <table id="16" parent="6" name="payment_planned"/>
+    <table id="17" parent="6" name="payment_type"/>
+    <table id="18" parent="6" name="role_type"/>
+    <table id="19" parent="6" name="roles"/>
+    <table id="20" parent="6" name="statuses_type"/>
+    <table id="21" parent="6" name="user_roles"/>
+    <table id="22" parent="6" name="users"/>
+    <column id="23" parent="7" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="7" name="balance">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="7" name="creditscore">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="7" name="account_status">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="7" name="account_contract">
+      <Position>5</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="7" name="FK_ACCOUNT_TYPE_idx">
+      <ColNames>account_status</ColNames>
+    </index>
+    <key id="29" parent="7" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="7" name="FK_ACCOUNT_CONTRACT">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contract</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="31" parent="7" name="FK_ACCOUNT_TYPE">
+      <ColNames>account_status</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>statuses_type</RefTableName>
+      <RefColNames>statusestype</RefColNames>
+    </foreign-key>
+    <column id="32" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="8" name="city">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="8" name="street">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="8" name="house">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="8" name="postalcode">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="37" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="9" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="9" name="bank_contact">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="9" name="name">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="9" name="balance">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="42" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="10" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="10" name="balanse">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="10" name="branch_contact">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="46" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="10" name="FK_BRANCH_CONTACT">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contact</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="11" name="mobile">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="11" name="telephone">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="11" name="email">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="11" name="contact_address">
+      <Position>5</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="53" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="11" name="FT_CONTACT_ADDRESS">
+      <ColNames>id</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>adress</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="55" parent="12" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="12" name="dategeneration">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="12" name="datefinishing">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="58" parent="12" name="rate">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="12" name="amountremain">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="12" name="amountpaid">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="12" name="score">
+      <Position>7</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="62" parent="12" name="contract_type">
+      <Position>8</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="63" parent="12" name="FK_CONTRACT_TYPE_idx">
+      <ColNames>contract_type</ColNames>
+    </index>
+    <key id="64" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="65" parent="12" name="FK_CONTRACT_TYPE">
+      <ColNames>contract_type</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contract_type</RefTableName>
+      <RefColNames>contracttype</RefColNames>
+    </foreign-key>
+    <column id="66" parent="13" name="contracttype">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="67" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>contracttype</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="14" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="14" name="creditscore">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="14" name="customer_contact">
+      <Position>3</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="14" name="balance">
+      <Position>4</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="72" parent="14" name="FK_CUSTOMER_CONTACT_idx">
+      <ColNames>customer_contact</ColNames>
+    </index>
+    <key id="73" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="74" parent="14" name="FK_CUSTOMER_CONTACT">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contact</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="75" parent="15" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="15" name="amount">
+      <Position>2</Position>
+      <DataType>float|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="15" name="date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="15" name="payment_contract">
+      <Position>4</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="15" name="payment_type">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="80" parent="15" name="FP_PAYMENT_TYPE_idx">
+      <ColNames>payment_type</ColNames>
+    </index>
+    <index id="81" parent="15" name="PF_PAYMENT_CONTRACT_idx">
+      <ColNames>ID</ColNames>
+    </index>
+    <foreign-key id="82" parent="15" name="PF_PAYMENT_CONTRACT">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contract</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="83" parent="15" name="FK_PAYMENT_TYPE">
+      <ColNames>payment_type</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>payment_type</RefTableName>
+      <RefColNames>Paymenttype</RefColNames>
+    </foreign-key>
+    <column id="84" parent="16" name="ID">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="85" parent="16" name="panneddates">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="16" name="ispaid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="16" name="paiddate">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="16" name="payment_contract">
+      <Position>5</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="89" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="90" parent="16" name="FK_PAYMENT_PLANNED_CONTRACT">
+      <ColNames>ID</ColNames>
+      <RefSchemaName>banking</RefSchemaName>
+      <RefTableName>contract</RefTableName>
+      <RefColNames>ID</RefColNames>
+    </foreign-key>
+    <column id="91" parent="17" name="Paymenttype">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="92" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Paymenttype</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="93" parent="18" name="roletype">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="94" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>roletype</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="95" parent="19" name="ROLE">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="19" name="ROLE_NAME">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="97" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ROLE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="98" parent="20" name="statusestype">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="99" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>statusestype</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="100" parent="21" name="USERNAME">
       <Position>1</Position>
       <DataType>varchar(36)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="10" parent="7" name="USER_ROLE">
+    <column id="101" parent="21" name="USER_ROLE">
       <Position>2</Position>
       <DataType>varchar(30)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="11" parent="7" name="USER_ROLE_UK">
+    <index id="102" parent="21" name="USER_ROLE_UK">
       <ColNames>USERNAME
 USER_ROLE</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="12" parent="7" name="USER_ROLE_UK">
+    <key id="103" parent="21" name="USER_ROLE_UK">
       <ColNames>USERNAME
 USER_ROLE</ColNames>
       <UnderlyingIndexName>USER_ROLE_UK</UnderlyingIndexName>
     </key>
-    <column id="13" parent="8" name="USERNAME">
+    <column id="104" parent="22" name="USERNAME">
       <Position>1</Position>
       <DataType>varchar(36)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="14" parent="8" name="PASSWORD">
+    <column id="105" parent="22" name="PASSWORD">
       <Position>2</Position>
       <DataType>varchar(36)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="15" parent="8" name="ENABLED">
+    <column id="106" parent="22" name="ENABLED">
       <Position>3</Position>
       <DataType>smallint(6)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="16" parent="8" name="EMAIL">
+    <column id="107" parent="22" name="EMAIL">
       <Position>4</Position>
       <DataType>varchar(36)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="17" parent="8" name="PRIMARY">
+    <key id="108" parent="22" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>USERNAME</ColNames>
       <Primary>1</Primary>

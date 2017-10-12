@@ -1,6 +1,6 @@
 package com.tocsyk.models;
 
-import com.tocsyk.models.enums.StatusesType;
+import com.tocsyk.models.enums.AccountStatusType;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ public class Account {
 
     private int ID;
     private int accountStatusID;
-    private StatusesType accountStatus;
+    private AccountStatusType accountStatus;
     private List<Contract> contractList;
     private float balance;
     private float creditScore;
@@ -53,11 +53,11 @@ public class Account {
         this.creditScore = creditScore;
     }
 
-    public StatusesType getAccountStatus() {
+    public AccountStatusType getAccountStatus() {
         return accountStatus;
     }
 
-    public void setAccountStatus(StatusesType accountStatus) {
+    public void setAccountStatus(AccountStatusType accountStatus) {
         this.accountStatus = accountStatus;
     }
 

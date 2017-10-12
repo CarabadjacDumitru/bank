@@ -1,6 +1,6 @@
 package com.tocsyk.config;
 
-import com.tocsyk.daoImp.MyDBAuthenticationService;
+import com.tocsyk.dao.daoImp.MyDBAuthenticationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

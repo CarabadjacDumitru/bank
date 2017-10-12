@@ -1,6 +1,6 @@
 package com.tocsyk.controllers;
 
-import com.tocsyk.daoImp.LoginDAOImpl;
+import com.tocsyk.dao.daoImp.LoginDAOImpl;
 import com.tocsyk.models.Login;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

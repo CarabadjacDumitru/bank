@@ -19,15 +19,15 @@
 <div class="generic-container">
     <div class="well lead">User Registration Form</div>
     <form:form method="POST" action="/registerProcess" modelAttribute="loginAtr" class="form-horizontal">
-        <form:input type="hidden" path="id" id="id"/>
+        <form:input type="hidden" path="ID" id="ID"/>
 
         <div class="row">
             <div class="form-group col-md-12">
-                <label class="col-md-3 control-lable" for="userName">First Name</label>
+                <label class="col-md-3 control-lable" for="LoginName">First Name</label>
                 <div class="col-md-7">
-                    <form:input type="text" path="userName" id="userName" class="form-control input-sm"/>
+                    <form:input type="text" path="LoginName" id="LoginName" class="form-control input-sm"/>
                     <div class="has-error">
-                        <form:errors path="userName" class="help-inline"/>
+                        <form:errors path="LoginName" class="help-inline"/>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
             <div class="form-group col-md-12">
                 <label class="col-md-3 control-lable" for="passWord">Password</label>
                 <div class="col-md-7">
-                    <form:input type="password" path="passWord" id="password" class="form-control input-sm"/>
+                    <form:input type="passWord" path="passWord" id="passWord" class="form-control input-sm"/>
                     <div class="has-error">
                         <form:errors path="passWord" class="help-inline"/>
                     </div>
@@ -50,9 +50,9 @@
             <div class="form-group col-md-12">
                 <label class="col-md-3 control-lable" for="eMail">Email</label>
                 <div class="col-md-7">
-                    <form:input type="text" path="eMail" id="email" class="form-control input-sm"/>
+                    <form:input type="text" path="email" id="email" class="form-control input-sm"/>
                     <div class="has-error">
-                        <form:errors path="eMail" class="help-inline"/>
+                        <form:errors path="email" class="help-inline"/>
                     </div>
                 </div>
             </div>
@@ -73,9 +73,9 @@
 
         <div class="row">
             <div class="form-group col-md-12">
-                <label class="col-md-3 control-lable" for="role">Role</label>
+                <label class="col-md-3 control-lable" for ="role">Role</label>
                 <div class="col-md-7">
-                    <form:select path="role" items="${roles}" multiple="false" class="form-control input-sm"/>
+                    <form:select path="role" items="${roles}" multiple="false" itemValue="ID" itemLabel="role"  class="form-control input-sm"/>
                     <div class="has-error">
                         <form:errors path="role" class="help-inline"/>
                     </div>

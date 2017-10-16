@@ -1,11 +1,11 @@
 package com.tocsyk.service.AbstractService;
 
-import com.tocsyk.model.AccountStatus;
+import com.tocsyk.model.Contact;
 
 import java.util.List;
 
 public interface AbstractPaymentTypeService {
-    List<AccountStatus> findAllPaymentType();
-    AccountStatus getPaymentTypeByName(String name);
-    AccountStatus getPaymentTypeByID(int ID);
+    List<Contact.AccountStatus> findAllPaymentType();
+    Contact.AccountStatus getPaymentTypeByName(String name);
+    Contact.AccountStatus getPaymentTypeByID(int ID);
 }

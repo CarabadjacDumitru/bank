@@ -1,11 +1,11 @@
 package com.tocsyk.DAO.AbstractDAO;
 
-import com.tocsyk.model.AccountStatus;
+import com.tocsyk.model.Contact;
 
 import java.util.List;
 
 public interface AbstractContractTypeDAO {
-    List<AccountStatus> findAllContractType();
-    AccountStatus getContractTypeByName(String name);
-    AccountStatus getContractTypeByID(int ID);
+    List<Contact.AccountStatus> findAllContractType();
+    Contact.AccountStatus getContractTypeByName(String name);
+    Contact.AccountStatus getContractTypeByID(int ID);
 }

@@ -1,9 +1,11 @@
 package com.tocsyk.config;
 
+import com.tocsyk.converter.RoleToUserProfileConverter;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
 import org.springframework.core.env.Environment;
+import org.springframework.format.FormatterRegistry;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
@@ -16,7 +18,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 import javax.sql.DataSource;
-import java.nio.charset.Charset;
 import java.util.Properties;
 
 
@@ -29,7 +30,9 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private Environment env;
-    private static final Charset UTF8 = Charset.forName("UTF-8");
+    @Autowired
+    RoleToUserProfileConverter roleToUserProfileConverter;
+
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -100,6 +103,10 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         return dataSource;
     }
 
+    @Override
+    public void addFormatters(FormatterRegistry registry) {
+        registry.addConverter(roleToUserProfileConverter);
+    }
 
     /*@Autowired
    @Bean(name = "transactionManager")

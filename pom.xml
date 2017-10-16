@@ -13,7 +13,7 @@
     <description>The bank that will work !!!!!</description>
 
     <properties>
-        <springframework.version>4.3.5.RELEASE</springframework.version>
+        <springframework.version>4.3.9.RELEASE</springframework.version>
         <springsecurity.version>4.2.3.RELEASE</springsecurity.version>
         <hibernate.version>5.2.11.Final</hibernate.version>
         <mysql.connector.version>5.1.31</mysql.connector.version>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${springframework.version}</version>
+            <version>4.3.12.RELEASE</version>
         </dependency>
 
         <!-- Spring Security -->
@@ -91,13 +91,13 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
+            <version>5.2.10.Final</version>
         </dependency>
 
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>${hibernate.version}</version>
+            <version>5.2.10.Final</version>
         </dependency>
 
         <!-- Servlet+JSP+JSTL -->

@@ -46,11 +46,11 @@
                     <hr class="colorgraph">
 
                     <div class="form-group">
-                        <input type="userName" name="userName" id="username" class="form-control input-lg"
+                        <input type="LoginName" name="LoginName" id="LoginName" class="form-control input-lg"
                                placeholder="Email Address">
                     </div>
                     <div class="form-group">
-                        <input type="password" name="passWord" id="password" class="form-control input-lg"
+                        <input type="passWord" name="passWord" id="passWord" class="form-control input-lg"
                                placeholder="Password">
                     </div>
 

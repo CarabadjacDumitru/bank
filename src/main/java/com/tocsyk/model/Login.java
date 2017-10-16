@@ -75,6 +75,11 @@ public class Login {
         return roleID;
     }
 
+
+    @OneToOne
+    @JoinTable(name = "hRole",
+            joinColumns = { @JoinColumn( name = "hLogin", referencedColumnName = "ID")},
+            inverseJoinColumns = {  @JoinColumn( name = "hRole", referencedColumnName = "ID") })
     public void setRole(int role) {
         this.roleID = role;
     }

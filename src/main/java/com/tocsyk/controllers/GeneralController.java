@@ -12,7 +12,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -27,48 +26,20 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@Transactional
-@SessionAttributes("loginSes")
+@SessionAttributes("roles")
 public class GeneralController {
 
     protected final Log logger = LogFactory.getLog(getClass());
 
     @Autowired
-    public LoginServiceImpl loginRepository;
+    public LoginServiceImpl loginService;
 
     @Autowired
-    public RoleServiceImpl roleRepository;
+    public RoleServiceImpl roleService;
 
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
 
-    //region Bank
-    @RequestMapping(value = "/bankregister", method = RequestMethod.GET)
-    public String newBank(Model model) {
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "BankRegisterPage";
-    }
-
-    @RequestMapping(value = {"/banklist"}, method = RequestMethod.GET)
-    public String listBank( ModelMap model) {
-
-        model.addAttribute("loggedinuser", getPrincipal());
-        return "BankListPage";
-    }
-
-    //endregion
-
-    //region Branch
-    //endregion
-
-    //region Customer
-    //endregion
-
-    //region Contract
-    //endregion
-
-    //region Payment
-    //endregion
 
 
     //region Login
@@ -86,11 +57,6 @@ public class GeneralController {
         }
     }
 
-    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.GET)
-    public String forgotPassPage(Model model) {
-        return "LoginForgotPassPage";
-    }
-
 
     @RequestMapping(value = "/loginregister", method = RequestMethod.GET)
     public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
@@ -106,7 +72,7 @@ public class GeneralController {
         ModelAndView mav = null;
         mav = new ModelAndView("operationSuccessPage");
 
-        loginRepository.registerLogin(login);
+        loginService.registerLogin(login);
         mav.addObject("loggedinuser", getPrincipal());
         mav.addObject("firstname",login.getLoginName());
         return mav;
@@ -120,7 +86,7 @@ public class GeneralController {
         return "operationSuccessPage";
     }
 
-
+/*
     @RequestMapping(value = "/loginforgotpass", method = RequestMethod.POST)
     public String forgotPass(Model model, Principal principal) {
         model.addAttribute("title", "Forgot Password");
@@ -128,6 +94,12 @@ public class GeneralController {
         model.addAttribute("loggedinuser", getPrincipal());
         return "LoginForgotPassPage";
     }
+
+    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.GET)
+    public String forgotPassPage(Model model) {
+        return "LoginForgotPassPage";
+    }
+*/
 
     @RequestMapping(value = "/logininfo/{login}/", method = RequestMethod.GET)
     public String userInfo(Model model, Principal principal) {
@@ -139,7 +111,7 @@ public class GeneralController {
 
     @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.GET)
     public String editLogin(@PathVariable String loginName, ModelMap model) {
-        Login login2 = loginRepository.getLoginByName(loginName);
+        Login login2 = loginService.getLoginByName(loginName);
         model.addAttribute("login", login2);
         model.addAttribute("title", "User Modify Page");
         model.addAttribute("loggedinuser", getPrincipal());
@@ -149,7 +121,7 @@ public class GeneralController {
     @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.POST)
     public String updateUser(@Valid Login login, BindingResult result,
                              ModelMap model, @PathVariable String loginName) {
-        loginRepository.updateLogin(login);
+        loginService.updateLogin(login);
         model.addAttribute("message", "User " + loginName + " was updated successfully");
         model.addAttribute("title", "Success by modifing the Login data ");
         model.addAttribute("loggedinuser", loginName);
@@ -163,7 +135,7 @@ public class GeneralController {
         model.addAttribute("message", "Login " + loginName + " was removed successfully");
         model.addAttribute("loggedinuser", getPrincipal());
 
-        loginRepository.deleteLogin(loginRepository.getLoginByName(loginName));
+        loginService.deleteLogin(loginService.getLoginByName(loginName));
         return "operationSuccessPage";
     }
     //endregion Login
@@ -171,7 +143,7 @@ public class GeneralController {
     //region Admin
    @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(Model model) {
-        List<Login> logins = loginRepository.getAllLogins();
+        List<Login> logins = loginService.getAllLogins();
         model.addAttribute("logins", logins);
         model.addAttribute("loggedinuser", getPrincipal());
         return "adminPage";
@@ -210,7 +182,7 @@ public class GeneralController {
 
     @ModelAttribute("roles")
     public List<Role> initializeProfiles() {
-        return roleRepository.getAllRoles();
+        return roleService.getAllRoles();
     }
 
     @RequestMapping(value = "/403", method = RequestMethod.GET)
@@ -239,4 +211,33 @@ public class GeneralController {
         return userName;
     }
     //endregion General
+
+    //region Bank
+    @RequestMapping(value = "/bankregister", method = RequestMethod.GET)
+    public String newBank(Model model) {
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "BankRegisterPage";
+    }
+
+    @RequestMapping(value = {"/banklist"}, method = RequestMethod.GET)
+    public String listBank( ModelMap model) {
+
+        model.addAttribute("loggedinuser", getPrincipal());
+        return "BankListPage";
+    }
+
+    //endregion
+
+    //region Branch
+    //endregion
+
+    //region Customer
+    //endregion
+
+    //region Contract
+    //endregion
+
+    //region Payment
+    //endregion
+
 }

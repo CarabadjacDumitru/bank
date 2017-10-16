@@ -1,25 +1,31 @@
 package com.tocsyk.service.ImplService;
 
+import com.tocsyk.DAO.ImplDAO.RoleDAOImpl;
 import com.tocsyk.model.Role;
 import com.tocsyk.service.AbstractService.AbstractRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("roleService")
+@Service("RoleService")
 public class RoleServiceImpl implements AbstractRoleService {
+
+    @Autowired
+    RoleDAOImpl roleDAO;
+
     @Override
     public List<Role> getAllRoles() {
-        return null;
+        return roleDAO.getAllRoles();
     }
 
     @Override
     public Role getUserRoleByName(String name) {
-        return null;
+        return roleDAO.getUserRoleByName(name);
     }
 
     @Override
     public Role getUserRoleByID(int ID) {
-        return null;
+        return roleDAO.getUserRoleByID(ID);
     }
 }

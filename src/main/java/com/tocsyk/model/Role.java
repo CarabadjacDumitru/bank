@@ -10,12 +10,13 @@ public class Role {
     @Column(name="ID")
     private int ID;
     @Column(name="Role")
-    private String role;
+    private String role ;
 
     public Role() {
     }
 
-    public Role(String role) {
+    public Role(int ID,String role) {
+        this.ID = ID;
         this.role = role;
     }
 

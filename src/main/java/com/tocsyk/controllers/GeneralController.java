@@ -1,7 +1,9 @@
 package com.tocsyk.controllers;
 
-import com.tocsyk.dao.daoImp.LoginDAOImpl;
-import com.tocsyk.models.Login;
+import com.tocsyk.model.Login;
+import com.tocsyk.model.Role;
+import com.tocsyk.service.ImplService.LoginServiceImpl;
+import com.tocsyk.service.ImplService.RoleServiceImpl;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +34,10 @@ public class GeneralController {
     protected final Log logger = LogFactory.getLog(getClass());
 
     @Autowired
-    public LoginDAOImpl loginDAOImpl;
+    public LoginServiceImpl loginRepository;
+
+    @Autowired
+    public RoleServiceImpl roleRepository;
 
     @Autowired
     AuthenticationTrustResolver authenticationTrustResolver;
@@ -101,9 +106,9 @@ public class GeneralController {
         ModelAndView mav = null;
         mav = new ModelAndView("operationSuccessPage");
 
-        loginDAOImpl.registerLogin(login);
+        loginRepository.registerLogin(login);
         mav.addObject("loggedinuser", getPrincipal());
-        mav.addObject("firstname",login.getUserName());
+        mav.addObject("firstname",login.getLoginName());
         return mav;
     }
 
@@ -116,7 +121,7 @@ public class GeneralController {
     }
 
 
-    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.GET)
+    @RequestMapping(value = "/loginforgotpass", method = RequestMethod.POST)
     public String forgotPass(Model model, Principal principal) {
         model.addAttribute("title", "Forgot Password");
         model.addAttribute("message", "You have lost your chanse");
@@ -134,7 +139,7 @@ public class GeneralController {
 
     @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.GET)
     public String editLogin(@PathVariable String loginName, ModelMap model) {
-        Login login2 = loginDAOImpl.findLogin(loginName);
+        Login login2 = loginRepository.getLoginByName(loginName);
         model.addAttribute("login", login2);
         model.addAttribute("title", "User Modify Page");
         model.addAttribute("loggedinuser", getPrincipal());
@@ -144,7 +149,7 @@ public class GeneralController {
     @RequestMapping(value = {"/loginmodify/{loginName}/"}, method = RequestMethod.POST)
     public String updateUser(@Valid Login login, BindingResult result,
                              ModelMap model, @PathVariable String loginName) {
-        loginDAOImpl.updateLogin(login);
+        loginRepository.updateLogin(login);
         model.addAttribute("message", "User " + loginName + " was updated successfully");
         model.addAttribute("title", "Success by modifing the Login data ");
         model.addAttribute("loggedinuser", loginName);
@@ -158,7 +163,7 @@ public class GeneralController {
         model.addAttribute("message", "Login " + loginName + " was removed successfully");
         model.addAttribute("loggedinuser", getPrincipal());
 
-        loginDAOImpl.deleteLogin(loginName);
+        loginRepository.deleteLogin(loginRepository.getLoginByName(loginName));
         return "operationSuccessPage";
     }
     //endregion Login
@@ -166,7 +171,7 @@ public class GeneralController {
     //region Admin
    @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String adminPage(Model model) {
-        List<Login> logins = loginDAOImpl.findAllLogins();
+        List<Login> logins = loginRepository.getAllLogins();
         model.addAttribute("logins", logins);
         model.addAttribute("loggedinuser", getPrincipal());
         return "adminPage";
@@ -204,8 +209,8 @@ public class GeneralController {
     }
 
     @ModelAttribute("roles")
-    public List<String> initializeProfiles() {
-        return loginDAOImpl.getRoles();
+    public List<Role> initializeProfiles() {
+        return roleRepository.getAllRoles();
     }
 
     @RequestMapping(value = "/403", method = RequestMethod.GET)

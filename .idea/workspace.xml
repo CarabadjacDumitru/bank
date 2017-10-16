@@ -5,66 +5,192 @@
       <artifact name="Bank:war exploded" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java" description="        String role = jdbcTemplate.queryForObject(..." line="86" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="4f6805cf-54fd-4306-a168-f57e3661517f" name="Default" comment="work 2019 10 12">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_dbcp_7_0_55.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Account.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountStatus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Address.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Bank.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Branch.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contact.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contract.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Customer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Payment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentPlanned.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountStatusRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AddressRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BankRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BranchRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContactRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractTypeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/CustomerRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentPlannedRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentTypeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/RoleRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/UserRepository.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/config/SpringSecurityInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/config/SpringWebAppInitializer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/config/WebMvcConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/controllers/GeneralController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/converters/LoginMapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/dao/LoginDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Account.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Bank.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Branch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Contact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Contract.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Credit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Customer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Deposit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Grant.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Leasing.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Payment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/Sequence.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/enums/ContractType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/enums/PaymentType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/enums/RoleType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/tocsyk/models/enums/StatusesType.class" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_6_14.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractAccountDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractAccountStatusDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractAddressDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractBankDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractBranchDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractContactDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractContractDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractContractTypeDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractCustomerDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractLoginDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractPaymentDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractPaymentPlannedDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractPaymentTypeDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractRoleDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/LoginDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractAccountService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractAccountStatusService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractAddressService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractBankService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractBranchService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractContactService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractContractService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractContractTypeService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractCustomerService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractLoginService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractPaymentPlannedService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractPaymentService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractPaymentTypeService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractRoleService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AccountServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AccountStatusServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AddressServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/BankServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/BranchServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContactServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContractServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContractTypeServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/CustomerServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/LoginServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentPlannedServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentTypeServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/RoleServiceImpl.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/UserRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/AccountMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/AddressMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/BankMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/BranchMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/ContactMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/converters/LoginMapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/AddressDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/BankDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/BranchDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/ContactDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/ContractDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/CustomerDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/LoginDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/PaymentDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/AddressDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/BankDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Account.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Address.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Bank.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Branch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Contact.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Contract.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Credit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Customer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Deposit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Grant.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Leasing.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Login.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Payment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/models/Sequence.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/converters/LoginMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/LoginDAOImpl.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/dao/MyDBAuthenticationService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Account.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Address.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Bank.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Branch.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Contact.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Contract.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Credit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Customer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Deposit.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Grant.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Leasing.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Payment.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Role.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/Sequence.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/enums/ContractType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/enums/PaymentType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/enums/RoleType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/models/enums/StatusesType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/hibernate-commons-annotations-4.0.5.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/hibernate-core-4.3.11.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/jandex-1.1.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/javassist-3.18.1-GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/jboss-logging-3.1.3.GA.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/jboss-logging-annotations-1.2.0.Beta1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.0.Final.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-aop-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-beans-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-context-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-core-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-expression-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-jdbc-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-orm-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-security-acl-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-security-config-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-security-core-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-security-taglibs-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-security-web-4.0.4.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-tx-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-web-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/spring-webmvc-4.2.5.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/lib/xml-apis-1.0.b2.jar" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_11_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_5_2_11_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_acl_4_2_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_4_2_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_4_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_3_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_5_RELEASE.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_5_RELEASE.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/MyDBAuthenticationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/CustomUserDetailsService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Account.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/AccountStatus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Address.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Address.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Bank.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Branch.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Branch.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contact.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contact.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contract.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contract.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/ContractType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Customer.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Payment.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Payment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentPlanned.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/PaymentPlanned.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/PaymentType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Role.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Login.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/AccountStatusType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/AccountStatusType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/ContractType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/ContractType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/PaymentType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/PaymentType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/RoleType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/RoleType.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountStatusRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountStatusDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AddressRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AddressDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BankRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BankDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BranchRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BranchDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContactRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContactDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractTypeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractTypeDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/CustomerDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentPlannedRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentPlannedDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentTypeRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentTypeDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/RoleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/RoleDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebMvcConfig.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebMvcConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/config/WebSecurityConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/controllers/GeneralController.class" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/com/tocsyk/controllers/GeneralController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Bank_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bank.iml" afterPath="$PROJECT_DIR$/Bank.iml" />
@@ -72,13 +198,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Account.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/AddressDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/AddressDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/BankDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/BankDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/LoginDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/MyDBAuthenticationService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/MyDBAuthenticationService.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/StatusesType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/AccountStatusType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/application.properties" afterPath="$PROJECT_DIR$/target/SpringMVCHibernateWithSpringSecurityExample/WEB-INF/classes/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,135 +237,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BankRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BankRepository.java">
+      <file leaf-file-name="Customer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#565#566#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="969">
+              <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BranchRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BranchRepository.java">
+      <file leaf-file-name="GeneralController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="171">
+              <caret line="123" column="75" lean-forward="false" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContactRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#770#771#0" expanded="true" />
-                <element signature="e#848#849#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractTypeRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractTypeRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/CustomerRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentPlannedRepository.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentPlannedRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#350#351#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#516#517#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountStatusRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountStatusRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AddressRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#2921#2922#0" expanded="true" />
+                <element signature="e#2965#2966#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -257,55 +268,56 @@
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>INSERT INTO USERS</find>
-      <find>DataSource</find>
-      <find>loginName</find>
-      <find>bootstrJs</find>
-      <find>logou</find>
-      <find>auth.jsp</find>
-      <find>logininfo</find>
-      <find>RoleType</find>
-      <find>amountRemain</find>
-      <find>amount</find>
-      <find>creditScore</find>
-      <find>contact</find>
-      <find>userDetailsService</find>
-      <find>5353</find>
-      <find>jdbc.driverClassName</find>
-      <find>getTelephone</find>
-      <find>telephone</find>
-      <find>StatusesType</find>
-      <find>account_status</find>
-      <find>spring-orm</find>
-      <find> </find>
-      <find>restDataSource</find>
-      <find>BasicDataSource</find>
-      <find>hibernate.hbm2ddl.auto</find>
-      <find>DriverManagerDataSource</find>
-      <find>hibernate.dialect</find>
-      <find>Contact</find>
-      <find>Account</find>
       <find>AccountStatus</find>
       <find>contract</find>
+      <find>User</find>
+      <find>com.tocsyk.models.</find>
+      <find>loginDAOImpl</find>
+      <find>loginDAO</find>
+      <find>PersistenceContext</find>
+      <find>public</find>
+      <find>userDetailsService</find>
+      <find>ERROR</find>
+      <find>UserDetailsService</find>
+      <find>customUserDetailsService</find>
+      <find>session</find>
+      <find>SessionFactory</find>
+      <find>transactionManager</find>
+      <find>orm.hibernate</find>
+      <find>AnnotationSessionFactoryBean</find>
+      <find>repository</find>
+      <find>getSessionFactory</find>
+      <find>sessionFactory</find>
+      <find>hibernate3</find>
+      <find>getHibernateProperties</find>
+      <find>hibernateTemplate</find>
+      <find>hibernate5</find>
+      <find>hibernate4</find>
+      <find>authenticationProvider</find>
+      <find>ContractType</find>
+      <find>com.tocsyk.hibernate</find>
+      <find>forgotPass</find>
+      <find>loginforgotpass</find>
     </findStrings>
     <replaceStrings>
       <replace>Va rugam sa introduceti</replace>
-      <replace>Login</replace>
-      <replace />
       <replace />
       <replace>Contract</replace>
       <replace>AccountStatus</replace>
       <replace>Payment</replace>
       <replace>ContractType</replace>
       <replace>payment</replace>
+      <replace>Login</replace>
+      <replace>loginRepository</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\IntelliJ\Bank</dir>
@@ -325,57 +337,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/dao/BankDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Contact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/StatusesType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/RoleType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/PaymentType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/enums/ContractType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/AddressDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Branch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/daoImp/BankDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/models/Bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/AccountMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/AddressMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/BankMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/BranchMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/ContactMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AccountStatusService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AddressServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/BankService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/BankServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/BranchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContactServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContractServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContractTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentPlannedServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentTypeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentTypeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountStatusDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AddressDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BankDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BranchDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContactDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractTypeDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/CustomerDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentPlannedDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentTypeDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/BankRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/BranchRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/CustomerRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AddressRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContactHibernate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Bank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contact.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Branch.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contract.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountStatusRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Payment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentTypeRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentPlanned.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentPlannedRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Role.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/RoleRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentPlannedRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractLoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/LoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/MyDBAuthenticationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/RoleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/LoginDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractLoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/config/CustomUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contact.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/PaymentPlanned.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Login.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/ContractType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Branch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contract.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/model/Bank.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractAccountDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java" />
       </list>
     </option>
   </component>
@@ -413,10 +425,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-402" />
+    <option name="x" value="180" />
     <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1040" />
+    <option name="width" value="864" />
+    <option name="height" value="918" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -436,76 +448,69 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
-              <item name="hibernate" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bank" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tocsyk" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bank" type="b2602c69:ProjectViewProjectNode" />
               <item name="bank" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="bank" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bank" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3678161" />
     <property name="last_opened_file_path" value="C:/Program Files/Apache Software Foundation/Tomcat 9.0_TomcatTM/lib/ojdbc14.jar!/" />
@@ -521,11 +526,11 @@
       <recent name="com.tocsyk.dao" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\IntelliJ\bank\src\main\java\com\tocsyk\mySql_Excluded" />
+      <recent name="C:\IntelliJ\bank\src\main\java\com\tocsyk\hibernate" />
+      <recent name="C:\IntelliJ\bank\src\main\java\com\tocsyk\config" />
       <recent name="C:\IntelliJ\bank\src" />
       <recent name="C:\IntelliJ\bank\src\main\webapp\static" />
-      <recent name="C:\IntelliJ\bank\src\main\webapp\WEB-INF" />
-      <recent name="C:\IntelliJ\bank\src\main\resources\i18n" />
-      <recent name="C:\IntelliJ\bank\src\main" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -754,6 +759,11 @@
       <workItem from="1507710958482" duration="531000" />
       <workItem from="1507811928832" duration="6788000" />
       <workItem from="1507827635269" duration="11118000" />
+      <workItem from="1507872954719" duration="1224000" />
+      <workItem from="1508131526906" duration="3610000" />
+      <workItem from="1508135156590" duration="996000" />
+      <workItem from="1508137087674" duration="18304000" />
+      <workItem from="1508159084773" duration="1641000" />
     </task>
     <task id="LOCAL-00001" summary="home 2017 09 11">
       <created>1505079433381</created>
@@ -871,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="371192000" />
+    <option name="totallyTimeSpent" value="396967000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -883,12 +893,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.246878" sideWeight="0.44047618" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.082539685" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5773295" sideWeight="0.22068231" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756963" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08208955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.084754795" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1546" y="173" width="310" height="568" />
@@ -897,27 +907,27 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37271854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21613833" sideWeight="0.4477612" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756963" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266564" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38563535" sideWeight="0.5595238" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23492064" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32660902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43227667" sideWeight="0.7793177" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756963" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756963" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18283582" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28338137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21709894" sideWeight="0.4477612" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756963" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.284342" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1063,131 +1073,143 @@
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>34</line>
           <properties />
           <option name="timeStamp" value="173" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>119</line>
+          <line>124</line>
           <properties />
           <option name="timeStamp" value="188" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>127</line>
+          <line>132</line>
           <properties />
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>144</line>
+          <line>149</line>
           <properties />
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>155</line>
+          <line>160</line>
           <properties />
           <option name="timeStamp" value="192" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>147</line>
+          <line>152</line>
           <properties />
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>57</line>
           <properties />
           <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>58</line>
           <properties />
           <option name="timeStamp" value="203" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>66</line>
           <properties />
           <option name="timeStamp" value="204" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>48</line>
           <properties />
           <option name="timeStamp" value="213" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>49</line>
           <properties />
           <option name="timeStamp" value="214" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>146</line>
+          <line>151</line>
           <properties />
           <option name="timeStamp" value="219" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>152</line>
+          <line>157</line>
           <properties />
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>82</line>
+          <line>87</line>
           <properties />
           <option name="timeStamp" value="224" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/LoginServiceImpl.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>65</line>
-          <properties class="com.tocsyk.daoImp.LoginDAOImpl" method="deleteLogin">
+          <properties class="com.tocsyk.dao.daoImp.LoginDAOImpl" method="deleteLogin">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="176" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>56</line>
-          <properties class="com.tocsyk.daoImp.LoginDAOImpl" method="updateLogin">
+          <properties class="com.tocsyk.dao.daoImp.LoginDAOImpl" method="updateLogin">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="177" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>47</line>
-          <properties class="com.tocsyk.daoImp.LoginDAOImpl" method="registerLogin">
+          <properties class="com.tocsyk.dao.daoImp.LoginDAOImpl" method="registerLogin">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="178" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/zmySql_Excluded/dao/daoImp/LoginDAOImpl.java</url>
           <line>33</line>
-          <properties class="com.tocsyk.daoImp.LoginDAOImpl" method="validateLogin">
+          <properties class="com.tocsyk.dao.daoImp.LoginDAOImpl" method="validateLogin">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="179" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java</url>
-          <line>145</line>
+          <line>150</line>
           <properties class="com.tocsyk.controllers.GeneralController">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="197" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Branch.java</url>
+          <line>20</line>
+          <properties field="listCustomers" class="com.tocsyk.model.Branch" />
+          <option name="timeStamp" value="241" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="232" />
+      <option name="time" value="242" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1200,600 +1222,456 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Bank.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentTypeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Branch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/AccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/AddressMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="7" lean-forward="false" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/BankMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/BranchMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="59" lean-forward="false" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/ContactMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="2" lean-forward="false" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/LoginDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="41" column="125" lean-forward="false" selection-start-line="41" selection-start-column="125" selection-end-line="41" selection-end-column="125" />
+        <state relative-caret-position="357">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <marker date="1507828402670" expanded="true" signature="861:969" ph="select 1 fro... users" />
-            <marker date="1507828402670" expanded="true" signature="1187:1332" ph="select u.use... users" />
-            <marker date="1507828402670" expanded="true" signature="1535:1606" ph="INSERT INTO USERS... " />
-            <marker date="1507828402670" expanded="true" signature="1633:1689" ph="INSERT INTO USER_ROLES... " />
-            <marker date="1507828402670" expanded="true" signature="2050:2140" ph="UPDATE USERS... " />
-            <marker date="1507828402670" expanded="true" signature="2351:2405" ph="UPDATE USER_... " />
-            <marker date="1507828402670" expanded="true" signature="2608:2644" ph="DELETE FROM " />
-            <marker date="1507828402670" expanded="true" signature="2765:2806" ph="DELETE FROM " />
-            <marker date="1507828402670" expanded="true" signature="2924:3053" ph="select u.Use... users" />
-            <marker date="1507828402670" expanded="true" signature="3280:3339" ph="select r.use... user_roles" />
-            <marker date="1507828402670" expanded="true" signature="3573:3609" ph="select disti... ROLES" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/BankDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/AddressDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/PaymentPlannedServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="241" column="23" lean-forward="false" selection-start-line="241" selection-start-column="23" selection-end-line="241" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/converters/LoginMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/ContractTypeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#400#401#0" expanded="false" />
+            <element signature="e#427#428#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/AddressDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="23" />
-          <folding />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/daoImp/MyDBAuthenticationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BankDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/BranchDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="101" column="71" lean-forward="false" selection-start-line="101" selection-start-column="71" selection-end-line="101" selection-end-column="71" />
+        <state relative-caret-position="187">
+          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContactDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+        <state relative-caret-position="85">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractTypeDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/HibernateConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/CustomerDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+        <state relative-caret-position="85">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentPlannedDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/PaymentTypeDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.2.5.RELEASE/spring-beans-4.2.5.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/ContractDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.2.5.RELEASE/spring-orm-4.2.5.RELEASE-sources.jar!/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="332" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/AbstractService/AbstractLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebMvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-898">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="532">
+          <caret line="86" column="124" lean-forward="false" selection-start-line="86" selection-start-column="117" selection-end-line="86" selection-end-column="124" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/BankDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractLoginDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="39" />
+        <state relative-caret-position="255">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/BranchDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/dao/CustomerDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="true" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+        <state relative-caret-position="697">
+          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1143#1144#0" expanded="true" />
+            <element signature="e#1490#1508#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/models/Contract.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/config/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="135" column="18" lean-forward="false" selection-start-line="135" selection-start-column="18" selection-end-line="135" selection-end-column="18" />
+        <state relative-caret-position="-324">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1471#1472#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
-            <element signature="e#1529#1530#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1738#1739#0" expanded="true" />
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1812#1813#0" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1913#1914#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1970#1971#0" expanded="true" />
-            <element signature="e#2009#2010#0" expanded="true" />
-            <element signature="e#2041#2042#0" expanded="true" />
-            <element signature="e#2072#2073#0" expanded="true" />
-            <element signature="e#2100#2101#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
-            <element signature="e#2175#2176#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2248#2249#0" expanded="true" />
-            <element signature="e#2303#2304#0" expanded="true" />
-            <element signature="e#2351#2352#0" expanded="true" />
-            <element signature="e#2387#2388#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2515#2516#0" expanded="true" />
-            <element signature="e#2696#2697#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-            <element signature="e#2793#2794#0" expanded="true" />
-            <element signature="e#2841#2842#0" expanded="true" />
-            <element signature="e#2882#2883#0" expanded="true" />
-            <element signature="e#2918#2919#0" expanded="true" />
-            <element signature="e#2977#2978#0" expanded="true" />
-            <element signature="e#3027#3028#0" expanded="true" />
-            <element signature="e#3073#3074#0" expanded="true" />
-            <element signature="e#3108#3109#0" expanded="true" />
-            <element signature="e#3171#3172#0" expanded="true" />
-            <element signature="e#3219#3220#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Address.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="272">
+          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Payment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/LoginServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="73" column="18" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#926#927#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1058#1059#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1414#1415#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1491#1492#0" expanded="true" />
-            <element signature="e#1550#1551#0" expanded="true" />
-            <element signature="e#1596#1597#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/AccountStatusType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/ContractType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/enums/PaymentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <folding>
+            <element signature="e#1066#1067#0" expanded="true" />
+            <element signature="e#1133#1134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/RoleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/PaymentType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/PaymentPlanned.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#1308#1309#0" expanded="true" />
+            <element signature="e#1348#1349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Payment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="74" column="27" lean-forward="true" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/AccountStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Branch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="889">
+          <caret line="79" column="56" lean-forward="false" selection-start-line="79" selection-start-column="56" selection-end-line="79" selection-end-column="56" />
+          <folding>
+            <marker date="1508159435666" expanded="false" signature="1395:1406" ph=" { " />
+            <marker date="1508159435666" expanded="false" signature="1441:1447" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="137" column="54" lean-forward="false" selection-start-line="137" selection-start-column="54" selection-end-line="137" selection-end-column="54" />
+          <folding>
+            <marker date="1508159568961" expanded="false" signature="2905:2916" ph=" { " />
+            <marker date="1508159568961" expanded="false" signature="2949:2955" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Login.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="89" column="34" lean-forward="false" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/ContractType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/service/ImplService/AccountServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setAccountStatusType#0;class#Account#0" expanded="false" />
-          </folding>
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/AccountStatus.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountStatusDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="31" />
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AddressDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="153">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="48" />
           <folding>
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#505#506#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/ContractType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/LoginDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="269">
+          <caret line="28" column="15" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#646#647#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Contact.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Bank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        <state relative-caret-position="713">
+          <caret line="65" column="40" lean-forward="false" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Branch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/AbstractDAO/AbstractAccountDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Branch#0;class#Branch#0" expanded="false" />
-          </folding>
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/PaymentPlanned.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#564#565#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="18" lean-forward="false" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#818#819#0" expanded="true" />
-            <element signature="e#851#852#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-            <element signature="e#914#915#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1099#1100#0" expanded="true" />
-            <element signature="e#1147#1148#0" expanded="true" />
-            <element signature="e#1187#1188#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1251#1252#0" expanded="true" />
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1336#1337#0" expanded="true" />
-            <element signature="e#1368#1369#0" expanded="true" />
-            <element signature="e#1396#1397#0" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1528#1529#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1598#1599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Bank.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Bank#0;class#Bank#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/RoleRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="60" lean-forward="true" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/hibernate/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding>
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AccountStatusRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/AddressRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BankRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#565#566#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/BranchRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContactRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/ContractTypeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/CustomerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/repository/PaymentPlannedRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/DAO/ImplDAO/AccountDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+            <marker date="1508160901488" expanded="true" signature="381:392" ph=" { " />
+            <marker date="1508160901488" expanded="true" signature="412:418" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="77" column="38" lean-forward="false" selection-start-line="77" selection-start-column="38" selection-end-line="77" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tocsyk/controllers/GeneralController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="123" column="75" lean-forward="false" selection-start-line="123" selection-start-column="75" selection-end-line="123" selection-end-column="75" />
+          <folding>
+            <element signature="e#2921#2922#0" expanded="true" />
+            <element signature="e#2965#2966#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1857,6 +1735,7 @@
             <option name="proportions">
               <list>
                 <option value="0.3678161" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1868,7 +1747,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.6448276" />
+                <option value="0.3678161" />
               </list>
             </option>
           </splitter-proportions>

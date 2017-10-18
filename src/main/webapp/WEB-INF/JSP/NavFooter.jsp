@@ -14,7 +14,10 @@
             <a href='https://www.flickr.com/'><i class="fa fa-flickr fa-3x fa-fw"></i></a>
             <a href='https://www.linkedin.com/'><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
             </span>
+            <br/>
             <span>Dear <strong>${loggedinuser}</strong>, Welcome to CrazyUsers.</span>
+            <br/>
+            <span>Dear <strong>${loggedRole}</strong>, Welcome to CrazyUsers.</span>
         </div>
     </div>
 </head>

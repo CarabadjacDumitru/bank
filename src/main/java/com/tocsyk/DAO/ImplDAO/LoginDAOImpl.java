@@ -5,12 +5,13 @@ import com.tocsyk.DAO.AbstractDAO.AbstractLoginDAO;
 import com.tocsyk.model.Login;
 import org.apache.log4j.Logger;
 import org.hibernate.Criteria;
+import org.hibernate.Hibernate;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository("LoginDAO")
+@Repository("loginDAOImpl")
 public class LoginDAOImpl extends AbstractDAO<Integer, Login> implements AbstractLoginDAO {
 
     static final Logger logger = Logger.getLogger(LoginDAOImpl.class);
@@ -20,9 +21,17 @@ public class LoginDAOImpl extends AbstractDAO<Integer, Login> implements Abstrac
     }
 
     public Login getLoginByName(String name) {
+        /*Criteria crit = createEntityCriteria();
+        crit.add(Restrictions.eq("loginName", name));
+        return  (Login)crit;*/
+
         Criteria crit = createEntityCriteria();
-        crit.add(Restrictions.eq("LoginName", name));
-        return  (Login)crit.uniqueResult();
+        crit.add(Restrictions.eq("loginName", name));
+        Login login = (Login)crit.uniqueResult();
+        if(login!=null){
+            Hibernate.initialize(login.getRoles());
+        }
+        return login;
     }
 
     public void registerLogin(Login login) {

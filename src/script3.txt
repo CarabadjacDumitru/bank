@@ -115,3 +115,64 @@ CREATE TABLE `statuses_type` (
   `statusestype` varchar(20) NOT NULL,
   PRIMARY KEY (`statusestype`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+/**/*////////////////          2017 10 18  ////////////////*/
+
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(7,
+'PAYMENT');
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(6,
+'PAYMENT');
+
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(5,
+'CONTRACT');
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(4,
+'CUSTOMER');
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(3,
+'BRANCH');
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(2,
+'BANK');
+
+INSERT INTO `banking`.`hrole`
+(`ID`,
+`Role`)
+VALUES
+(1,
+'ADMIN');
+
+
+INSERT INTO `banking`.`hloginroles`
+(`Login_ID`,
+`Role_ID`)
+VALUES
+(1,
+1);

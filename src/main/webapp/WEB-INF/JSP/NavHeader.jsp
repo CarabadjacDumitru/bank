@@ -104,7 +104,7 @@
 
                     </ul>
 
-                    <sec:authorize access="hasRole('ADMIN')">
+                    <sec:authorize access="hasRole('ROLE_ADMIN')">
                         <ul class="nav navbar-nav">
                             <li class=""><a href="/admin">List of Users</a></li>
                         </ul>
@@ -112,7 +112,7 @@
 
 
 
-                    <sec:authorize access="hasAnyRole('USER','ADMIN')">
+                    <sec:authorize access="hasAnyRole('ROLE_USER','ROLE_ADMIN')">
                         <ul class="nav navbar-nav pull-right">
                             <li class=" dropdown">
                                 <a href="#" class="dropdown-toggle active" data-toggle="dropdown" role="button"

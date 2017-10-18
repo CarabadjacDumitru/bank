@@ -10,6 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -21,15 +22,18 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 
-@Configuration
 @EnableWebMvc
+@Configuration
+@EnableTransactionManagement
 @Import({WebSecurityConfig.class})
 @ComponentScan(basePackages = "com.tocsyk")
 @PropertySource("classpath:application.properties")
+
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
 
     @Autowired
     private Environment env;
+
     @Autowired
     RoleToUserProfileConverter roleToUserProfileConverter;
 
@@ -86,8 +90,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
         properties.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql", env.getProperty("hibernate.show_sql"));
         properties.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
-        properties.put("hibernate.batch.size", env.getRequiredProperty("hibernate.batch.size"));
-        properties.put("hibernate.current_session_context_class", env.getRequiredProperty("hibernate.current.session.context.class"));
 
         return properties;
     }
@@ -107,6 +109,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addFormatters(FormatterRegistry registry) {
         registry.addConverter(roleToUserProfileConverter);
     }
+
+
 
     /*@Autowired
    @Bean(name = "transactionManager")

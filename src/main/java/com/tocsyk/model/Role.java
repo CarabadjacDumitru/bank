@@ -1,16 +1,19 @@
 package com.tocsyk.model;
 
+import com.tocsyk.model.enums.enumRoleType;
+
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "hRole")
-public class Role {
+public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID")
     private int ID;
-    @Column(name="Role")
-    private String role ;
+
+    @Column(name="role", length=15, unique=true, nullable=false)
+    private String role = enumRoleType.ANONYMOUS.getRole();
 
     public Role() {
     }

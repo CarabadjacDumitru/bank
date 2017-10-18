@@ -1,7 +1,7 @@
 package com.tocsyk.model.enums;
 
-public enum RoleType {
-    Unspecified("ANONYMOUS"),
+public enum enumRoleType {
+    ANONYMOUS("ANONYMOUS"),
     ADMIN("ADMIN"),
     BANK("BANK"),
     BRANCH("BRANCH"),
@@ -11,11 +11,11 @@ public enum RoleType {
 
     private String roleType;
 
-    RoleType(String roleType) {
+    enumRoleType(String roleType) {
         this.roleType = roleType;
     }
 
-    public String getRole(){
+    public  String getRole(){
         return roleType;
     }
 }

@@ -46,6 +46,7 @@ public class GeneralController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage(Model model) {
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         if (isCurrentAuthenticationAnonymous()) {
             model.addAttribute("title", "Login page ");
             model.addAttribute("message", "This is the start page page!");
@@ -62,6 +63,7 @@ public class GeneralController {
     public ModelAndView showRegister(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView mav = new ModelAndView("LoginRegisterPage");
         mav.addObject("loggedinuser", getPrincipal());
+        mav.addObject("loggedRole", roleService.getAllRoles().get(1));
         mav.addObject("loginAtr", new Login());
         return mav;
     }
@@ -73,6 +75,7 @@ public class GeneralController {
         mav = new ModelAndView("operationSuccessPage");
 
         loginService.registerLogin(login);
+        mav.addObject("loggedRole", roleService.getAllRoles().get(1));
         mav.addObject("loggedinuser", getPrincipal());
         mav.addObject("firstname",login.getLoginName());
         return mav;
@@ -83,6 +86,7 @@ public class GeneralController {
         model.addAttribute("title", "Log Out");
         model.addAttribute("message", "You have been LOGGED OUT");
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "operationSuccessPage";
     }
 
@@ -106,6 +110,7 @@ public class GeneralController {
         String userName = principal.getName();
         System.out.println("User Name: " + userName);
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "LoginInfoPage";
     }
 
@@ -115,6 +120,7 @@ public class GeneralController {
         model.addAttribute("login", login2);
         model.addAttribute("title", "User Modify Page");
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "LoginModifyPage";
     }
 
@@ -125,7 +131,7 @@ public class GeneralController {
         model.addAttribute("message", "User " + loginName + " was updated successfully");
         model.addAttribute("title", "Success by modifing the Login data ");
         model.addAttribute("loggedinuser", loginName);
-
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "operationSuccessPage";
     }
 
@@ -134,7 +140,7 @@ public class GeneralController {
         model.addAttribute("title", "Success by deleting the Login data ");
         model.addAttribute("message", "Login " + loginName + " was removed successfully");
         model.addAttribute("loggedinuser", getPrincipal());
-
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         loginService.deleteLogin(loginService.getLoginByName(loginName));
         return "operationSuccessPage";
     }
@@ -146,6 +152,7 @@ public class GeneralController {
         List<Login> logins = loginService.getAllLogins();
         model.addAttribute("logins", logins);
         model.addAttribute("loggedinuser", getPrincipal());
+       model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "adminPage";
     }
     //endregion Admin
@@ -156,14 +163,16 @@ public class GeneralController {
         model.addAttribute("title", "Log IN");
         model.addAttribute("message", "You have been LOGGED IN");
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "operationSuccessPage";
     }
 
     @RequestMapping(value = {"/"}, method = RequestMethod.GET)
     public String initialPage(Model model) {
-        model.addAttribute("title", "Welcome Page");
-        model.addAttribute("message", "This is the start page page!");
+        model.addAttribute("title", "Slash Page");
+        model.addAttribute("message", "This is the slash page page!");
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "welcomePage";
     }
 
@@ -171,7 +180,9 @@ public class GeneralController {
     public String welcomePage(Model model) {
         model.addAttribute("title", "Welcome Page");
         model.addAttribute("message", "This is the start page page!");
+
         model.addAttribute("loggedinuser", getPrincipal());
+        model.addAttribute("loggedRole", roleService.getAllRoles().get(1));
         return "welcomePage";
     }
 

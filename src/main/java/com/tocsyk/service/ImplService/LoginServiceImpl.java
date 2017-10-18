@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service("LoginService")
+@Service("loginService")
 public class LoginServiceImpl implements AbstractLoginService {
 
     @Autowired

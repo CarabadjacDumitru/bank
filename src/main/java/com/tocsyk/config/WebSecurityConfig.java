@@ -67,7 +67,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")//
                 .defaultSuccessUrl("/operationSuccess")//
                 //.failureUrl("/login?error")//
-                .usernameParameter("userName")//
+                .usernameParameter("loginName")//
                 .passwordParameter("passWord")
                 .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logoutSuccessful");
         ;

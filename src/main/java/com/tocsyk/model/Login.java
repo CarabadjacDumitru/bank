@@ -1,34 +1,40 @@
 package com.tocsyk.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "hLogin")
-public class Login {
+public class Login implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID")
     private int ID;
     @Column(name="LoginName")
-    private String LoginName;
+    private String loginName;
     @Column(name="PassWord")
     private String passWord;
     @Column(name="Enabled")
     private boolean enabled;
     @Column(name="Email")
     private String email;
-    @Column(name="Role")
-    private int roleID;
+
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "hLoginRoles",
+            joinColumns = { @JoinColumn(name = "Login_ID") },
+            inverseJoinColumns = { @JoinColumn(name = "Role_ID") })
+    private Set<Role> roles;
 
     public Login() {
     }
 
-    public Login(String LoginName, String passWord, boolean enabled, String email, int role) {
-        this.LoginName = LoginName;
+    public Login(String LoginName, String passWord, boolean enabled, String email, Set<Role> roles) {
+        this.loginName = LoginName;
         this.passWord = passWord;
         this.enabled = enabled;
         this.email = email;
-        this.roleID = roleID;
+        this.roles = roles;
     }
 
     public int getID() {
@@ -40,11 +46,11 @@ public class Login {
     }
 
     public String getLoginName() {
-        return LoginName;
+        return loginName;
     }
 
     public void setLoginName(String LoginName) {
-        this.LoginName = LoginName;
+        this.loginName = LoginName;
     }
 
     public String getPassWord() {
@@ -71,28 +77,23 @@ public class Login {
         this.email = email;
     }
 
-    public int getRole() {
-        return roleID;
+    public Set<Role> getRoles() {
+        return roles;
     }
 
-
-    @OneToOne
-    @JoinTable(name = "hRole",
-            joinColumns = { @JoinColumn( name = "hLogin", referencedColumnName = "ID")},
-            inverseJoinColumns = {  @JoinColumn( name = "hRole", referencedColumnName = "ID") })
-    public void setRole(int role) {
-        this.roleID = role;
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     @Override
     public String toString() {
         return "Login{" +
                 "ID=" + ID +
-                ", LoginName='" + LoginName + '\'' +
+                ", LoginName='" + loginName + '\'' +
                 ", passWord='" + passWord + '\'' +
                 ", enabled=" + enabled +
                 ", email='" + email + '\'' +
-                ", role=" + roleID +
+                ", role=" + roles +
                 '}';
     }
 }

@@ -1,6 +1,7 @@
 package com.tocsyk.config;
 
 import com.tocsyk.model.Login;
+import com.tocsyk.model.Role;
 import com.tocsyk.service.ImplService.LoginServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
@@ -9,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     LoginServiceImpl loginService;
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Login login = loginService.getLoginByName(username);
         System.out.println("Login : " + login);
@@ -35,8 +38,11 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     private List<GrantedAuthority> getGrantedAuthorities(Login login) {
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        System.out.println("UserProfile : " + login.getRole());
-        authorities.add(new SimpleGrantedAuthority("ROLE_" + login.getRole()));
-        return authorities;
+        System.out.println("UserProfile : " + login.getRoles());
+
+        for (Role role : login.getRoles()) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getRole()));
+        }
+         return authorities;
     }
 }

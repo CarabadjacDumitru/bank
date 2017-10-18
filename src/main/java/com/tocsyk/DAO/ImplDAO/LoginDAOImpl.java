@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+
 @Repository("loginDAOImpl")
 public class LoginDAOImpl extends AbstractDAO<Integer, Login> implements AbstractLoginDAO {
 

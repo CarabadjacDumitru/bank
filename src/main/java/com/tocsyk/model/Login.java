@@ -29,8 +29,8 @@ public class Login implements Serializable {
     public Login() {
     }
 
-    public Login(String LoginName, String passWord, boolean enabled, String email, Set<Role> roles) {
-        this.loginName = LoginName;
+    public Login(String loginName, String passWord, boolean enabled, String email, Set<Role> roles) {
+        this.loginName = loginName;
         this.passWord = passWord;
         this.enabled = enabled;
         this.email = email;
@@ -61,7 +61,7 @@ public class Login implements Serializable {
         this.passWord = passWord;
     }
 
-    public boolean isEnabled() {
+    public boolean getEnabled() {
         return enabled;
     }
 

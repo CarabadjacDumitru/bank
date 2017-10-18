@@ -26,7 +26,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
-@SessionAttributes("roles")
+@SessionAttributes("roleList")
 public class GeneralController {
 
     protected final Log logger = LogFactory.getLog(getClass());
@@ -73,8 +73,14 @@ public class GeneralController {
                                    @ModelAttribute("loginAtr") Login login) {
         ModelAndView mav = null;
         mav = new ModelAndView("operationSuccessPage");
+        Login log2 = new Login();
+        log2.setEmail(login.getEmail());
+        log2.setEnabled(login.getEnabled());
+        log2.setLoginName(login.getLoginName());
+        log2.setPassWord(login.getPassWord());
+        log2.setRoles(login.getRoles());
 
-        loginService.registerLogin(login);
+        loginService.registerLogin(log2);
         mav.addObject("loggedRole", roleService.getAllRoles().get(1));
         mav.addObject("loggedinuser", getPrincipal());
         mav.addObject("firstname",login.getLoginName());
@@ -191,7 +197,7 @@ public class GeneralController {
         return authenticationTrustResolver.isAnonymous(authentication);
     }
 
-    @ModelAttribute("roles")
+    @ModelAttribute("roleList")
     public List<Role> initializeProfiles() {
         return roleService.getAllRoles();
     }

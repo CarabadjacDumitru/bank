@@ -73,11 +73,14 @@
 
         <div class="row">
             <div class="form-group col-md-12">
-                <label class="col-md-3 control-lable" for ="role">Role</label>
+                <label class="col-md-3 control-lable" for ="roles">Role</label>
                 <div class="col-md-7">
-                    <form:select path="role" items="${roles}" multiple="false" itemValue="ID" itemLabel="role"  class="form-control input-sm"/>
+                    <form:select path="roles">
+                    <form:options   id="roles" items="${roleList}"   multiple="false" itemValue="ID" itemLabel="role"  class="form-control input-sm">
+                    </form:select>
+
                     <div class="has-error">
-                        <form:errors path="role" class="help-inline"/>
+                        <form:errors path="roles" class="help-inline"/>
                     </div>
                 </div>
             </div>
